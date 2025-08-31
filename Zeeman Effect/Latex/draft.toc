@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Weak Field Zeeman Effect}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Experimental Setup}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fabry-Perot Etalon}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}CCD Camera}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Results \& Discussion}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bohr Magneton}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Polarisation}{11}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}%

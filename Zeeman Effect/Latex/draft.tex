@@ -1,0 +1,398 @@
+\documentclass{article}
+\newcommand{\exptitle}{Zeeman Effect}
+\newcommand{\course}{PHYS3111 - Quantum Mechanics}
+
+\input{../../preamble.tex}
+
+\section{Introduction}
+
+On March 12, 1862, Faraday carried out his last experiment in the laboratory of the Royal Institution. Despite his notes not 
+being completely clear, it was obvious he was trying to demonstrate that magnetism has a direct effect on light sources through 
+the use of a spectroscope. He found nothing and even wrote "not the slightest effect demonstrable either with polarised or 
+unpolarised light." This would lead Maxwell to proclaim at a meeting of the British Association on September 15, 1870 that 
+light-radiating particles in a flame could not be altered by any natural force, even in the slightest, either in their mass 
+or perid of oscillation. Nowadays, this would be quite surprising coming from the grandfather of electromagnetic theory.
+
+In August of 1896, Pieter Zeeman placed a sodium flame inbetween the poles of a strong electromagnet, exposing the flame to a 
+large magnetic field. The spectral lines created by observing the flame through a Rowland mirror had broadened once the 
+magnetic field was turned on and were sharply defined in absence of a magnetic field. Initially, Zeeman and his colleagues 
+dismissed the result, as guided by the powerful words by the now late James Clerk Maxwell years prior, no natural force could 
+alter the oscillations of the light particles in a flame.
+
+However, they would soon confirm their results by changing the direction of observation. First, they looked at the spectral lines 
+perpendicular to the magnetic field, seeing the broadening of the spectral lines. Then, they observed the flame parallel to the 
+magnetic field, now seeing a strange splitting of the same lines. Later formalised into a paper with the help of fellow electromagnetic 
+savant, Hendrik Lorentz, the pair would describe three-colour light coming from the source when viewed perpendicular to the magnetic 
+field and two-colour light coming from the source when viewed parallel to the magnetic field in place of the one-colour light when 
+there is no magnetic field.
+
+The Zeeman effect would then provide indirect experimental evidence of spin before it was ever formally conceptualised. The anomalous
+Zeeman effect described the phenomenon where atoms such as hydrogen displayed splittings into even numbered states, which was problematic
+as if angular momentum was quantised only as an integer, you should expect $2l+1$ states, where $l \in \mathbb{Z}$, thus only producing 
+odd numbered splittings. This would then later contribute to the discovery of the half-integer spin particles.
+
+In present time, the Zeeman effect is now a well understood quantum phenomena with plenty of practical applications across various 
+fields of physics, medicine and biology. For example, the development of the MRI machine that is used to create detailed pictures 
+inside the human body has had countless of use cases and will continue to do so in alignment with the advancement of modern medicine. 
+The machine relies on the knowledge brought about by the analysis of the Zeeman effect and amongst other magnetic-related theories in 
+physics.
+
+\section{Theory}
+
+\subsection{Weak Field Zeeman Effect}
+
+When an atom is placed in an uniform external magnetic field, $\mathbf{B}_{\text{ext}}$, the energy levels of the atom are shifted slightly.
+For a single electron, the perturbation is 
+
+\begin{equation} \label{equation:hprime0}
+    H'_{Z} = -(\mu_l+\mu_s)\cdot \mathbf{B}_{\text{ext}}.
+\end{equation}
+
+where $l$ and $s$ denote the orbital motion and spin of the electron, therefore
+
+\begin{equation*}
+u_s = -\frac{e}{m}\mathbf{S}
+\end{equation*}
+
+which describes the magnetic dipole moment associated with electron spin and 
+
+\begin{equation*}
+    u_l = \frac{e}{2m}\mathbf{L}
+\end{equation*}
+
+which is the magnetic dipole moment associated with the orbital motion. Therefore, Equation \ref{equation:hprime0} becomes
+
+\begin{equation*}
+    H'_{Z} = \frac{e}{2m}(\mathbf{L}+2\mathbf{S})\cdot \mathbf{B}_{\text{ext}}.
+\end{equation*}
+
+In the weak-field Zeeman effect regime, we find that $B_{\text{ext}} \ll B_{\text{int}}$, meaning fine structure dominates 
+and we can include the Bohr and the fine structure interactions as the unperturbed Hamiltonian and the Zeeman 
+effect as our perturbed Hamiltonian, i.e 
+
+\begin{align*}
+    H &= H_{\text{Bohr}} + H'_{fs} + H'_{Z} \\
+    &= H_0 + H'_{Z}.
+\end{align*}
+
+The energy states in the unpertubed Hamiltonian are degenerate however if we align $\mathbf{B}_{\text{ext}}$ with the $z$ axis, 
+$H'_Z$ will commute with $J_Z$ and $L^2$ so the good eigenstates are
+\begin{equation*}
+    \bra{n, l,j,m_j}
+\end{equation*}
+
+where each of the degenerate states can be uniquely labeled by $m_j$ and $l$. Therefore, using non-degenerate perturbation 
+theory, the first order correction to energy is 
+
+\begin{equation*}
+    E^{(1)}_Z = \bra{n l j m_j}H'_Z\ket{nljm_j} = \frac{e}{2m}B_{\text{ext}}\braket{\mathbf{L} + 2\mathbf{S}}.
+\end{equation*}
+
+The oribtal quantum number $L$ denotes the length or magnitude of angular momentum due to orbital motion of the electron 
+whereas the magnetic sublevels $m$ describes the orientation in space for $L$, i.e the projection onto the $z$-axis, therefore 
+
+\begin{equation*}
+    -l \le m \le l
+\end{equation*}
+
+where $l = \frac{L}{\hbar}$. So for the lower level of the transition $^1P^o_1$, $m'$ can take on the values $-1,0,1$ as $l=1$.
+
+To determine the expectation value of $\mathbf{L} + 2\mathbf{S}$, we begin with writing 
+
+\begin{equation*}
+    \mathbf{L} + 2\mathbf{S} = \mathbf{J} + \mathbf{S}.
+\end{equation*}
+
+Since the magnetic field is aligned with the $z$-axis, we already know $\braket{\mathbf{J}}=m_j$ and we know the time average 
+value of $\mathbf{S}$ must be its projection along $\mathbf{J}$ so 
+
+\begin{equation*}
+    \braket{\mathbf{S}} = \frac{(\mathbf{S}\cdot \mathbf{J})}{J^2}\mathbf{J}.
+\end{equation*}
+
+If we square $\mathbf{L} = \mathbf{J} - \mathbf{S}$ so that $L^2 = J^2 +S^2-2\mathbf{J}\cdot\mathbf{S}$ and 
+rearrange for $\mathbf{J}\cdot\mathbf{S}$
+
+\begin{align*}
+    \mathbf{J}\cdot\mathbf{S} &= \frac{1}{2}\left(J^2 + S^2 - L^2\right) \\
+    &= \frac{\hbar^2}{2}\left(j(j+1) + s(s+1)-l(l+1)\right). \\
+    &= \frac{\hbar^2}{2}\left(\frac{3}{4}+j(j+1) -l(l+1)\right) \: \: \text{(spin of electron is 1/2)}
+\end{align*}
+
+Therefore, the average value of $\mathbf{L}+2\mathbf{S}$ is 
+
+\begin{equation*}
+    \mathbf{L}+2\mathbf{S} = \mathbf{J}+\mathbf{S} = m_j\left(\frac{3}{2}-\frac{3/4 - l(l+1)}{2j(j+1)}\right)
+\end{equation*}
+
+or more succintly defined using the Lande g-factor, $g_j$. The energy correction is then 
+
+\begin{align} \label{equation:energy_split}
+    E^{(1)}_Z &=\frac{e\hbar}{2m}g_jB_{\text{ext}}m_j \\
+    &= \mu_B g_jB_{\text{ext}}m_j
+\end{align}
+
+where $\mu_B$ is the Bohr magneton.
+
+We can plot Equation \ref{equation:energy_split}, setting $g_j = \mu_B = 1$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Figures/theory.png}
+    \caption{$\Delta E$ vs $B$ plot showing the two different levels, $J=1$ and $J=2$, we find that the higher 
+    total angular momentum corresponds to a greater energy split.}
+    \label{fig:theory}
+\end{figure}
+
+We can see in Figure \ref{fig:theory} that there are 3 sublevels for $J=1$ and 5 sublevels for $J=2$, however 
+since this is an electric dipole transition and with $Delta J =1$, the only allowed $\Delta m$ values are 
+$-1,0,1$. We can do an example calculation for an energy level splitting of $^1D_2$ and $1P_1^o$ in 1 T magnetic 
+field. Using Equation \ref{equation:energy_split} and with $g = 1$, we find that the splitting of the energy levels 
+can be $0$ for $\Delta m = 0$ and for $\Delta m = \pm 1$
+
+\begin{equation*}
+    \Delta E = \pm \mu_B.
+\end{equation*}
+
+The shift in wavelength is then 
+
+\begin{equation} \label{equation:wavelengtht}
+    \Delta \lambda = \pm \frac{hc}{\Delta E} = \pm \frac{hc}{\mu_B}.
+\end{equation}
+
+\section{Experimental Setup}
+In this experiment, a Cd discharge lamp is placed between the poles of an electromagnet
+and the resultant spectral line splittings are resolved, by means of a Fabry-Perot étalon
+and measured, as a function of applied magnetic field, by using a CCD camera and a
+frame grabber to capture the images of the spectral lines. A schematic diagram of the
+experimental set-up is given in Figure \ref{fig:diagram}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../Figures/diagram.png}
+    \caption{The beam path is idealised as it assumes the lamp is a point source. The iris and lens 
+    serves the purpose of better resolution for the CCD camera, the main instrument in this experiment 
+    is the F-P etalon.}
+    \label{fig:diagram}
+\end{figure}
+
+The discharge lamp emits wavelengths 467.8 nm, 480.0 nm, 508.6 nm and 643.8 nm however with the red filter, 
+only $\lambda = 643.8$ nm will pass through.
+
+\subsection{Fabry-Perot Etalon}
+
+The Fabry-Perot Etalon is a practical application of the more simple F-P interferometer. The F-P interferometer 
+consists of two parallel flat glass plates, coated on the inner surface with a partially transmitting metallic 
+layer. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../Figures/f-p.png}
+    \caption{Diagram of the parallel plates of the Fabry-Perot interferometer. Close up to show geometry.}
+    \label{fig:f-p}
+\end{figure}
+
+The two glass plates are separated by a distance d. The incoming light rays will make an angle $\theta$ at the 
+normal as shown in Figure \ref{fig:f-p}. Here we only consider 1 ray but in actuality there are infinite number of rays 
+hitting the interferometer. We want to find the path difference between ray paths ABCDE and ABGF i.e the path from 
+reflection and the path from the transmitted rays. The path difference is 
+
+\begin{align*}
+    \Delta OPL &= n(AB + BC + CD + DE) - n(AB + BG + GF) \\
+    &= n(BC +CD) - n(GF) \: \text{(as DE = BG)}.
+\end{align*}
+
+From $\triangle ABX$, we can find $AB=BC=CD$,
+
+\begin{equation*}
+    AB = \frac{d}{\cos\theta}.
+\end{equation*}
+
+We can find $GF$ by considering $GF = EG\sin\theta $ where $EG=2BX$ and $BX = d\tan\theta$ so 
+
+\begin{align*}
+    \Delta OPL &= n\left(\frac{2d}{\cos\theta}-2d\sin\theta\tan\theta\right) \\
+    &= n\frac{2d}{\cos\theta} \times \cos^2\theta \\
+    &= 2ndcos\theta.
+\end{align*}
+
+Using the phase difference, we can look for constructive inteference,
+
+\begin{equation*}
+    2nd\cos\theta = m\lambda
+\end{equation*}
+
+where $m$ must be an integer. As the equation depends on $\cos\theta$, we find that the higher orders tend 
+towards the middle, therefore higher wavelengths will be towards the center, as shown in 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Figures/f-p_rings.png}
+    \caption{The higher order of interference corresponds to smaller angle as $\cos\theta_m < \cos\theta_{m+1}$ so 
+    $\theta_m > \theta_{m+1}$.}
+    \label{fig:f-p_rings}
+\end{figure}
+
+We now want to relate the radius of the rings observed on the screen with the wavelength of the incoming light. We 
+can first take a small angle approximation.
+
+\begin{equation*}
+    \theta \approx \sin\theta = \frac{r}{f}
+\end{equation*}
+
+where $f$ is the focal length of the lens on the output of the etalon, as it focuses the outgoing rays from the 
+etalon onto the screen. We can do a first order Taylor expansion of $\cos\theta$ so
+
+\begin{equation*}
+    \cos\theta \approx 1 - \frac{1}{2}\left(\frac{r}{f}\right)^2.
+\end{equation*}
+
+Therefore combining with the interference condition,
+
+\begin{equation} \label{equation:wavelengthexp}
+    \lambda = \frac{2nd}{m}\left(1-\frac{1}{2}\left(\frac{r}{f}\right)^2\right).
+\end{equation}
+
+\subsection{CCD Camera}
+
+The standard sensor size for a 1.1" format is shown in Figure \ref{fig:camera}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../Figures/camera_size.png}
+    \caption{The dimensions of a 1.1 inch format camera, with width 14.2 mm and height 10.4 mm.}
+    \label{fig:camera}
+\end{figure}
+
+The camera's resolution is 4096 horizontal by 3000 vertical pixels so to calculate the average size of a pixel, the 
+height is given as $10.4 mm /3000$ and its width given as $14.2 mm /4096$. Taking the average of the two gives us a 
+conversion between px and mm we can use
+
+\begin{align*}
+    \text{Pixel Length (px)} &= \frac{1}{2}\left(\frac{10.4}{3000}+\frac{14.2}{4096}\right) \\
+    &\approx 0.0035 \text{ mm} \\
+    &= 3.5 \text{ $\mu$m}
+\end{align*}
+
+However, to take the data, we magnified the image by 1.9, so the conversion between px to $\mu$m should be
+
+\begin{equation*}
+    1 px = 1.84 \mu m.
+\end{equation*}
+
+\section{Results \& Discussion}
+
+We opted to not complete the Field calibration exercise as it is unnecessary due to the fact that in this 
+experiment, we are only turning up the magnetic field strength. Magnetic hysteresis only really becomes an 
+issue if we are constantly changing the direction of the changes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{../Figures/0d00A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/0d50A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/1d00A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/1d50A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/2d00A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/2d50A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/3d00A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/3d50A_Para.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/4d00A_Para.png}
+    \caption{Intensity vs radius graphs for increasing magnetic field strengths observed parallel to the magnetic field. 
+    It is clear that Zeeman splitting only becomes apparent at ~3A, or 118.9mT in this setup.}
+    \label{fig:parallelgraphs}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.33\textwidth]{../Figures/0d00A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/0d50A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/1d00A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/1d50A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/2d00A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/2d50A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/3d00A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/3d50A_Perp.png}
+    \includegraphics[width=0.33\textwidth]{../Figures/4d00A_Perp.png}
+    \caption{Intensity vs radius graphs for increasing magnetic field strengths observed perpendicular to the magnetic 
+    field. Unlike before, there is no clear Zeeman splitting in the 3A~4A range.}
+    \label{fig:perpendiculargraphs}
+\end{figure}
+
+\subsection{Bohr Magneton}
+
+To find $\mu_B$, we looked specifically at 4A parallel observation, where there was a clear splitting 
+into two levels.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{../Figures/bohrmag.png}
+    \caption{bluh}
+    \label{fig:bohrmag}
+\end{figure}
+
+In Figure \ref{fig:bohrmag}, we find peaks in the Zeeman splitting at 756.24 and 859.28 $\mu$m. This 
+corresponds to wavelengths of 643.79 nm and 643.78 nm respectively using Equation \ref{equation:wavelengthexp}. We 
+can then convert them into energies using 
+
+\begin{equation*}
+    E = \frac{hc}{\lambda}
+\end{equation*}
+
+where $h$ is Planck's constant and $c$ is the speed of light. To find $\Delta E$ we can do the following,
+
+\begin{equation*}
+    \Delta E = \frac{E_1 - E_2}{2}.
+\end{equation*}
+
+Finally, to obtain $\mu_B$, we divide by the magnetic field strength $B=143.6mT$, giving us a Bohr magneton 
+value of 
+
+\begin{equation*}
+    \mu_B = 8.95 \times 10^{-24} J/T.
+\end{equation*}
+
+To obtain an uncertainty value, we fit a Gaussian to the zero magnetic field observation as seen in Figure \ref{fig:bohrmag}.
+We obtain a full width at half maximum reading of 119.11, leading to a standard deviation of 50.6. Therefore, the two radii 
+readings used in the calculation has a percentage uncertainty of 6.7\% and 5.9\%. Adding them in quadrature gets us a total 
+random uncertainty of 8.9\%. Thus, our experimental value for the Bohr magneton is 
+
+\begin{equation*}
+    \mu_B = 8.95 \pm 0.8 \times 10^{-24} J/T.
+\end{equation*}
+
+This result agrees with the widely accepted value of $\mu_B = 9.27 \times 10^{-24} J/T$.
+
+\subsection{Polarisation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{../Figures/comparePara.png}
+    \caption{Intensity graphs comparing the three setups viewing parallel to the field: no polariser, right-handed polariser
+    and left-handed polariser.}
+    \label{fig:parallelcomparison}
+\end{figure}
+
+In Figure \ref{fig:parallelcomparison}, we can see that the Zeeman splitting has two levels that are differed in their 
+polarisation. Therefore, the $\Delta m = \pm 1$ are circularly polarised, i.e $\sigma^+$ component is right-handedly 
+circular polarised and $\sigma^-$ is left-handedly circuarly polarised.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{../Figures/comparePerp.png}
+    \caption{Intensity graphs comparing 5 setups viewing perpendicular to the magnetic field: no polarisation, linear 
+    polariser at $0^\circ$, $90^\circ$, $-90^\circ$ and circular polariser.}
+    \label{fig:perpcomparison}
+\end{figure}
+
+In Figure \ref{fig:perpcomparison}, we can see that the lack of Zeeman splitting is not because there is no Zeeman 
+splitting. It is because our equipment is not sharp enough to resolve the different levels. From the polarisation 
+experiment, we can see that there is a linearly polarised level, $\Delta m =0$, or commonly expressed as $\pi$ component.
+We can also see in the circular polarisation that it had no effect however we think that this is a low resolution result 
+rather than expected polarisation.
+
+\section{Conclusion}
+In conclusion, we successfully determined the different polarisation of the Zeeman splitting levels whilst also finding 
+a value for the Bohr magneton. In future, we want to take more accurate measurements as the sensitivity levels in each 
+variable to the result was quite high.
+
+\end{document}
