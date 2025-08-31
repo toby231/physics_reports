@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Precession}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Nutation}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Aim}{2}{section.2}%
+\contentsline {section}{\numberline {3}Method}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experimental Setup}{2}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Locked Gyroscope}{3}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Free Gyroscope}{4}{subsubsection.3.1.2}%
+\contentsline {section}{\numberline {4}Results}{6}{section.4}%
+\contentsline {section}{\numberline {5}Analysis}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Moment of Inertia}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Precession}{10}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Nutation}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Extension}{11}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Discussion}{11}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{12}{section.7}%

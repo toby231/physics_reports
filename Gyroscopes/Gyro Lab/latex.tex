@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage[margin=1in]{geometry}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\title{GYRO REPORT}
+\author{Toby Nguyen - z5416116}
+\date{May 2024}
+
+\begin{document}
+\begin{center}
+    \huge{Gyro Report} \\[10pt]
+    \large{Toby Nguyen - z5416116}
+\end{center}
+
+\section*{Introduction}
+In rotational mechanics, there are phenomena analog to translational mechanics
+such as momentum of inertia, torque and angular velocity, acceleration and
+momentum. However, certain phenomena in rotational mechanics such as precession
+and nutation do not have such analogs and are thus inherently unintuitive. To 
+explore these mechanics and to build the intuition, a mathematical derivation is required. 
+
+\subsection*{Precession}
+Precession is the motion where the spinning object rotations about a vertical axis, 
+in addition to the rotation about its own axis.
+
+In its inertial reference frame, the total torque of a spinning object is related to its angular momentum,
+\begin{equation}
+    \vec{\tau} = \frac{d\vec{L}}{dt}.
+\end{equation}
+
+However from a fixed reference frame, there must be a second term that accounts 
+for the rotation of the inertial reference frame, i.e
+\begin{equation}
+    \vec{\tau} = \frac{d\vec{L}}{dt} + \vec{\omega} \times \vec{L}.
+\end{equation}
+
+This second term suggests that there is a torque that acts perpendicular to
+the angular momentum and velocity of the spiining object. 
+\begin{equation}
+    \vec{\tau}_p = \vec{\omega}_s \times \vec{L}_s.
+\end{equation}
+
+\subsection*{Nutation}
+Nutation refers to the oscillating motion of a spinning object's own axis with respect
+to its original axis' position. Nutation occurs when a transient force acts on the 
+spinning object in any direction perpendicular to its angular momentum. Hence,
+\begin{equation}
+    \vec{\tau}_n = k_1\vec{F}_{applied} \times k_2\vec{L}_s. 
+\end{equation}
+
+\section*{Aim}
+\section*{Method}
+\section*{Results}
+\section*{Analysis}
+\section*{Discussion}
+\section*{Conclusion}
+\end{document}
