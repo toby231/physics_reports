@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Method}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Measuring Mechanical Power}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Theory}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Experiment setup}{2}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Measuring Electrical Power}{3}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Theory}{3}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Experimental setup}{3}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cooling}{4}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Theory}{4}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Experimental setup}{4}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Results}{5}{section.3}%
+\contentsline {section}{\numberline {4}Analysis}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Optimal angular velocity}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Work done by system}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Discussion}{9}{section.5}%
+\contentsline {section}{\numberline {6}Theoretical Prework}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Derive expressions for the heat flow in (or out) and the work done by each step in the Stirling cycle}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Calculate the heat flow in each step}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Calculate the work done by the gas in the cycle}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Calculate the efficiency of the engine}{12}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Experimental Prework}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Explain how the torque meter works}{13}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Appendix}{13}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Raw Data}{13}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Code snippets}{14}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Lab Book Pages}{16}{section.9}%
