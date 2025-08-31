@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Aim}{2}{section.2}%
+\contentsline {section}{\numberline {3}Method}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fraunhofer Condition}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Theory}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Experimental Setup}{6}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Fitted function}{7}{subsubsection.3.3.1}%
+\contentsline {section}{\numberline {4}Results \& Analysis}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}0.1 mm slit}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}0.2 mm slit}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}0.4 mm slit}{10}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Discussion}{11}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{11}{section.6}%
+\contentsline {section}{\numberline {7}Appendix}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Similar Experiment}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Lab book}{12}{subsection.7.2}%
