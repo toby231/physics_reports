@@ -1,0 +1,23 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[McAlister(1955)]{mcalister}
+Daniel~R. McAlister.
+\newblock \emph{Neutron Shielding Materials}.
+\newblock PhD thesis, PG Research Foundation, 1955.
+
+\bibitem[Metals(unknown)]{brass}
+Austral~Wright Metals.
+\newblock Brass: Composition, properties and uses - austral wright metals.
+\newblock unknown, unknown.
+
+\bibitem[Mint(unknown)]{mint}
+Australian Mint.
+\newblock About our coins.
+\newblock ramint.gov.au, unknown.
+
+\end{thebibliography}
