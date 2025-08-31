@@ -1,0 +1,233 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{pgf}
+\usepackage{lmodern}
+\usepackage{import}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[margin=1in]{geometry}
+\usepackage{pythonhighlight}
+\usepackage[toc]{appendix}
+\usepackage{placeins}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\section*{Graphs}
+Note that any plot using age has to use the Vanderberg 
+table which is constrained to 55 globular clusters. Any 
+other plot without age will be using the Harris catalogue 
+so there are many more clusters plotted.
+
+\subsection*{Stellar populations}
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{agefeh.pgf}}
+    \caption{Note the density of the dots. We expect 
+    metallicities of clusters to be similar at a fixed 
+    age. We find that at older ages, there is a greater 
+    range in metallicities, indicating potential accreted
+    metal poor stars.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{agergc.pgf}}
+    \caption{We find that there is little to no correlation
+    between age of globular clusters and their distance from 
+    galactic center. Strangely enough, there are some old 
+    globular clusters that are relatively close to the galactic
+    center, could potentially indicate accreted or clusters
+    moving closer towards the center?}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{fehrgc.pgf}}
+    \caption{Similar to previous plot, there seems to be 
+    no correlation between galactic radius and metallicity.
+    There is a large variety of globular clusters near 
+    each other. Why?}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{xzfeh.pgf}}
+    \caption{Edge on view of the distribution of metallicity.
+    Zoomed out doesn't show too much. Note the really metal 
+    poor clusters far away from the cluster cluster.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{xzfeh1.pgf}}
+    \caption{A zoomed in version of the previous plot. We 
+    can better see the group of clusters with various 
+    metallicities. Strong evidence for accreted globular
+    clusters.}
+\end{figure}
+
+\subsection*{Stellar kinematics}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgcsigv.pgf}}
+    \caption{Large range of dispersion velocity at a fixed
+    radius, indicating large variety of low mass and high 
+    mass stars (different hot and cold orbits).}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgcvr.pgf}}
+    \caption{Largely symmetric distribution of rotational 
+    velocity, showing lack of asymmetric disturbance in 
+    the galaxy. Dotted grey lines displaying $\mu = -4.7$
+    and $1\sigma$, $2\sigma$, $3\sigma$.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgczsigv.pgf}}
+    \caption{Edge on view of galaxy, measuring its 
+    dispersion velocity. Note that it is predominately
+    low dispersion, indicating more spirals/low mass. 
+    Note the yellow points in the group, could indicate
+    accreted cluster.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgczvr.pgf}}
+    \caption{Similar graph as before, note the purples
+    and yellows near the big group.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{xysigv.pgf}}
+    \caption{Bird eye view of the plots before.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{xyvr.pgf}}
+    \caption{Bird eye view of the plots before.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{yvr.pgf}}
+    \caption{Potential counter-rotators? If Y and 
+    rotational velocity are opposite signs then 
+    possibly accreted.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{norm1.pgf}}
+    \caption{Radial velocity distribution.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{norm2.pgf}}
+    \caption{Dispersion velocity distribution.}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgcsigv1.pgf}}
+    \caption{Large range of dispersion velocity at a fixed
+    radius, indicating large variety of low mass and high 
+    mass stars (different hot and cold orbits).}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \scalebox{0.75}{\input{rgcvr1.pgf}}
+    \caption{Largely symmetric distribution of rotational 
+    velocity, showing lack of asymmetric disturbance in 
+    the galaxy. Dotted grey lines displaying $\mu = -4.7$
+    and $1\sigma$, $2\sigma$, $3\sigma$.}
+\end{figure}
+
+\begin{python}
+
+#Ensuring naming conventions for GCs match
+vbt.rename(columns={'#NGC':'ID'},inplace=True)
+def add_NGC(s):
+    return "NGC " + s
+vbt['ID'] = vbt['ID'].apply(add_NGC)
+
+#Dropping irrelevant columns in the dataset
+hp1 = hp1.drop(columns=["Name","RA","DEC","L","B","R_Sun"])
+hp2 = hp2.drop(columns=["E(B-V)","V_HB","(m-M)V","V_t","M_V,t","U-B","B-V","V-R","spt","ellip"])
+hp3 = hp3.drop(columns=["v_LSR","c","r_c","r_h","mu_V","rho_0","lg_tc","lg_th"])
+vbt = vbt.drop(columns=["Name","Method", "Figs", "Range","HBtype","R_G","M_V","v_e0","log_sigma_0"])
+
+#Ensuring values are represented in the same way
+hp1['ID'] = hp1['ID'].str.replace('"', '')
+hp2['ID'] = hp2['ID'].str.replace('"', '')
+hp3['ID'] = hp3['ID'].str.replace('"', '')
+vbt['ID'] = vbt['ID'].str.replace('"', '')
+
+hp1['ID'] = hp1['ID'].str.strip()
+hp2['ID'] = hp2['ID'].str.strip()
+hp3['ID'] = hp3['ID'].str.strip()
+vbt['ID'] = vbt['ID'].str.strip()
+
+#Merging into two dataframes, one with age and one without age
+df0 = pd.merge(hp1,hp2,on='ID')
+dfna = pd.merge(df0,hp3,on='ID')
+dfa = pd.merge(dfna,vbt,on='ID')
+\end{python}
+
+\newpage
+
+\begin{python}
+plt.scatter(
+    dfna['R_gc'],
+    dfna['sig_v'],
+    marker='x',
+    c=dfna['[Fe/H]']
+)
+
+plt.xlim(0,30)
+plt.xlabel("Galactic Radius (kpc)")
+cbar = plt.colorbar()
+cbar.set_label('[Fe/H]')
+plt.ylabel("Dispersion velocity (km/s)")
+plt.savefig("rgcsigv1.pgf", bbox_inches='tight', pad_inches=0.1)
+\end{python}
+
+\begin{python}
+# 1. Remove NaN values
+dfna_clean = dfna['sig_v'].dropna()
+
+# 2. Plot the histogram to visualize the distribution
+plt.hist(dfna_clean, bins=20, density=True, alpha=0.6, color='b', label='Binned Data')
+
+# 3. Fit a normal distribution and overlay the curve (Optional)
+mu, std = norm.fit(dfna_clean)  # Get mean and standard deviation
+xmin, xmax = plt.xlim()
+x = np.linspace(xmin, xmax, 100)
+p = norm.pdf(x, mu, std)
+plt.plot(x, p, 'k', linewidth=2, label='Normal Fit',linestyle='--')
+print(std)
+
+# 4. Add labels and show the plot
+plt.xlabel('Velocity Dispersion (km/s)')
+plt.ylabel('Density')
+plt.title('Binned Data and Normal Distribution Fit')
+plt.legend()
+plt.savefig("norm2.pgf", bbox_inches='tight', pad_inches=0.1)
+plt.show()
+\end{python}
+\end{document}
