@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Aim}{3}{section.2}%
+\contentsline {section}{\numberline {3}Method}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experimental Setup}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Constants and Systematic Uncertainty}{5}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Results}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Spring Constant}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pendulas in phase}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Pendulas in phase: Fourier Plots}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Pendulas out of phase}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Pendulas out of phase: Fourier Plots}{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Pendulas in beatmode}{12}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Pendulas in beatmode: Fourier Plots}{13}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Analysis}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Spring constant}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Coupled Pendula: In Phase}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Coupled Pendula: Out of Phase}{15}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Coupled Pendula: Beatmode}{15}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Discussion}{16}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{17}{section.7}%
+\contentsline {section}{\numberline {A}Pre-work}{17}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Theory}{17}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Experimental}{20}{subsection.A.2}%
+\contentsline {section}{\numberline {B}Lab Book}{21}{appendix.B}%
