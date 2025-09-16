@@ -6,4 +6,156 @@
 
 \section{Introduction}
 
-\end{document}
+\section{Theory}
+
+Atomic nuclei carry protons and neutrons, which both have a property known as spin angular momentum. Nuclei with non-zero spin possess a magnetic dipole moment, $\mu$, which is proportional to the spin angular momentum, $S$,
+
+\begin{equation} \label{eqn:1}
+    \vec{\mu} = \gamma \vec{S},
+\end{equation}
+
+where $\gamma$ is the gyromagnetic ratio, which is a constant that is unique to specific nuclei. 
+
+\subsection{Larmor Frequency}
+
+If we place this magnetic moment in a magnetic field, $\mathbb{B}$, it will experience a torque, $\mathbb{\tau}$ equal to $\mathbb{\mu} \times \mathbb{B}$, as the field rotates the dipole to be aligned. 
+But the magnetic moment has an angular momentum $\vec S$ directed perpendicular to the field, causing the magnetic dipole to precess around the direction of the magnetic field. The magnetic moment is now at 
+an angle of $\theta$ to the magnetic field, known as the angle of precession. The torque from the magnetic field will change the direction of the angular momentum of the magnetic moment so in a small time $t$ so, 
+
+\begin{equation}
+    \Delta S = \left(S \sin{\theta}\right)\left(\omega_0 \Delta t\right),
+\end{equation}
+
+where $\omega_0$ is the frequency of the precession, known as the Larmor frequency.
+
+The rate of change of the angular momentum is then
+
+\begin{equation}
+    \frac{dS}{dt}=\omega_0 S \sin{\theta}.
+\end{equation}
+
+This rate of change must be equal to the applied torque so, substituing in Equation \ref{eqn:1}
+
+\begin{align}
+    \tau &= \mu B \sin{\theta} = \omega_0 S \sin{\theta} \\
+    \omega_0 &= \frac{\mu}{S}B \\
+    &= \gamma B.
+\end{align}
+
+\subsection{Rotating frame of reference}
+We can transform our reference frame to one that is rotating at $\omega$ about $\mathbb{B}$, the apparent rate of change of $\omega$ is then 
+
+\begin{align} \label{eqn:2}
+    \frac{d\mu}{dt} &= \frac{\partial \mu}{\partial t} + \omega \times \mu \\
+    \frac{\partial \mu}{\partial t} &= \gamma \mu \times \left[\mathbb{B} - \frac{\omega}{gamma}\right] \\
+    &= 0 \: \: \: \: \text{for }\omega = \omega_0 = \gamma \mathbb{B}. 
+\end{align}
+
+We can see that if the rotating frame is rotating at the same speed as the Larmor frequency, the magnetic moment $\mu$, will appear stationary, hence resonance.
+
+\subsection{Magnetisation}
+
+Rather than just one magnetic moment, or one nucleus, we need to consider the whole magnetisation of the material, $M$,
+
+\begin{equation}
+    \mathbb{M}_0 = \left(\frac{\chi_0}{\mu_0}\right)\mathbb{B}.
+\end{equation}
+
+The static magnetisation $\mathbb{M}_0$ is the vector sum of all the magnetic moments from the individual nuclei. There should be a slight excess of nuclei with components of magnetic 
+moments parallel to $\mathbb{B}$ rather than anti-parallel, so there should be a net magnetisation $\mathbb{M}_0$ parallel to the magnetic field. In \bold{equilibrium}, there will be 
+no component of magnetisation perpendicular to the magnetic field. 
+
+If the magnetisation is perturbed, such that the magnetisation and the magnetic field are no longer aligned, the magnetisation will precess about the magnetic field, 
+
+\begin{equation} \label{eqn:3}
+    \frac{d\mathbb{M}}{dt}=\gamma \mathbb{M}\times\mathbb{B}.
+\end{equation}
+
+This precessing magnetisation can be detected if a coil was wrapped around the material. 
+
+\subsection{Effect of Radio Frequency Pulses}
+
+We need to first label our static magnetic field $B_0$, and place it along the z-axis, for simplicity sake, $\mathbb{B}=B_0\hat{\mathbb{z}}$. We want to now apply a plane-polarised, oscillating RF field of the form,
+
+\begin{equation}
+    \mathbb{B}_1(t) = 2B_1\cos{\omega t}\hat{\mathbb{x}}.
+\end{equation}
+
+This pulse can be decomposed into two counter-rotating components, where one component rotates opposite to the precessing magnetisation and because it is so far off resonance, can be ignored (averages out to zero). 
+If the frequency of the pulse to close to resonance, that is $\omega \approx \omega_0$, the rotating field will appear static in the rotating frame. Therefore, in this rotating frame, the magnetisation only 'sees' 
+the static vector $\mathbb{B}_1$. The magnetisation vector in the rotating frame will now begin to precess about $\mathbb{B_1}$ with angular frequency, $\omega_1 = \gamma B_1$, 
+
+\begin{equation}
+    \frac{\partial \mathbb{M}}{\partial t}=\gamma \mathbb{M}\times\mathbb{B}_1.
+\end{equation}
+
+If the rotating field is applied in the form of a pulse of duration $\tau_p$, then the angle of precession due to the rotating field will be 
+
+\begin{align}
+    \theta_p &= \omega_1\tau_p \\
+    &= \gamma B_1 \tau_p.
+\end{align}
+
+We can then select $\theta_p$ to change the direction of magnetisation by applying different pulses.
+
+\subsection{Bloch Equations}
+
+We can see that in Equation \ref{eqn:3}, that it lacks any effects for the relaxation of the magnetisation after the perturbation. Bloch added terms to this equation based on two conditions
+
+\begin{enumerate}
+    \item Recovery of z component of magnetisation $M_z$ back to its equilibrium value $M_0$ (in absence of perturbing RF field) with time constant $T_1$, representing the longitudinal or spin-lattice relaxation time. This time 
+    relates to the magnetisation exchanging energy back into the environment to achieve thermal equilibrium 
+    \item Decay of the transverse components of magnetisation $M_x$ and $M_y$ over a time scale, $T_2$, characterised by the spin-spin relaxation time. Note that, in practice, the applied magnetic field $B_0$ is not homogenous so 
+    spins in different parts of the material will precess at slightly different frequencies. Following a $90^\circ$ pulse, the magnetisation will de-phase, which has a time scale much shorter than $T_2$ so $T_2* < T_2$. The slightly 
+    different local effective fields result in a broadening or splitting of NMR spectrum into discrete resonance peaks. The FWHM of the peak is given by $\frac{1}{\pi}T_2*$.
+\end{enumerate}
+
+The Bloch equations are derived from the differential equations, 
+
+\begin{align}
+    \frac{dM_x}{dt} &= -M_y\omega_0 - \frac{M_x}{T_2} \\
+    \frac{dM_y}{dt} &= M_x\omega_0 - \frac{M_y}{T_2} \\
+    \frac{dM_z}{dt} &= \frac{\left(M_0-M_z\right)}{T_1}
+\end{align}
+
+which have solutions
+
+\begin{align} \label{eqn:4}
+    M_x(t) &= \left[M_x(0)\cos{\omega_0 t}+M_y(0)\sin{\omega_0 t}\right]e^{-t/T^2}\\
+    M_y(t) &= \left[M_x(0)\sin{\omega_0 t}-M_y(0)\cos{\omega_0 t}\right]e^{-t/T^2} \\
+    M_z(t) &= \left[M_z(0)-M_0\right] e^{-t/T_1} + M_0.
+\end{align}
+
+\section{Experimental Setup}
+
+\subsection{Different samples}
+In the case of solid materials and viscous liquids, with short intrinsic transverse relaxation times $T_2$, the spin-spin relaxation fuynction can be determined directly from the FID or spectrum. However for non-viscous liquids, where 
+the FID signal is affected by the magnetic field inhomogeneities, leading to a transverse relaxation time characterised by $T_2*$.
+
+\subsection{Measuring the characteristic times}
+
+To measure $T_1$, we use a pulse sequence by first perturbing the magnetisation (aligned with the z-axis), with either a $90^\circ$ or $180^\circ$ pulse, then letting the magnetisation recover over time $\tau$. After $\tau$, the magnetisation 
+is 'read out' by applying a $90^\circ$ pulse and recording the FID. 
+
+In the first case, where we first perturb with a $90^\circ$ pulse (saturation recovery), we want to equalise the populations of states, corresponding to an infinite spin temperature state. During the relaxation delay $\tau$, the transverse 
+magnetisation de-phases and the longitudinal component recovers, so the FID amplitude,
+
+\begin{equation}
+    M_z(\tau)=M_0\left(1-e^{-\tau/T_1}\right).
+\end{equation}
+
+To help us obtain $T_1$, we can make an approximation, in liquid-like samples and biological materials, 
+
+\begin{equation}
+    M_y(t)=M_z e^{-t/T_2*}.
+\end{equation}
+
+In the case of starting with a $180^\circ$ pulse (inversion recovery), the sequence reverses the initial state populations and sample magnetisation, corresponding to a state of negative spin temperature. Following the $90^\circ$ pulse after 
+recovery time $\tau$, the magnetisation recovers according to 
+\begin{equation}
+    M_z(\tau)=M_0\left(1-2e^{-\tau/T_1}\right).
+\end{equation}
+
+Here, $M_z$ will pass through zero when $\tau = T_1 \ln(2)$.
+
+\end{document} 
