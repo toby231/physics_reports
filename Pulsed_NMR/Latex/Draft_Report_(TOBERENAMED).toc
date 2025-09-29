@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Theory}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Larmor Frequency}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Rotating frame of reference}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Magnetisation}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Effect of Radio Frequency Pulses}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bloch Equations}{4}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Experimental Setup}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Finding FID signal}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Different samples}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Measuring the characteristic times}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Apparatus}{7}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Receiver Module}{7}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Synthesiser}{7}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}The Permanent Magnet and LC Circuit}{7}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Uncertainty Analysis}{8}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Experimental Results}{9}{section.4}%
+\contentsline {section}{\numberline {5}Discussion}{9}{section.5}%
+\contentsline {section}{\numberline {6}Appendix}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Pre-lab questions}{9}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Question 1}{9}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Question 2}{10}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Question 3}{10}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}Question 4}{10}{subsubsection.6.1.4}%
