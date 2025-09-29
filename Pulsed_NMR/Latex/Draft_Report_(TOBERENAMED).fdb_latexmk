@@ -1,8 +1,15 @@
 # Fdb version 4
-["pdflatex"] 1759114237.98018 "/Users/tobynguyen/Documents/physics_reports/Pulsed_NMR/Latex/Draft_Report_(TOBERENAMED).tex" "Draft_Report_(TOBERENAMED).pdf" "Draft_Report_(TOBERENAMED)" 1759114239.25829 0
+["pdflatex"] 1759141373.42966 "/Users/tobynguyen/Documents/physics_reports/Pulsed_NMR/Latex/Draft_Report_(TOBERENAMED).tex" "Draft_Report_(TOBERENAMED).pdf" "Draft_Report_(TOBERENAMED)" 1759141374.76801 0
   "../../preamble.tex" 1758019890.65284 995 1dfe62936fb7679061c1e4a82f46e511 ""
-  "../Figures/goodtime.png" 1759110146.79361 41088 2b2f2976579f05dca3451d4f59e09ab6 ""
-  "/Users/tobynguyen/Documents/physics_reports/Pulsed_NMR/Latex/Draft_Report_(TOBERENAMED).tex" 1759114237.83911 20651 42f7c9fb3dabe1c3038bf58ac8053365 ""
+  "../Figures/Lab Book-1.jpg" 1759141241 699426 7fcf2995812d23d6acf3b5897d658737 ""
+  "../Figures/Lab Book-2.jpg" 1759141241 696206 3fdebb7bb651ccf5f7625fc51f132ff9 ""
+  "../Figures/Lab Book-3.jpg" 1759141241 685233 1a06ea9800bcc74927fcebfed0960fbf ""
+  "../Figures/Lab Book-4.jpg" 1759141205 545716 df8260bf541d69f348b7618902d494de ""
+  "../Figures/badpulselength.png" 1759136677.69867 48005 b1964919ae483b5457a601713da653b9 ""
+  "../Figures/badtime.png" 1759115746.63519 26786 8f8612613f99536a7767b047c3a66805 ""
+  "../Figures/goodpulselength.png" 1759136409.28732 44233 c2c83bffd8e9f2d7e564b9e0be836bc2 ""
+  "../Figures/goodtime.png" 1759115711.24614 41088 2b2f2976579f05dca3451d4f59e09ab6 ""
+  "/Users/tobynguyen/Documents/physics_reports/Pulsed_NMR/Latex/Draft_Report_(TOBERENAMED).tex" 1759141371.84844 30980 adf5fef9ed9a8e19d7d516535f3a855a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc" 1699652218 3877 2ca811886181a05a861d20a35de75e06 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1698694482 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
@@ -260,10 +267,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1717067784.25712 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1717067653 8221424 4e180d915e995e8ddc03894eb3fdc21f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Draft_Report_(TOBERENAMED).aux" 1759114239.13383 3719 d6b5feababe5639694e74ac7db3427f9 "pdflatex"
-  "Draft_Report_(TOBERENAMED).out" 1759114239.13451 3421 7cdfb56f44876fd9ecd4244230476ea6 "pdflatex"
-  "Draft_Report_(TOBERENAMED).tex" 1759114237.83911 20651 42f7c9fb3dabe1c3038bf58ac8053365 ""
-  "Draft_Report_(TOBERENAMED).toc" 1759114239.13469 1990 de8674cde0184b06963ce59b6e20d4b0 "pdflatex"
+  "Draft_Report_(TOBERENAMED).aux" 1759141374.62984 7763 015489ebf8e042bc7b1db88a492bc1d5 "pdflatex"
+  "Draft_Report_(TOBERENAMED).out" 1759141374.6308 3522 1e872ee978da7a765df2a2cf3b8244a6 "pdflatex"
+  "Draft_Report_(TOBERENAMED).tex" 1759141371.84844 30980 adf5fef9ed9a8e19d7d516535f3a855a ""
+  "Draft_Report_(TOBERENAMED).toc" 1759141374.63099 2069 7f33c32fde259c243ab5c44b8f4a46e5 "pdflatex"
   (generated)
   "Draft_Report_(TOBERENAMED).aux"
   "Draft_Report_(TOBERENAMED).log"

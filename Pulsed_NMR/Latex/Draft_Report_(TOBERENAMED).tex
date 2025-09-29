@@ -6,6 +6,14 @@
 
 \section{Introduction}
 
+Nuclear magnetic resonance (NMR) is when a nuclei is placed in a strong constant magnetic field but then a weaker oscillating magnetic field is applied. The nuclei then 
+produces an electromagnetic signal with a frequency characteristic to the magnetic field at the nucleus. When the oscillation of the appleid magnetic field is near 
+the instrinsic oscillation frequency of the nuclei, resonance is achieved. The electromagnetic signal can then be read and thus the structure of the matter can be determined.
+
+The most prominent use of NMR technology is in medicine. The magnetic resonance imaging or MRI machine is one of the most important inventions in the last 100 years, advancing
+the field and the health care system significantly. Generally, NMR spectroscopy is used everywhere to determine physical, chemical, electronic and structural 
+information about nuclear spins in various samples. 
+
 \section{Theory}
 
 Atomic nuclei carry protons and neutrons, which both have a property known as spin angular momentum. Nuclei with non-zero spin possess a magnetic dipole moment, $\mu$, which is proportional to the spin angular momentum, $S$,
@@ -318,14 +326,105 @@ so the statistical error contribution would be $\pm 0.25 \: \mu$s.
 
 \section{Experimental Results}
 
-We successfully obtained a value for $T_2^*$ by producing a FID seen in Figure \ref{fig:goodtime} below.
+Rather than describing the experiments, we will focus more on what we did and what went wrong. Firstly, we successfully obtained a value for $T_2^*$ 
+by producing a FID seen in Figure \ref{fig:goodtime} below. Fitting the curve to the data, our estimated value for $T_2^*$ is 3.51 $\pm0.02$. 
 
 \begin{figure} [H]
     \centering
     \includegraphics[width = 0.8\textwidth]{../Figures/goodtime.png}
+    \caption{This is a voltage vs time graph clearly displaying a FID curve with a sharp peak. We find that 
+    because of our low signal, the 10 mV noise is apparent in the plot. This is reflected in the statistical 
+    error obtained by the fitting curve. The standard error for the amplitude parameter was 8\% and the error 
+    for $T_2^*$ was 0.6\%. We find that the slope is quite accurately fitted whereas the amplitude has more 
+    variation, which aligns with the visual from the graph.}
+    \label{fig:goodtime}
 \end{figure}
 
+However, the manual for this experiment expects our value for $T_2^*$ to be greater than 5 and so we realised our set up for this FID was not optimal, i.e 
+our signal strength was too weak. The reason for this being the time of decay of the transverse magnetisation will increase if we had more inital spins 
+magnetised in the direction of our magnet. We had not realised we needed to increase the signal at this time, so we proceeded with the subsequent experiment.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/badpulselength.png}
+    \caption{The peak FID amplitude displays a sinusoidal relationship with the duration of the pulse. We find that the signal is particularly weak as 
+    near the points of interest, i.e the peak and troughs of the graph and the point at which the amplitude is zero, we find more varying behaviour. We find 
+    that the standard error in the frequency of the graph is 6\% using the curve fit parameters. The extrema of the graph occur when the pulse length is 2.52 $\mu$s
+    and 7.59 $\mu$s.}
+    \label{fig:badpulselength}
+\end{figure}
+
+Figure \ref{fig:badpulselength} shows a clear sinusoidal relationship. It had taken us many hours to get to this point because we could always tell the synthesiser 
+was not on resonance if the FID amplitude would not go to zero near 5 $\mu$s. Most of the time, when we were tuning the synthesiser, the FID amplitude would go near 
+zero, but never zero as we were off resonance and so there was always inherent changing magnetisation, regardless of pulse length, as per Equation \ref{eqn:2}. Once 
+we achieved this sine curve, or at least a curve that supposedly went to zero, we were unsure as to why it was not as smooth as a sine curve. The extrema points 
+obtained were 2.52 $\pm 0.15$ and 7.59 $\pm 0.46$ $\mu$s, which agree with expected results given in the manual. However, the large standard errors were a worry.
+One of the things we checked was the scale of the oscilloscope and we realised that we were not exactly at zero throughout the sweep. Therefore, we were not at 
+resonance and so the search for resonance started again. We increased the signal and the driving frequency and then obtained the same plot, with 10 times the 
+original signal.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/goodpulselength.png}
+    \caption{Same plot as before but with 10x the signal. We find a smoother relationship visually. We find our standard error for the frequency of the graph 
+    goes down to 5\%. The behaviour around the extrema are less chaotic due to higher signal to noise. The corresponding pulse length values are 2.48, 5.02 and 
+    7.47 $\mu$s for $90^\circ$, $180^\circ$ and $270^\circ$ respectively.}
+    \label{fig:goodpulselength}
+\end{figure}
+
+There is clearly a smoother relationship between the peak amplitudes and the pulse length and so this was a much more certain result for the sweep. We found 
+the peak amplitude for the FID actually went to 0 at 5 $\pm 0.25\:\mu$s and so were satisfied with the result. However, we then checked the FID decay curve for 
+the $90^\circ$ pulse length. Upon closer inspection we found the curve shown in Figure \ref{eqn:badtime}.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/badtime.png}
+    \caption{Comparing with the previous FID curve, we find this to be 10x the signal again. However this time, there is a large dip right after the decay 
+    of the curve. This does not impact the FID curve directly however pulses after this initial curve would not be read correctly.}
+    \label{fig:badtime}
+\end{figure}
+
+There is a large, non-negligible dip after the FID curve, and the FID curve itself is incredibly short. Despite the increase in signal to noise, we found that 
+our $T_2^*$ value decreased drastically to 3.02 $\pm 0.04 \: \mu$s, suggesting that the curve itself has been 'eaten' up by the dip. We believe that the increase 
+in signal had caused our receiver to not recover in time, or saturate.
+
 \section{Discussion}
+
+Since there really is not an overaching story here, or path of discovery about pulsed nuclear magnetic resonance, I will use this section to dot point our pain 
+points and thoughts. The lab book in appendix will detail our thoughts on the day. We completed this lab over 2 days, in the first day, we had very little 
+knowledge of what the lab entailed, outside of the theory. On the second day, after reading the manual, we had a good understanding of the instruments and apparatus 
+used.
+
+\begin{enumerate}
+    \item The first thing we noticed going into the lab on the second day was that our sample volume was much larger than suggested. 
+    We had not picked this up on the first day hence why we believe things did not work on the first day. It is important that the 
+    sample lies within the effects of the sample coil as too much sample would lead to spins resisting magnetisation, potentially 
+    introducing unnecessarily friction.
+    \item Over the week, we realised that the only important thing in this experiment was to get the synthesiser to resonant frequency. 
+    It is important to optimise all components of the equipment however in terms of being able to achieve results, especially in the second 
+    experiment, we needed to drive the setup at the Larmor frequency. It seems simple but this one condition became the bane of the experiment.
+    \item Once we had decreased the volume of the sample, we changed the synthesiser frequency to 21.3 MHz, as this maximised the amplitude of 
+    the signal. However, this would not be resonant frequency as the FID curve would not go to zero when the pulse duration was supposedly at 
+    $180^\circ$. All we did was tune the synthesiser frequency to the frequency of the capacitors.
+    \item The capacitors did not play a role in finding resonant frequency, they served the exact same function as the variable gain amplifier,
+    all they did was maximise signal. We naively spent so much wasted time tuning the capacitors before achieving resonant frequency of the 
+    synthesiser and so we managed to tune them to the same frequency but it was not the Larmor frequency.
+    \item We realised that we could use one of the outputs of the synthesiser to help us find resonant frequency. The synthesiser demodulates 
+    the signal by multiplying it by the reference signal that we choose. We achieve resonant frequency when the beating between these two 
+    frequencies is 0 which is given by one of the outputs from the synthesiser. The synthesiser was then tuned to when this beat was zero and finally 
+    we had achieved a sine curve, or atleast the FID amplitude going to zero. However, we realised soon that our oscilloscope's scale was too high and 
+    so it was not actually resonant frequency. At this point in time, we tuned it to 21.87 MHz.
+    \item The reason we were unsure of our previous frequency was because our $T_2^*$ could never get close to 5, it was always 4.26 and below no 
+    matter how optimal our magnetic field gradients were. This was another pain point, the magnetic field gradients were so difficult to use and 
+    there was no clear direction in how they should be tuned. The manual provided little help here.
+    \item We finally tuned our synthesiser to 21.89 MHz and found a perfect sine curve shown in experimental results. Now, we ran into the problem 
+    of having not enough signal for Experiment 3. The second pulses were way too small for a good reading and so we started to play with the capacitors
+    again. We tuned the capacitors to the point where we could achieve 40 peak to peak voltage however, once we looked at the FID curve, we found that 
+    the FID curve saw a large dip after the decay, hinting at instrument saturation.
+    \item After this time, it had been a couple of hours since we achieved the sine curve, and with so much time passing, our set up was now out of 
+    resonance. We could not replicate that sine curve again. The last hours in this experiment were spent trying to achieve the resonance we once had, 
+    even trying the old methods however we could not get it again.
+\end{enumerate}
 
 \section{Appendix}
 \subsection{Pre-lab questions}
@@ -384,4 +483,25 @@ We use Equation \ref{eqn:chem_shift}, with the reference frequency being 20.0000
     &= 5 \text{ ppm.}
 \end{align*}
 
+\subsection{Lab Book}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/Lab Book-1.jpg}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/Lab Book-2.jpg}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/Lab Book-3.jpg}
+\end{figure}
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{../Figures/Lab Book-4.jpg}
+\end{figure}
 \end{document} 
