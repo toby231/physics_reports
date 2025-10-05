@@ -1,0 +1,85 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{11}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Canon}(2025)}]{canon}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Canon}},\ }\href@noop {} {\bibinfo {title} {{Canon Science Lab - Photographs}}},\ \bibinfo {howpublished} {Company article} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Reece}(2024)}]{reece1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Reece}}} (\bibinfo {year} {2024}),\ \bibinfo {note} {{UNSW Physics Lecture}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gabor}(1971)}]{gabor}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Gabor}}} (\bibinfo {year} {1971}),\ \bibinfo {note} {{Nobel Lecture}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gabor}(1949)}]{gaboring}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Gabor}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Research Laboratory, British Thomson-Houston Comapny Ltd.}\ } (\bibinfo {year} {1949})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Leith}\ and\ \citenamefont {Upatnieks}(1962)}]{leithupatnieks}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~N.}\ \bibnamefont {Leith}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Upatnieks}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of the Optical Society of America}\ }\textbf {\bibinfo {volume} {52}} (\bibinfo {year} {1962})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stroke}\ and\ \citenamefont {Halioua}(1970)}]{stroke}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~W.}\ \bibnamefont {Stroke}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Halioua}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physics Letters}\ }\textbf {\bibinfo {volume} {33A}} (\bibinfo {year} {1970})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pepper}(2021)}]{pepper}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Pepper}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Guggenheim New York}\ } (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pribram}(1971)}]{pribram}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Pribram}},\ }\href@noop {} {\emph {\bibinfo {title} {Languages of the Brain: Experimental Paradoxes and Principles in Neuropsychology}}},\ edited by\ \bibinfo {editor} {\bibnamefont {Prentice-Hall}}\ (\bibinfo  {publisher} {Wadsworth},\ \bibinfo {year} {1971})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hooft}(2000)}]{hooft}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Hooft}}} (\bibinfo {year} {2000}),\ \bibinfo {note} {opening Lecture}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huygens}(1690)}]{huygens}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Huygens}},\ }\href@noop {} {\emph {\bibinfo {title} {Traité de la lumière}}}\ (\bibinfo {year} {1690})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Crew}\ \emph {et~al.}(1900)\citenamefont {Crew}, \citenamefont {Huygens}, \citenamefont {Young}, \citenamefont {Fresnel},\ and\ \citenamefont {Arago}}]{fresnel}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Crew}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Huygens}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Young}}, \bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Fresnel}},\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Arago}},\ }\href@noop {} {\emph {\bibinfo {title} {The wave theory of light: memoirs of Huygens, Young and Fresnel}}}\ (\bibinfo  {publisher} {New York, Cincinnati American Book Company},\ \bibinfo {year} {1900})\BibitemShut {NoStop}%
+\end{thebibliography}%

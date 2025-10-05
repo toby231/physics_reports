@@ -1,8 +1,30 @@
-\documentclass{article}
-\newcommand{\exptitle}{Holography}
-\newcommand{\course}{PHYS3117 - Physics Laboratory}
+\documentclass[aps,prl,reprint,10pt,amsmath,amssymb,superscriptaddress,a4paper]{revtex4-2}
+\usepackage{graphicx} % Graphics package
+\usepackage{dcolumn} % Double column package
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[margin=2cm]{geometry} % Sets 2cm margins
+\usepackage{datetime} % Package for automatic date & time
+\usepackage{subfig}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pythonhighlight}
 
-\input{../../preamble.tex}
+\setcitestyle{authoryear,round}
+
+\begin{document}
+
+\title{Holograhy}
+
+\author{T. Nguyen (z5416116)}
+\affiliation{UNSW PHYS3117 - Physics Laboratory}
+\date{\currenttime~\today}
+
+\begin{abstract}
+The aim of this experiment is to verify the past observations of previous experiments and differentiate between the acousto-optic modulator and deflector. We investigated the difference between acousto-optic modulators and deflectors through analysing the Klein-Cook parameter, 
+finding that the acoustic width of the crystal in the instrument determined the regime in which the acousto-optic 
+effect was operating in. Exploring the various relationships between light and the angle enabled us to develop a more well rounded understanding of the Bragg and Raman-Nath regimes.
+\end{abstract}
+
+\maketitle
 
 \section{Introduction}
 
@@ -17,7 +39,7 @@ Holography is a technique for imaging scenes that captures and retains all infor
 principle of holography was discovered by accident by Dennis Gabor in 1947, when he was developing better imaging techniques in 
 electron microscopy. On a fateful Easter day, he came up with the idea to take a picture that contains the whole information, and 
 then correct it by optical means \citep{gabor}. Realising that in ordinary photography, phase is lost, he added a coherent background, 
-or a 'reference wave' that he could use to compare with the object wave, to produce fringes on an interference pattern.
+or a `reference wave' that he could use to compare with the object wave, to produce fringes on an interference pattern.
 
 Due to the limitations in his era, Gabor ran into a strange effect in his initial experiments \citep{gaboring}. Some parts of the 
 object became much brighter than the coherent background at an angle in-line with the imaging plane. The effect looked like a focusing 
@@ -28,7 +50,7 @@ the object, and the reference beam, which was done after the invention of the la
 At this point in time, holography had not yet been able to capture the spectacular 3D images we see today. To see the hologram, Gabor 
 had to focus the field through a microscope or a short-focus eyepiece, enough to reconstruct the image but the area was not large enough 
 to see the image's depth and angular behaviour. It was not until the improvement of the laser to helium-neon as well as bleached or 
-'phase' holograms that one could have the impression of peering through a window to look at the object itself.
+`phase' holograms that one could have the impression of peering through a window to look at the object itself.
 
 The first large image capturing took place in 1970 of a statue of Abraham Lincoln \citep{stroke}. Since then, holography had become a 
 niche artistic medium. Whether or not it is a relevant creative medium is outside the scope of this report but it is important to note 
@@ -38,7 +60,7 @@ taught others how to do so.
 
 The most challenging component is not the interpretation of the art but its implementation and creation involving high powered lasers 
 and equipment not available to the average person. With stronger collaborations between artists and scientists may this medium of 
-creativity flourish \citep{Pepper}.
+creativity flourish \citep{pepper}.
 
 The culmination of physics, art, medicine and philosophy comes with a remark made by Gabor in his Nobel lecture. He brought up the idea 
 that diffuse holograms were a disturbed memory, drawing between the similarities with the noise in creating holograms to the fragmentation 
@@ -51,5 +73,37 @@ to the creation of a holographic photograph where a 3D object is projected onto 
 principle concerns itself with a description of particle states in the near vicinity of a black hole.
 
 \section{Theory}
+
+Light is an electromagnetic wave and therefore, its behaviour governed by Maxwell's equations. We could treat our physics this way and continuously 
+solve the equations for a set of boundary conditions however it would be tedious and difficult to obtain. Often, optical problems are treated 
+with Huygens-Fresnel theory. The link back into Maxwell's electromagnetic theory can be made when considering Kirchhoff's diffraction theory \citep{reece1}.
+
+\subsection{Huygens-Fresnel construction}
+
+Competing with Newton's corpuscle theory of light in the 17th century, was a primitive version of the wave theory of light we see today \citep{huygens}.
+Huygens' construction of light involved a series of irregular shock waves with great but finite velocity through the ether. The model we will be using 
+is the second part, where each point of the wavefront is itself the origin a secondary spherical wave. Later on, in 1818, following Thomas Young's interference 
+experiment, Fresnel showed that Huygens' construction was itself, an interference of waves and therefore could explain the rectilinear propagation of 
+light and also diffraction effects \citep{fresnel}.
+
+The optical wave functions can be written simply as 
+
+\begin{equation}
+    U(r,t) = Ae^{i(kr-\omega t)}.
+\end{equation}
+
+We can see that, despite the lack of true vector representation and Maxwell rigor, our scalar wave function still comprises of an amplitude and a phase. 
+The corresponding intensity of the wave function would be the magnitude of this function, 
+
+\begin{equation}
+    I(r,t) = U(r,t)U^*(r,t) = |A|^2.
+\end{equation}
+
+\subsubsection{Assumptions}
+
+
+
+\bibliographystyle{apsrev4-2}
+\bibliography{../Notes/references}
 
 \end{document}
