@@ -6,9 +6,6 @@
 \usepackage{datetime} % Package for automatic date & time
 \usepackage{subfig}
 \usepackage[hidelinks]{hyperref}
-\usepackage{pythonhighlight}
-
-\setcitestyle{authoryear,round}
 
 \begin{document}
 
@@ -35,17 +32,26 @@ pattern is then focused through a lens onto a local image plane \citep{reece1}. 
 relies on Fourier optics and the intensity of light reflected from the object. Therefore, the information about the incident light's 
 phase is lost.
 
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/holography_principle.png}
+    \caption{Source: Gabor's Nobel Lecture - Diagram showing the adjustment Leith and Upatnieks made after the invention of the laser. They 
+    could illuminate the object and insert the reference beam off-axis, producing the conjugate image out of frame of the film.}
+    \label{fig:holography_principle}
+\end{figure}
+
 Holography is a technique for imaging scenes that captures and retains all information of the scene and projects it onto film. The 
 principle of holography was discovered by accident by Dennis Gabor in 1947, when he was developing better imaging techniques in 
 electron microscopy. On a fateful Easter day, he came up with the idea to take a picture that contains the whole information, and 
 then correct it by optical means \citep{gabor}. Realising that in ordinary photography, phase is lost, he added a coherent background, 
 or a `reference wave' that he could use to compare with the object wave, to produce fringes on an interference pattern.
 
+
 Due to the limitations in his era, Gabor ran into a strange effect in his initial experiments \citep{gaboring}. Some parts of the 
 object became much brighter than the coherent background at an angle in-line with the imaging plane. The effect looked like a focusing 
 of the reference beam onto an image of the object on the opposite side of the film. This is known as the conjugate image and is a 
 result of the first order diffraction of the reference beam. This effect can be removed by separating the illuminating beam used on 
-the object, and the reference beam, which was done after the invention of the laser in 1961, \citep{leithupatnieks}.
+the object, and the reference beam, which was done after the invention of the laser in 1961, pictured in Figure \ref{fig:holography_principle}
+, \citep{leithupatnieks}.
 
 At this point in time, holography had not yet been able to capture the spectacular 3D images we see today. To see the hologram, Gabor 
 had to focus the field through a microscope or a short-focus eyepiece, enough to reconstruct the image but the area was not large enough 
@@ -62,11 +68,23 @@ The most challenging component is not the interpretation of the art but its impl
 and equipment not available to the average person. With stronger collaborations between artists and scientists may this medium of 
 creativity flourish \citep{pepper}.
 
+\begin{figure} [h]
+    \includegraphics[width=8cm]{../Figures/bragg_condition.png}
+    \caption{Incident light is reflected off phase gratings separated by distance $d$. The reflected waves have a path difference of $d\sin{\theta}$.}
+    \label{fig:bragg_condition}
+\end{figure}
+
 The culmination of physics, art, medicine and philosophy comes with a remark made by Gabor in his Nobel lecture. He brought up the idea 
 that diffuse holograms were a disturbed memory, drawing between the similarities with the noise in creating holograms to the fragmentation 
 of human memories. It is an exciting question that gave birth to the Holonomic Brain Theory \citep{pribram}. The model describes the brain 
 as a holographic storage network where pieces of long-term memory is distributed over a dendritic arbor. The model has served being a 
 foundation for many other quantum models of the brain ever since.
+
+Of course, holography is significant in the field of physics and electronics. Holography has uses in imaging, due to its ability to store high 
+resolution data. It also has the ability to produce lensless Fourier images which has use cases in signal processing as well. There are holographic 
+diffraction gratings, scanners, filters and other optical elements such as in head-up displays and beam shaping, which is more and more relevant 
+due to advancements in augmented-reality. Its high capacity of storage sees its influences in networks, memories and neural networks, enabling 
+higher processing speeds. There has also been a massive uptick in computer-generated holography \citep{hariharan}.
 
 Finally, the last item of note for holography would be the development of The Holographic Principle \citep{hooft}. The core idea is analogous 
 to the creation of a holographic photograph where a 3D object is projected onto a 2D plane where all information is retained. In this case, the 
@@ -86,7 +104,14 @@ is the second part, where each point of the wavefront is itself the origin a sec
 experiment, Fresnel showed that Huygens' construction was itself, an interference of waves and therefore could explain the rectilinear propagation of 
 light and also diffraction effects \citep{fresnel}.
 
-The optical wave functions can be written simply as 
+The optical wave functions can be written simply (under appropriate assumptions) as 
+
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/diff_transmission.png}
+    \caption{If we consider $\theta$ as our angle of the incident light. $\theta=0^\circ$ corresponds to in-line transmission hologram. When $0^\circ < \theta < \approx80^\circ$, the transmission hologram is known as 
+    a plane hologram. When $\approx80^\circ < \theta \leq 360^\circ$, the hologram is known as a volume hologram. Source: Ohio State University \citep{ohio}}
+    \label{fig:diff_tranmission}
+\end{figure}
 
 \begin{equation}
     U(r,t) = Ae^{i(kr-\omega t)}.
@@ -102,6 +127,470 @@ The corresponding intensity of the wave function would be the magnitude of this 
 \subsubsection{Assumptions}
 
 
+For the Fresnel additions to Huygens theory, we have to approximate the behaviour of the wave to make the mathematics less complicated. A full rigorous 
+treatment can be done using Kirchhoff diffraction theory and using Maxwell's equations. In our wavefront construction, we have to assume that the wavelength 
+of light is much smaller than any optical components we use \citep{born_and_wolf}. The second assumption we must apply is that the obliquity factor $\chi = 
+1+\frac{\cos{\theta}}{2}$ is approximately unity near the optical axis of the light, known as the paraxial approximation \citep{Paschotta_2007_paraxial_approximation}.
+If these two conditions are met experimentally, then we can use scalar diffraction theory to analyse our setup.
+
+For holography, we require the light used for the reference beam, and hence the object beam must be singular coloured and coherent. The reason being that since we are 
+comparing the phase shifts in our splitted beam, any incoherence or small changes in the phase will reflect significantly on the output of the hologram. The only candidate 
+for this requirement is the laser.
+
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/layering.png}
+    \caption{Volume transmission and reflection gratings and associated vector diagrams \citep{kogelnik2}}.
+    \label{fig:layering}
+\end{figure}
+
+\subsection{Fresnel Regime}
+One assumption we have not discussed is the optical regime that we are working in. The holography setup, by design must be in the Fresnel, near field diffraction 
+regime. This is because in this region, the phase of the light is still reflected in the curvature of the wavefronts. If we were to go out to the far field, the 
+waves would become planar and the information in the curvature and thus phase, would be lost. However, we would still get a mainly 2D image from the diffraction pattern, 
+performing a lensless Fourier transform.
+
+
+The laser is technically a Gaussian beam however if we are working 
+near the waist of the beam then we can approximate it to be a plane wave \citep{eden}. Once the laser is reflected by the object, we have to consider that each 
+point that is reflecting the laser now originates a secondary spherical wavefront \citep{givens}. It is this difference between the waves that allow us to exploit 
+their interference at the observation plane.
+
+\subsection{Zone plate model}
+
+There are two main models that explain the principle of holography. There is a geometric interpretation, developed by Dr Tung H. Jeong of Lake Forest college in Illinois \citep{jeong}.
+It is considerably easier to understand and therefore proves to be useful heuristically. However, we want to apply our wavefront construction and derive the holography 
+equation more rigorously. The basis for the zone plate model of holography comes from the diffraction pattern of a singular point particle in the near field. The 
+zone plate has a circular primary focus (bright zone), corresponding to the zeroth order and higher circular foci that corresponds to powers which are odd integer multiples of the primary power \citep{rogers}.
+These concentric rings are known as Fresnel zones. We can extend this singular pattern for a whole extended scene and interpret the resultant interference pattern as a 
+superposition of all these point patterns from the extended scene.
+
+\subsection{Recording the total field}
+
+To create our interference pattern, we need to consider the scalar wave functions for the object and reference beams. The reference beam will be put through a lens or a spatial filter,
+therefore transforming the planar waves into spherical wavefronts. The reflected laser for the object beam is also put through another lens and then is spread out, turning the beam into 
+spherical wavefronts. We have to modify our optical wave function to a monochromatic spherical wave function,
+
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/lippmann.png}
+    \caption{Gabriel Lippmann's method of photography}
+    \label{fig:lippmann}
+\end{figure}
+
+\begin{equation}
+    U(r,t) = \frac{A}{r}e^{i(kr-\omega t)}.
+\end{equation}
+
+We will define the reference beam wave function as $R(x,y) = \frac{|R|}{r}e^{i\phi(x,y)}$ and the object beam, $O(x,y) = \frac{|O|}{r}e^{i\psi(x,y)}$ on the observation screen. The intensity of the light at the plate is then 
+
+\begin{widetext}
+\begin{align} \label{eqn:intensity_object_field}
+    I(x,y) &= \left(R(x,y) + O(x,y)\right)\left(R(x,y) + O(x,y)\right)^* \\
+    &= \left(\frac{|R|}{r}e^{i\phi(x,y)} + \frac{|O|}{r}e^{i\psi(x,y)}\right)\left(\frac{|R|}{r}e^{i\phi(x,y)} + \frac{|O|}{r}e^{i\psi(x,y)}\right)^* \nonumber \\
+    &= \frac{1}{r^2}\left(|R|^2 + |O|^2 + 2|R||O|\cos{(\phi(x,y)-\psi(x,y))}\right) \nonumber
+\end{align}
+\end{widetext}
+
+Here we can clearly our Fresnel near field approximation. The $\frac{1}{r^2}$ amplitude term can be approximated, via the Taylor expansion, to be
+\begin{equation}
+    \frac{1}{r^2} \approx \frac{1}{z^2}\left(1-\frac{x^2+y^2}{z^2} + ...\right) 
+\end{equation}
+
+where $z$ is the distance from the object/source of reference beam to the plate. We can see that if $x^2 + y^2 \ll z^2$, the second term falls off. The leading 
+term is then constant across the plate and only depends on the longitudinal distance.
+
+Returning to our intensity formula, we can see that the intensity on the screen depends on the phase difference between the two beams, varying based on the position 
+on the screen. Therefore, we would see an interference pattern on the plate with the two beams. To encode this pattern, the plate or film will trigger chemical reactions 
+based on the intensity of the amplitude to change the opacity of the film. The opacity of the film is then 
+
+\begin{equation}
+    \text{Film Opacity} = c\cdot I(x,y).
+\end{equation}
+
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/denisyuk.png}
+    \caption{The experimental set up diagram shows a laser passing through an optical isolator to ensure planar wave. A shutter is used to control when the film is exposed and for 
+    how long. In exposure, the shutter is open and passing to a mirror that directs the beam to a spatial filter. The perpendicular set up is not important and is merely drawn for 
+    convenience of bench space. The spatial filter spreads out the planar wave and illuminates the plate and the object behind it. The reflected light from the object will hit the 
+    plate from the opposite side of the illuminating light. The plate will absorb $\approx 10\%$ of the beam and so the reflected light will be much lower in intensity compared to 
+    the reference beam.}
+    \label{fig:denisyuk}
+\end{figure}
+
+\subsection{Reconstruction}
+To reconstruct the wave we need to pass a reference beam through the film on the other side. The resultant field that is observed is then 
+
+\begin{widetext}
+
+\begin{equation}
+    \text{Hologram optical field} = R(x,y) \cdot (1 - \text{Film Opacity}) = R(x,y) \cdot (1 - c \cdot I(x,y)).
+\end{equation}
+
+It is more revealing if we utilise the factored form of the intensity of the plate, so 
+    \begin{align}
+        \text{Hologram optical field} &= R \cdot (1 - c(R+O)(R^*+O^*)) \\
+        &= R - c((|R|^2+|O|^2)\cdot R + |R^2| \cdot O + |R|^2 \cdot O^*) \nonumber 
+    \end{align}
+\end{widetext}
+
+Here, we find that reconstruction of the field comes in the form of our reference beam's field being dimmed out by a pattern formed by the object wave. The first and 
+second term represents the reference beam that we are using to shine through the film to illuminate the pattern. The third term is the object wave field and its that field 
+that encodes the 3D scene. The last term is the conjugate image, it is the strange aberration that Gabor saw in his initial experiments, and it is the term that can be ignored 
+if we angle the reference beam away from the optical axis.
+
+\subsection{Bragg Condition}
+
+To encode the intensity field in Equation \ref{eqn:intensity_object_field} in the plate, we have to consider how the light interacts with the material. The phase hologram can be 
+modelled as a dielectric grating with a sinusoidal refractive index variation \citep{kogelnik2}, similar to an acousto-optic modulator. We can actually analyse the holographic 
+film using acousto-optic language. The Klein-Cook parameter, or quality factor, also exists in holographic phase gratings, given by the same formula 
+
+\begin{equation}
+    Q = \frac{2\pi \lambda d}{n \Lambda^2 \cos{\theta}}
+\end{equation}
+
+where $d$ is the thickness of the grating, $\Lambda$ the period of modulation/interference and $n$ is the average refractive index in the material. A holographic grating is considered 'thick' or 'thin' 
+when $Q$ is larger than 10 or less than unity \citep{hariharan}. To be even more confusing, 'thick' and 'thin' holograms are sometimes referred to as 'volume' and 'plane' holograms. 
+Therefore, in the 'thick' hologram regime, where the thickness of the phase gratings are comparable to the wavelength of the incident light, the behaviour of the interaction will be governed by the 
+theory of the Bragg's law \citep{bragg}.
+
+When incident light falls on the grating, there is a path difference of $2d\sin{\theta}$, where $d$ is the spacing between the fringes and $\theta$ is the angle of incidence (see Figure \ref{fig:bragg_condition}).
+
+The reflected beams will then constructively interfere and produce a maximum intensity pattern when the path difference is an integer multiple of the incident wavelength,
+
+\begin{equation}
+    2d\sin{theta} = m\lambda.
+\end{equation}
+
+In our case, the distance between the phase gratings is effectively equal to the product of the refractive index and the period of the grating, $d \approx n\Lambda$. 
+The reflected light is then what reconstructs the image we see in the hologram.
+
+\begin{figure}
+    \includegraphics[width = 8cm]{../Figures/reflection.png}
+    \caption{The experiment was set up with the same starting components as the first experiment with the optical isolator, shutter and first mirror, M1. From M1, the beam was split
+    into two paths, the obejct and reference path. The reference path was directed towards the spatial filter and spread out to hit the plate. The object path was directed towards 
+    another mirror, M2, and then another mirror M3, to direct the path to an aspheric lens. The lens serves the same purpose as the spatial filter, to spread out the beam and illuminate 
+    the object. The object beam is then reflected off the object and enters the plate from the opposite side of the incident light. The plate was placed on an angle as to centre the object 
+    in the middle of the image.}
+    \label{fig:reflection}
+\end{figure}
+
+\section{Aim}
+The aim of this report is to qualitatively analyses the process of creating and reconstructing an image using holography. We want to be able to reproduce and verify the results of 
+previous holographers and their innovations in techniques. We will analyse the procedures used by providing motivations for each decision in creating the holograms. We will investigate 
+the Denisyuk hologram, followed by transmission and two beam reflection holograms. We will then reproduce Michelsoon and Morley's famous interferometry experiment to motivate the steps 
+and outline the technique of double exposure for holograms to analyse small perturbations in objects.
+
+\section{Experimental Setup}
+
+THe basic set up for holography involves a laser, an object of interest, lens or spatial filters to spread out the plane waves and then mirrors to adjust the direction of the 
+laser and of course the film in which the hologram will be printed on. Different experiments or holograms will be a reconfiguration of this basic set up.
+
+\subsection{Experimental Apparatus}
+\subsubsection{Laser}
+The coherent light source used in these experiments is a a frequency-doubled diode-pumped solid state laser. The maximum power of this laser is 292 mW. The 
+beam divergence at the max angle is 15 mrad, indicating high collimation. The variation in wavelength, given in the manual is from 531 nm to 533 nm \citep{thorlabs}.
+The wavelength of the laser emitted is then $532 \pm 1$ nm. However, due to the nature of the experiment, the variation in wavelength is insignificant in 
+creating the hologram, so long as the laser stays the same throughout the exposure.
+
+\subsubsection{Beam splitter}
+In this set up, we need to split the beam with varying intensities. We need the beam illuminating the object to be relatively higher than the reference beam. This is because 
+the light off the object will be partially absorbed and the intensity actually reaching the film will be much smaller. To achieve this, a neutral density filter wheel is used 
+to equalise the intensity of the two beams and then the reflective surface is rotated to adjust the ratio of intensities to desired levels.
+
+\subsubsection{Spatial filter}
+We need to convert our collimated beam to spherical wave fronts. To do so, we will use a spatial filter and/or an aspheric lens to spread out the light and create spherical 
+wavefronts. A more spread out beam allows us more greatly illuminate the object.
+
+\subsubsection{Holographic plates}
+The holographic plates used in this series of experiments were self developing polymer, LitiHolo, C-RT20 Hologram film. The film thickness is 16 microns. The energy required for 
+exposure is 30 mJ/cm$^2$ \citep{litiholo}. This is a film especially made for holography. The reason for the specialty made for film is that compared to photography film, the 
+film for holography needs to be much greater in resolution, on a microscopic level of fineness \citep{kasper}. Unlike photographic film, the holographic plates allow all light to pass 
+through, encoding the phase of the light through modulating the refractive index of the photo-sensitive area \citep{ioka}.
+
+\begin{figure} 
+    \includegraphics[width = 8cm]{../Figures/transmission.png}
+    \caption{Similar set up to the reflection hologram except the object is now moved in front of the plate. Again blockers were used to ensure the paths do not cross paths, even after spread 
+    out before they hit the plate.}
+    \label{fig:transmission}
+\end{figure}
+
+\subsection{Exposure Time}
+One of the most important decisions we had to make in this experiment was determining the duration of the exposure for each plate. The calculation itself is approximate and the 
+accuracy of the length does not need to be high. However, we want to avoid under exposure to capture all the important details of the scene and we also need to be weary of over 
+exposure as to not saturate the hologram and over-emphasise some features and not capturing smaller ones. The general rule of thumb we were advised was to double whatever time 
+length we calculated and then add on a little extra to account for the aging of the film. We found that this advice was quite good in achieving our holograms. Whether or not the 
+advice is scientifically sound should be a basis for further discussion. Nevertheless the calculation for exposure time begins with finding the total exposure energy required for 
+the film which is quoted as $30$ mJ/cm$^2$ and dividing this by the power of the laser. 
+
+The power of the laser will change experiment to experiment however we will use a ThorLabs PM100D power meter and a large area silicon photodiode, ThorLabs S120C, with a maximum 
+power range of 50 mW for the 532 nm CW light to measure the power right before the laser would hit the film and (behind it for reflection holograms) to calculate the exposure time. The maximum power of the laser we 
+found to be 0.998 mW at the output of the laser which is well below the maximum range of 50 mW. The diameter of the aperture of the photodide is 9.5 mm so to obtain the actual power 
+for which we are reading we have to divide the reading by the area of the aperture. Once the exposure begins, the laser will reach its maximum output which is 146 times the maximum 
+reading we obtained when it is not exposing, therefore to calculate the time length used to exposed the film, 
+
+\begin{equation*}
+    \text{Exposure Time} = 2\times\frac{30\cdot \pi \cdot \left(\frac{0.95}{2}\right)^2}{P_{\text{reading}}\cdot146}
+\end{equation*}
+
+where $P_\text{reading}$ is the reading we obtain from the power meter and is commonly in microwatts and thus must be converted into milliwatts to obtain the exposure time in seconds.
+
+\subsection{Types of holograms}
+
+\begin{figure} 
+    \includegraphics[width = 8cm]{../Figures/lens_setup.jpg}
+    \caption{Diagram showing the set up for the extension hologram. It is utilising the Denisyuk method to capture the magnifying lens on hologram. The arrows indicate the direction of light, the object wave and the 
+    reference wave will interfere at opposite sides of the plate.}
+    \label{fig:extension}
+\end{figure}
+
+\subsubsection{Thick and Thin holograms}
+Analysing the different characteristics and efficiencies of thick and thin holograms is outside the scope of this report however it is important to mention the differences. The angle 
+to produce thick and thin (volume and plane) are shown in Figure \ref{fig:diff_tranmission}. 
+
+
+A thin hologram is essentially a 2D diffraction grating with a method of reconstructing the pattern imprinted on it. It is still created using holography methods and so the fringe pattern or 
+grating is much more complicated than a diffraction grating but its working principles are the same. The thin hologram can only record the amplitude of the object wave, not its phase.
+
+A thick hologram is the commonly referred to hologram. It can reconstruct a 3D scene into a 3D image and so contains information about the object waves' phases and amplitude. For most of this 
+report, we will only concern ourselves with the thick hologram, and refer to it as a the hologram. 
+
+The interference of the reference and object beam on the holographic plate produces fringes. The orientation of the fringes depends on whether or not the hologram is a 
+transmission or reflection hologram and is shown in Figure \ref{fig:layering}. The phase difference between the two beams orientates the grating vector $K$. We can 
+clearly see here how the Bragg angle is necessary in recreating the original image. 
+
+\begin{figure} 
+    \includegraphics[width = 8cm]{../Figures/michelson.png}
+    \caption{Diagram showing a scaled-down version of a Michelson interferometer. The laser is split into two using the beam splitter and then the different paths' interference pattern is shown on the screen.}
+    \label{fig:michelson}
+\end{figure}
+
+We can see that for the transmission hologram, the reference beam used to reconstruct the image will interact with only few fringes compared to almost all the fringes in 
+the reflection hologram. The result of this is that reflection holograms will be able to select a particular wavelength to produce the maximally diffracted image and so can 
+be illuminated using white light. In the transmission hologram, wavelengths not equal to the one used to construct it will diffract disorderly and create blurry and rainbow 
+abberations due to this diffraction with only a few fringes.
+
+In other words, the transmission hologram will see little interaction between the incident light and the fringes in comparison to the reflection hologram, hence the difference 
+in angular selectivity. 
+
+\subsubsection{Denisyuk or Lippmann type reflection hologram}
+
+Before holography, photographer Gabriel Lippmann produced one of the first color photographs by using interference of light waves to chemically develop the plate. For this 
+technique, he received the Nobel Prize in 1908. Lippmann used a mirror to reflect the oncoming light and this reflected wave would interfere with the incident wave in the 
+emulsion to create the interference fringes, which were physically encoded via precipitation of silver grains at maxima points. The layers were spread out by half a wavelength 
+to ensure the Bragg condition was satisifed shown in Figure \ref{fig:lippmann}.
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/denisyuk_result.jpg}
+    \caption{Hologram created via Denisyuk procedure. Captures scene with hedgehog (left) and toadstool (right).}
+    \label{fig:denisyuk_result}
+\end{figure}
+
+For reconstruction, the layers are illuminated with white light but now can only reflect a narrow waveband around the original colour of the scene. This is because the interference 
+fringes produced were determined by the Lippmann layers added up in phase. Denisyuk improved on this technique by suggesting that the scene or object wave should enter the emulsion 
+from the opposite side to the incident or reference light. This way, the beams interfere $180^\circ$ apart and the resultant phase difference would produce fringes perpendicular to 
+the plane of the emulsion, exactly how a reflection hologram would be produced years later. Denisyuk was limited by his time as he came up with the hologram idea before the invention 
+of the laser and so separating the reference and object wave was not possible, hence he could only complete an in-line reflection hologram.
+
+\subsection{Creating the holograms}
+
+The first hologram we created was the Denisyuk hologram. The equipment was set up as shown in Figure \ref{fig:denisyuk}. The power before and after the plate was $2$ and $1$ $\mu W$ 
+with an absolute uncertainty of $\pm 0.5$ $\mu W$. The high uncertainty is due to the low power reading and sensitivity of the power meter. We calculated and exposed the hologram for 
+100 seconds.
+
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/transmission_pikachu.jpg}
+    \caption{Picture of tranmission hologram. The hologram is volumetric, showing clear depth and 3D detail of a Pikachu on a circuit board. As if an illusion, there is nothing 
+    but a black screen behind the hologram. Even without the black screen, the hologram will still exist.}
+    \label{fig:transmission_result}
+\end{figure}
+
+The second hologram we created was the reflection hologram. The equipment was set up as seen in Figure \ref{fig:reflection}. It was important for the reference and object beams not to 
+interfere before the plate so blockers were used, ensuring the two paths do not cross at any point. Furthermore, the reference beam was polarised until the intensity of the object wave 
+was double the reference beam. This was so that once the object wave is partially absorbed, the reflected beam is roughly equal to the reference beam. The power recorded for each side 
+was roughly equal at $2 \pm 0.5$ $\mu W$ and so we exposed the hologram for 65 seconds.
+
+The next hologram we created was the transmission hologram and the set up is shown in Figure \ref{fig:transmission}. The power right before the plate was $4 \pm 0.5 \: \mu W$ and so we exposed the 
+hologram for 75 seconds.
+
+For an extension of our experiment, we created, under the guidance of Nicholas, a reflection hologram that could be used as a magnifying lens. Theoretically, the resolution of the film is high enough to 
+capture the wavefront changes caused by lenses and so once the lens is captured in the hologram, we could place an object in the lens in the hologram image to see a magnified version. Due to the difficulty 
+of capturing a transparent object on film, we had to use a diffuser to spread out the wave even more to capture as much of the lens as possible. A diagram of the setup is shown in Figure \ref{fig:extension}.
+We utilised a Denisyuk reflection diagram to minimise the difficulty in capturing the lens, in fact, an in line hologram is required to capture the transparent object because the object will not reflect light.
+
+
+\subsection{Interferometry}
+Interferometry is a technique that uses the interference of superimposed waves to extract information. The most famous interferometry experiment was conducted by Albert A. Michelson and Edward W. Morley in 1887, where they attempted to determine 
+the existence of the luminiferous aether. It even more famously led to a null result \citep{michelson} and eventually, along with other evidence, helped Einstein develop his theory of special relavitity. Einstein was quoted saying, in his biography, "If the Michelson–Morley 
+experiment had not brought us into serious embarrassment, no one would have regarded the relativity theory as a (halfway) redemption." \cite{folsing}
+
+\subsubsection{Michelson Interferometer}
+We can reuse our optical components to recreate this famous experiment, shown in Figure \ref{fig:michelson}.
+
+The path difference between the two beams then introduces a phase difference which is indicative of any changes along the path lengths between the two beams or if the beams propagated through any changes in refractive index. These phase differences are reflected in the interference 
+pattern we see on the screen. The formation of the fringes on the screen can be altered by the angles of the mirrors in the interferometer however this is a purely geometric consequence.
+
+\begin{figure*} 
+    \centering
+    \subfloat[Most left angle]{\includegraphics[width=7cm]{../Results/reflection_angle_0.jpg}}
+    \hspace{0.5cm}
+    \subfloat[2nd most left angle]{\includegraphics[width=7cm]{../Results/reflection_angle_1.jpg}} \\
+    \subfloat[Central Angle]{\includegraphics[width=7cm]{../Results/reflection_angle_2.jpg}}
+    \hspace{0.5cm}
+    \subfloat[2nd most right angle]{\includegraphics[width=7cm]{../Results/reflection_angle_3.jpg}} \\
+    \subfloat[Most right angle]{\includegraphics[width=7cm]{../Results/reflection_angle_4.jpg}}
+    \caption{The camera is kept right at the reflection hologram to capture the most detail possible. The outline and details of the capybara and fish are clear. The reflection 
+    of the camera is to show absolute same position for all 5 images however the source of the white light (another iPhone torch) is varying from left to right. The angle at which the hologram 
+    appears changes with the variation of the source.}
+    \label{fig:reflection_angle}
+\end{figure*}
+
+\subsubsection{Double exposure hologram interferometry}
+
+Holograhy allows us to store wavefronts as we please and reconstruct it at a desired time. We can exploit this for interferometry by producing two wavefronts from the same object, and comparing them after a perturbation to the object. We assume that the change to the shape of the object 
+is small so the object's wave function $O(x,y)$ is pertubed to become 
+
+\begin{equation}
+    O'(x,y) = O(x,y)e^{-\Delta \psi(x,y)}.
+\end{equation}
+
+If we record the object in its original state and then again after the pertubation, the two reconstructed images will produce an interference pattern 
+
+\begin{equation}
+    U(x,y) = O(x,y) + O'(x,y).
+\end{equation}
+
+
+If we compute the intensity field, we can obtain a rather useful result.
+
+\begin{widetext}
+    \begin{align}
+        I(x,y) &= \left(O(x,y)\left(1+e^{-\Delta \psi(x,y)}\right)\right)\left(O^*(x,y)\left(1+e^{\Delta \psi(x,y)}\right)\right) \\
+        &= |O(x,y)|^2\left(1+\cos{\Delta(\psi(x,y))}\right) \nonumber
+    \end{align}
+\end{widetext}
+
+
+\begin{figure*} 
+    \subfloat[Source of illumination is close]{\includegraphics[width=8cm]{../Results/enlargement_1.jpg}}
+    \subfloat[Source of illumination is further away]{\includegraphics[width=8cm]{../Results/enlargement_2.jpg}}
+    \caption{The source of light is varied along the z direction, as a result, the reflection hologram image is diminished if brought close and enlarged if the source is further away, up until a maximum before 
+    the image is faint and cannot be seen.}
+    \label{fig:enlargement}
+\end{figure*}
+
+Bright fringes can be seen when $\Delta \psi(x,y) = 2m\pi$, for integer $m$. 
+
+The experiment was set up exactly the same as for the transmission hologram except the object we used was an aluminium can painted white. We calculated the 
+total exposure time for the can to be 74 s and so now we had to split the timings for the first and second exposure. For the first exposure, we placed 
+a 750g brass weighted (coloured brown) on top of the can as to slightly introduce wrinklings in the can. Our human eyes could not detect any structural changes 
+upon placing the weight. For the second exposure, the weight was removed as to introduce the pertubation to the object, the can would now expand back to its original 
+strucutre.
+
+We completed this experiment twice with different ratios between the time lengths for the first and second expsoures. In the first experiment, we did a simple calibration of 
+50/50 allocations, completing the first exposure for 37 s and the second exposure for 37 s. For the second experiment we changed the ratios slightly in favour of the first 
+exposure. We exposed the first time around for 44 s and the second exposure for 30 s. Our rationale being we want to ensure the structure of the can is captured before perturbation 
+so any slight changes is better reflected in the interference pattern.
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/seeing_double.jpg}
+    \caption{Two white light sources were shone on the reflection hologram, as a result, two hologram images were formed.}
+    \label{fig:seeing_double}
+\end{figure}
+
+\section{Results and Discussion}
+
+Throughout our results section, we took coloured photos of the holograms however placed a black and white filter on top of them to emphasise the intensity of the light recorded by the 
+hologram as well as to emphasise smaller details in the image such as interference patterns which may be destroyed by over saturation of colour.
+
+The Denisyuk hologram, shown in Figure \ref{fig:denisyuk_result}, displays a clear capturing of the scene of a hedgehog and toadstool. The outline of both figurines are distinct however 
+the fine resolution details are lost in regions of less illuminated light from the reference beam used to reflect off the object, which is expected. In the regions of great illumination 
+such as the spikes on the back of the hedgehog, we can see that each spike is able to be finely resolved. However, the top of the toadstool cannot be defined. This is most likely due to 
+absorption of the green laser as the toadstool is red, reflecting only red light and therefore cannot be illuminated with green light. In this hologram, it is hard to distinguish the depth 
+of the scene and so we move onto more sophisticated holograms.
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/michelson_result.jpg}
+    \caption{Interference pattern from the Michelson interferometer setup. The bright bands are well defined however irreguarly shaped.}
+    \label{fig:michelson_result}
+\end{figure}
+
+The transmission hologram was most likely the most 'sci fi' of the holograms due to its imaging as a part of the real world when viewed. It is the most related to the holograms 
+we would see when R2D2 projects a message to Luke. The image is much more finely resolved than the Denisyuk hologram and more of the scene is captured in terms of peripherals. 
+If you zoom into Figure \ref{fig:transmission_result}, you can observe the indents on the circuit board, even when some crevices are hiding behind elevated parts. However, unlike the reflection holograms 
+we will talk about soon, the transmission holograms suffers from low angular selectivity. As mentioned before, the fringes are perpendicular to the plane of the hologram and so 
+incident light have less interaction with the fringes. The incident light then cannot produce the constructive interference required to reconstruct the light if the Bragg condition is 
+not satisifed wholly, by all incident light. If we used any other colour light to reconstruct the image, nothing will appear and if we shifted the angle slightly away from the angle used to construct the hologram, nothing 
+will appear. The reflected beams satisfying the Bragg condition are reflected everywhere and so if we changed our point of observation, we can still see the image, in fact we can begin 
+to shift our perspective of the image and see the scene from different angles.
+
+Unlike the transmission hologram, if the source of illumination for reconstructing the hologram was varied in position, the constructed image would also vary in its position on the hologram plane, 
+seen in Figure \ref{fig:reflection_angle}. Moving the phone torch from left to right, shifted the image also from left to right (camera was kept fixed).
+
+Similarly, shifting the illumination source along the longitudinal plane did not make the image disappear, in fact it controlled the magnification of the reconstructed scene, 
+seen in Figure \ref{fig:enlargement}. 
+
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/double_exposure_first_one.jpg}
+    \caption{Double exposure reflection hologram of a white painted aluminium can. The interference patterns from the perturbations are defined clearly.}
+    \label{fig:first_double}
+\end{figure}
+
+Not only is white light able to reconstruct the hologram, the angle of the incident light does not need to be finely adjusted to produce the image. This is because the reflection hologram has strong Bragg selectivity.
+The incident light must interact with a lot more fringes and so only the wavelength (and angle of incidence combination) satisfying the Bragg condition will be reflected back to the observer. The fringes in the reflection 
+hologram are orientated parallel to the hologram surface and so the light must pass through and interact with a lot of fringes. The light that does not satisfy the Bragg condition will not constructively interfere as desired 
+and so the images in that colour or even images at all will not be created. We can better see this relationship between illumination light and filtering by the fringes in Figure \ref{fig:seeing_double}. By introducing another 
+source of white light, we obtain another hologram image, however it is quite low in resolution. This could be basis for further investigation but we think it has something to do with the diffraction efficiency of the grating.
+It could be that a lot of the fringes are used up to create one hologram and therefore not enough remain to produce the second image. However, just qualitatively, there does not seem to be less detail in the first image.
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/double_exposure_second_one.jpg}
+    \caption{Double exposure reflection hologram of a white painted aluminium can. The interference patterns from the perturbations are defined less clearly.}
+    \label{fig:second_double}
+\end{figure}
+We start our interferometry investigation with the set up for the Michelson interferometer and we find that our results matches up similarly to the famous null result somewhat (see Figure \ref{fig:michelson_result}). 
+We can definitely observe bands of bright and dark regions in stripe-like form. Our pattern is a little deformed and spotty however we can attribute this to the impurities in our aspheric lens which we will talk about more in a bit.
+
+
+
+Following on from the Michelson interferometer, we wanted to find the superposition of light coming from an original scene and a pertubed version of the scene. The interference are very clearly shown in Figure \ref{fig:first_double} 
+for a perturbation in lifting a weight off an aluminium can. 
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Results/spotted_double_exposure.jpg}
+    \caption{Photo of the spotted pattern from the dusty aspheric lens. The rounded features on the interference pattern is as a result of diffraction of smaller 
+    particles on lens, not a feature of the desired interference.}
+    \label{fig:spotted_double}
+\end{figure}
+We completed this experiment again in Figure \ref{fig:second_double}, this time changing the ratio of the first exposure and second exposure time lengths. In the second attempt, the interference patterns on the can are no longer easily 
+observable and those spots (like Jupiter's storm) are a result of the aspheric lens, not the interference pattern. This is validated in Figure \ref{fig:spotted_double}, where we took the picture without a hologram. In the second attempt 
+of the double exposure experiment, we exposed the weight on the can for longer because we were motivated by the fact that in the first attempt, we could not see the weight on top of the can so we believed it to be underexposed. However, 
+we know now that it is not showing because of the colour, being brownish-red due to rust and so green would not reflect well off it. The diminishing of the interference patterns could then be attributed to the lost of exposure of the 
+perturbation, which is now underexposed and so the interference between the two exposures are not well defined.
+
+
+In the last bit, we wanted to complete a little extension of the task and tried to produce a lens-less magnifying glass. However we achieved a null result as the iamge of the lens could not be used to magnify any object. We want to say that 
+this is because the lens and the diffused light used to illuminate the object are not resolved and bright enough to achieve a clear magnified image. The hologram was created using strong lasers and so trying to illuminate an object and then 
+reflecting that light onto the lens would not work because the object light is not bright enough.
+
+\begin{figure} 
+    \includegraphics[width=8cm]{../Results/lens.jpg}
+    \caption{Denisyuk hologram of a lens. The lens is cleary however any image shown on the lens is not bright enough to be interfering with the lens.}
+    \label{fig:lens_result}
+\end{figure}
+
+\section{Conclusion}
+
+We were able to complete our aim and verify the creation and reconstruction of holographic images. The procedure for exposing holographic plates to capture scenes were verified and shown to be sound as we were able to successfully create our 
+own holograms. The theory behind Bragg's law and its description for the behaviour of diffracting light on fringes was sufficient in explaining the experimental results we observed. The angular selectivity of reflection and transmission plates 
+was successfully compared, we found that the source of light used for reconstruction could illuminate the image on the reflection hologram regardless of the source's position whereas for transmission holograms, the image only appeared at the original 
+angle and wavelength used to produce the image, aligning with the predictions made with Bragg's law. The results obtained by Michelson and Morley were successfully reproduced and the predictions made for using double exposure holograms as an interferometer 
+were successfully verified.
+
+\section{Acknowledgements}
+
+I want to thank my lab partner, Michael Zenkov, in helping me setting up the experiment and conducting it as well as for the photographs he took of the Denisyuk hologram. We want to give much thanks and appreciation to Michelle Ding and Nicholas for guiding us 
+through the experiment and assissting when we required help. I would also like to personally thank my lovely girlfriend, Amira, for expertly choosing the photos to include in this report.
 
 \bibliographystyle{apsrev4-2}
 \bibliography{../Notes/references}

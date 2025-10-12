@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{11}%
+\begin{thebibliography}{27}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -73,6 +73,9 @@
 \bibitem [{\citenamefont {Pribram}(1971)}]{pribram}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Pribram}},\ }\href@noop {} {\emph {\bibinfo {title} {Languages of the Brain: Experimental Paradoxes and Principles in Neuropsychology}}},\ edited by\ \bibinfo {editor} {\bibnamefont {Prentice-Hall}}\ (\bibinfo  {publisher} {Wadsworth},\ \bibinfo {year} {1971})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hariharan}(2002)}]{hariharan}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Hariharan}},\ }\href@noop {} {\emph {\bibinfo {title} {Basics of Holography}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {year} {2002})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hooft}(2000)}]{hooft}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Hooft}}} (\bibinfo {year} {2000}),\ \bibinfo {note} {opening Lecture}\BibitemShut {NoStop}%
@@ -82,4 +85,49 @@
 \bibitem [{\citenamefont {Crew}\ \emph {et~al.}(1900)\citenamefont {Crew}, \citenamefont {Huygens}, \citenamefont {Young}, \citenamefont {Fresnel},\ and\ \citenamefont {Arago}}]{fresnel}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Crew}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Huygens}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Young}}, \bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont {Fresnel}},\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Arago}},\ }\href@noop {} {\emph {\bibinfo {title} {The wave theory of light: memoirs of Huygens, Young and Fresnel}}}\ (\bibinfo  {publisher} {New York, Cincinnati American Book Company},\ \bibinfo {year} {1900})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Inc.}(2004)}]{ohio}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont {Inc.}},\ }\href@noop {} {\bibinfo {title} {Practical holography}},\ \bibinfo {howpublished} {Website} (\bibinfo {year} {2004})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Born}\ and\ \citenamefont {Wolf}(1999)}]{born_and_wolf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Born}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Wolf}},\ }\href@noop {} {\emph {\bibinfo {title} {Principle of Optics}}}\ (\bibinfo  {publisher} {University of Cambridge},\ \bibinfo {year} {1999})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Paschotta}(2007)}]{Paschotta_2007_paraxial_approximation}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Paschotta}},\ }\href {https://doi.org/10.61835/bgh" title="This link will reload the current page.} {\bibinfo {title} {Paraxial approximation}},\ \bibinfo {howpublished} {RP Photonics Encyclopedia} (\bibinfo {year} {2007}),\ \bibinfo {note} {available online at \url{https://www.rp-photonics.com/paraxial_approximation.html}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kogelnik}(1967)}]{kogelnik2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Kogelnik}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Bell Labs Technical Journal}\ }\textbf {\bibinfo {volume} {57}} (\bibinfo {year} {1967})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eden}(2017)}]{eden}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Eden}}} (\bibinfo {year} {2017}),\ \bibinfo {note} {{Lecture Notes}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Givens}(1967)}]{givens}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~P.}\ \bibnamefont {Givens}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Neurophysics at San Diego}\ } (\bibinfo {year} {1967})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jeong}(1975)}]{jeong}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~H.}\ \bibnamefont {Jeong}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {American Journal of Physics}\ } (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rogers}(1950)}]{rogers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~L.}\ \bibnamefont {Rogers}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\ } (\bibinfo {year} {1950})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bragg}(1915)}]{bragg}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~L.}\ \bibnamefont {Bragg}}} (\bibinfo {year} {1915}),\ \bibinfo {note} {{Nobel Lecture}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {ThorLabs}(2025)}]{thorlabs}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {ThorLabs}},\ }\href@noop {} {\bibinfo {title} {532 nm diode-pumped solid state (dpss) lasers}},\ \bibinfo {howpublished} {Manual} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {LitiHolo}(2025)}]{litiholo}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {LitiHolo}},\ }\href@noop {} {\bibinfo {title} {Self-developing hologram film}},\ \bibinfo {howpublished} {Manual} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {J.E.}\ and\ \citenamefont {S.A.}(1986)}]{kasper}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {J.E.}}\ and\ \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {S.A.}},\ }\href@noop {} {\emph {\bibinfo {title} {The Complete Book of Holograms}}}\ (\bibinfo  {publisher} {Dover Publications},\ \bibinfo {year} {1986})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ioka}\ and\ \citenamefont {Kurahashi}(1975)}]{ioka}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Ioka}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Kurahashi}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Optica Publishing Group}\ }\textbf {\bibinfo {volume} {14}} (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Michelson}\ and\ \citenamefont {Morley}(1887)}]{michelson}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~A.}\ \bibnamefont {Michelson}}\ and\ \bibinfo {author} {\bibfnamefont {E.~W.}\ \bibnamefont {Morley}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {American Journal of Science}\ }\textbf {\bibinfo {volume} {34}} (\bibinfo {year} {1887})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Folsing}(1998)}]{folsing}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Folsing}},\ }\href@noop {} {\emph {\bibinfo {title} {Albert Einstein: a biography}}}\ (\bibinfo  {publisher} {Penguin},\ \bibinfo {year} {1998})\BibitemShut {NoStop}%
 \end{thebibliography}%
