@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex DRAFT_TO_BE_RENAMED"] 1760239385.01952 "DRAFT_TO_BE_RENAMED.aux" "DRAFT_TO_BE_RENAMED.bbl" "DRAFT_TO_BE_RENAMED" 1760239386.90568 0
+["bibtex DRAFT_TO_BE_RENAMED"] 1760320041.87419 "DRAFT_TO_BE_RENAMED.aux" "DRAFT_TO_BE_RENAMED.bbl" "DRAFT_TO_BE_RENAMED" 1760320043.83371 0
   "../Notes/references.bib" 1760229106.49067 5730 2a8215b866533ef914dcae31d8a13b34 ""
-  "./DRAFT_TO_BE_RENAMEDNotes.bib" 1760239385.47242 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "./DRAFT_TO_BE_RENAMEDNotes.bib" 1760320042.37052 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1601932770 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "DRAFT_TO_BE_RENAMED.aux" 1760239386.58674 20340 e3be891455f6e736c4234f006ba3d44a "pdflatex"
+  "DRAFT_TO_BE_RENAMED.aux" 1760320043.51047 20345 c93e2c3132d4c60a3b572e9bfe5cf58a "pdflatex"
   (generated)
   "DRAFT_TO_BE_RENAMED.bbl"
   "DRAFT_TO_BE_RENAMED.blg"
   (rewritten before read)
-["pdflatex"] 1760239385.11763 "/Users/tobynguyen/Documents/physics_reports/Holography/Latex/DRAFT_TO_BE_RENAMED.tex" "DRAFT_TO_BE_RENAMED.pdf" "DRAFT_TO_BE_RENAMED" 1760239386.90588 0
+["pdflatex"] 1760320042.00878 "/Users/tobynguyen/Documents/physics_reports/Holography/Latex/DRAFT_TO_BE_RENAMED.tex" "DRAFT_TO_BE_RENAMED.pdf" "DRAFT_TO_BE_RENAMED" 1760320043.83389 0
   "../Figures/bragg_condition.png" 1760229588.57746 52349 e662607dad84810b97cb6efe2ce08993 ""
   "../Figures/denisyuk.png" 1759735965.08543 66706 f406dd333192f899453c11b6732d05b4 ""
   "../Figures/diff_transmission.png" 1759797430.82225 262084 f8747b5c3f8f1d473bbbf01d391ec7f9 ""
@@ -34,7 +34,7 @@
   "../Results/seeing_double.jpg" 1760233196.7065 3046366 3829bc312e234cf993520170fcc08088 ""
   "../Results/spotted_double_exposure.jpg" 1759937622 1562694 38c278dfc155d0e6f4a16d5050fb2480 ""
   "../Results/transmission_pikachu.jpg" 1759937624 1171448 6b21f963fbcc70b95cdd4cd3d12267dc ""
-  "/Users/tobynguyen/Documents/physics_reports/Holography/Latex/DRAFT_TO_BE_RENAMED.tex" 1760239382.91802 48395 b044617e605d25397fc615aa90b1ef67 ""
+  "/Users/tobynguyen/Documents/physics_reports/Holography/Latex/DRAFT_TO_BE_RENAMED.tex" 1760320039.74921 48529 2025f9d897a25f9f33c8f0b377232619 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -146,10 +146,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1717067784.25712 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1717067653 8221424 4e180d915e995e8ddc03894eb3fdc21f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "DRAFT_TO_BE_RENAMED.aux" 1760239386.58674 20340 e3be891455f6e736c4234f006ba3d44a "pdflatex"
-  "DRAFT_TO_BE_RENAMED.bbl" 1760239385.11531 11250 e1c01a9892a6b42ff72967be60ff1ade "bibtex DRAFT_TO_BE_RENAMED"
-  "DRAFT_TO_BE_RENAMED.out" 1760239386.58786 4304 c78840c1fc762884e3f841b10af8f3fb "pdflatex"
-  "DRAFT_TO_BE_RENAMED.tex" 1760239382.91802 48395 b044617e605d25397fc615aa90b1ef67 ""
+  "DRAFT_TO_BE_RENAMED.aux" 1760320043.51047 20345 c93e2c3132d4c60a3b572e9bfe5cf58a "pdflatex"
+  "DRAFT_TO_BE_RENAMED.bbl" 1760320042.00636 11250 e1c01a9892a6b42ff72967be60ff1ade "bibtex DRAFT_TO_BE_RENAMED"
+  "DRAFT_TO_BE_RENAMED.out" 1760320043.51163 4304 c78840c1fc762884e3f841b10af8f3fb "pdflatex"
+  "DRAFT_TO_BE_RENAMED.tex" 1760320039.74921 48529 2025f9d897a25f9f33c8f0b377232619 ""
   (generated)
   "DRAFT_TO_BE_RENAMED.aux"
   "DRAFT_TO_BE_RENAMED.log"
