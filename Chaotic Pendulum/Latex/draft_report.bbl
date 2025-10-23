@@ -1,0 +1,79 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{9}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Laplace}(1902)}]{laplacedemon}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.-S.}\ \bibnamefont {Laplace}},\ }\href@noop {} {\emph {\bibinfo {title} {A philiosophical essay on probabilities}}}\ (\bibinfo  {publisher} {John Wiley \& Sons},\ \bibinfo {year} {1902})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {O’Keefe}(2024)}]{sep-freedom-ancient}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {O’Keefe}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {The {Stanford} Encyclopedia of Philosophy}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {E.~N.}\ \bibnamefont {Zalta}}\ and\ \bibinfo {editor} {\bibfnamefont {U.}~\bibnamefont {Nodelman}}}\ (\bibinfo  {publisher} {Metaphysics Research Lab, Stanford University},\ \bibinfo {year} {2024})\ \bibinfo {edition} {{W}inter 2024}\ ed.\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Hoefer}(2024)}]{sep-determinism-causal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Hoefer}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {The {Stanford} Encyclopedia of Philosophy}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {E.~N.}\ \bibnamefont {Zalta}}\ and\ \bibinfo {editor} {\bibfnamefont {U.}~\bibnamefont {Nodelman}}}\ (\bibinfo  {publisher} {Metaphysics Research Lab, Stanford University},\ \bibinfo {year} {2024})\ \bibinfo {edition} {{S}ummer 2024}\ ed.\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Earman}(1986)}]{earman}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Earman}},\ }\href@noop {} {\emph {\bibinfo {title} {A Primer on Determinism}}},\ edited by\ \bibinfo {editor} {\bibfnamefont {R.~E.}\ \bibnamefont {Butts}}\ (\bibinfo  {publisher} {D. Reidel Publishing Company},\ \bibinfo {year} {1986})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lorenz}(1963)}]{lorenz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Lorenz}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of Atmospheric Sciences}\ }\textbf {\bibinfo {volume} {20}} (\bibinfo {year} {1963})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Palmer}(2009)}]{lorenzbio}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Palmer}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {The Royal Society}\ } (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Harvard}(2021)}]{lorenzstory}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Harvard}},\ }\href@noop {} {\bibinfo {title} {Chaos theory: A brief introduction}},\ \bibinfo {howpublished} {Online Article} (\bibinfo {year} {2021})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sparrow}(1982)}]{sparrow}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Sparrow}},\ }\href@noop {} {\emph {\bibinfo {title} {The Lorenz Equations}}}\ (\bibinfo  {publisher} {Springer New York, NY},\ \bibinfo {year} {1982})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Galaviz}(2024)}]{galaviz}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Galaviz}},\ }\href@noop {} {\bibinfo {title} {Part 1: An explanation of the three-body problem featured in science fiction series}},\ \bibinfo {howpublished} {ANSTO News} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\end{thebibliography}%

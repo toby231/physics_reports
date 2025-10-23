@@ -1,0 +1,164 @@
+\documentclass[aps,prl,reprint,10pt,amsmath,amssymb,superscriptaddress,a4paper]{revtex4-2}
+\usepackage{graphicx} % Graphics package
+\usepackage{dcolumn} % Double column package
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[margin=2cm]{geometry} % Sets 2cm margins
+\usepackage{datetime} % Package for automatic date & time
+\usepackage{subfig}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{Chaotic Circuit}
+
+\author{T. Nguyen (z5416116)}
+\affiliation{UNSW PHYS3117 - Physics Laboratory}
+\date{\currenttime~\today}
+
+\begin{abstract}
+l
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\begin{quote}
+\small
+"Given for one instant an intelligence which could comprehend all the
+forces by which nature is animated and the respective
+situation of the beings who compose it-an intelligence
+sufficiently vast to submit these data to analysis-it
+would embrace in the same formula the movements of
+the greatest bodies of the universe and those of the
+lightest atom; for it, nothing would be uncertain and
+the future, as the past, would be present to its eyes."
+\begin{flushright}
+- Pierre Simon Laplace, \textit{A philosophical essay on probabilities, pg. 4} \citep{laplacedemon}
+\end{flushright}
+\end{quote}
+
+\vspace{1em}
+
+The topic of determinism has been discussed by philiosophers and physicists alike for millenia and will continue 
+for the next thousands of years \citep{sep-freedom-ancient}. In a philosophical sense, determinism is more about 
+free will and moral responsibility of human beings for their actions, whereas the interpretation in physical 
+sciences, relates to predictions given the present state of systems. It is outside the scope of this report to, 
+firstly, argue the necessity for determinism in governing this universe and, secondly, discuss the interplay of free will 
+and determinism, we will leave this to contemporary philiosophers and budding online intellectuals. 
+
+In the realm of chaos theory, I will assume that determinism is the correct interpretation of our universe, that is, 
+to assume that the demon is real and computationally possible. The definition of determinism I will 
+be abiding by is one given by Hoefer's paper on "Causal Determinism" (2003), \citep{sep-determinism-causal}, where 
+determinism is loosely encompassed by the definition: 
+
+\begin{quote}
+    Determinism is true of the world if and only if, given a specified way things are at a time t, the way things go 
+    thereafter is fixed as a matter of natural law.
+\end{quote}
+
+In other words, the world this report resides in, is one governed solely by Newton's classical laws of physics. I will 
+ignore the challenges to determinism that quantum mechanics brings \citep{earman} and instead focus on the certainty of states given 
+their initial conditions. The study of chaos is, counter-intuitively, not probabilistic. Chaotic systems do not have 
+different outcomes if a perfect process is repeated. Instead, the different outcomes only appear to us humans because 
+of our imperfect knowledge of the parameters of the initial state of the system. Therefore, to an all knowing demon 
+who is able to perceive the parameters of a system to infinite figures, the future and the past, are one and the same.
+
+The language of chaos is often, understandably so, misused as a synonym for randomness. This comes from their shared 
+characteristic of unpredictability however the root cause of this unpredictability is not the same. Chaotic systems are 
+inherently unpredictable due to our lack of mathematical precision and the system's incredible sensitivity to inital 
+conditions. The time evolution of these systems may or may not exhibit patterns to us which also propagates the notion of 
+randomness however they are not equivalent. It is important to clear this language as throughout this report, I may describe 
+trajectories or shapes as disordered and lacking form but this does not mean it is not governed by deterministic physical law.
+
+The conditions for chaos are well understood, being formulated at the time of the discovery of chaotic behaviour by Edward Lorenz 
+in 1963 \citep{lorenz}. The discovery was serendpitious and as the story goes, Lorenz was trying to model weather patterns using 
+the state space of a 12 component model. Each component possessed a differential equation relating to a real world atmospheric 
+parameter such as temperature, pressure etc. He tried to solve this model numerically however found that his model was nonperiodic 
+whereas most studied solutions were periodic.
+
+The famous story in his career is that one day, he wanted to examine one of the solutions in greater detail. He had inputted in 
+12 numbers that the simulation had printed out, effectively restarting the process from about half way and found that his two runs
+had completely different outputs despite their shared initial conditions. Later, he would attribute the truncated output to be the 
+source of this divergence \citep{lorenzbio}.
+
+The computer he used for the simulation stored the output numbers to six decimal places however when he printed them out to restart 
+the process, he only printed up to three decimal places to save paper. This one part in ten thousand difference had caused 
+the simulation to wildly alter its course from its original trajectory \citep{lorenzstory}. The first condition of chaotic motion is 
+then the system must exhibit sensitive dependence on its inital conditions. 
+
+The story then goes that while visiting his colleague, Barry Saltzman, he found that in Barry's work, there was a three component subset
+that displayed aperiodicity, or chaotic motion. This three component model became the famous Lorenz model for 
+which chaotic motion can arise \citep{sparrow}. The beauty of the Lorenz equations came from their simplicity, only requiring three variables
+for the properties of chaos to appear. Through his work and shown in his paper in 1963, another condition for the aperiodicity is the 
+equations must be non-linear.
+
+Remarkably, the development of chaos theory since its discovery in 1963, continues on the work of Newton in his final pursuit 
+for a solution in the three body problem. Coincidentally, the three body problem has conditions 
+that align with the ones set out by chaos theory. Newton successfully solved the two body problem when he introduced to the world his idea 
+of gravitation. In that scenario, he only needed to worry about the motion of two celestial objects and therefore, the problem could be 
+solved analytically and the solution exhibited periodicity and stability always. However, the inclusion of a third gravitational body would 
+introduce a non-linear term into the equations as well as increasing the variable count to three, satisfying all conditions for aperiodicity 
+and therefore the solution to Newton's three body problem is chaotic \citep{galaviz}.
+
+The word 'chaos' was first coined by Jim Yorke to describe types of non-linear dynamical systems however the term has transcended the technical 
+community. The idea of chaos and its child, 'The Butterfly Effect', has become apart of everyday language and integrated itself seamlessly in pop 
+culture. It is common to hear in economics and political discussions, the term 'bifurcation' in relation to causal relationships, especially one 
+where predictability of outcomes is at its lowest. There is a Wikipedia article dedicated to the Butterfly Effect in popular culture as the metaphor 
+of a butterfly flapping its wings to cause a tornado in Texas (presented by Lorenz in a 1972 talk) resonates with the general public and their 
+perception of the world around them. The imagery of the smallest detail influencing the world's most significant events is one of the most powerful 
+narratives to ever been told. But the best kind of stories are the ones that did actually happen and its our marvel of the possibility turning 
+into reality is the reason why the butterfly effect and chaos theory really has a special place in our society today.
+
+\section{Theory}
+
+The central characteristic of chaos is that the system does not repeat its past behaviour, not even approximately. Despite their lack of regularity, 
+the aperiodicity still follow the deterministic equations derived from Newton's laws.
+
+\subsection{Conditions for chaos}
+
+As mentioned before, Edward Lorenz had come up with the two conditions for chaotic motion. For a system to be chaotic, it must:
+
+\begin{enumerate}
+    \item be described by at least three components that are independent dynamical variables
+    \item contain a non-linear term in its equations of motions that couples several of the variables
+\end{enumerate}
+
+The sensitivity to initial conditions is a consequence of the second condition. THe non-linear term grows errors in predictions exponentially in time so 
+any small shifts from its original state will cause that state to become essentially unrecognisable in evolution. It is this consequence that will drive 
+the motivation for investigation in chaos theory. Another non-trivial consequence of the second condition is that differential equations containing non-linear 
+terms are impossible to solve analytically and so solutions for equations of motion will have to be done numerically.
+
+\subsection{Phase space}
+
+To study dynamical systems, often phase spaces are used to describe states and their evolution. The phase space is a mathematical space with orthogonal coordinate 
+directions representing each of the variables required to define the state of the system. Commonly, the axis of the phase space will come in position, velocity pairs 
+or analogues. For each solution on a phase space diagram, there will be a corresponding phase trajectory. 
+
+There is an extremely non-trivial and significant property 
+of these trajectories, being they are non-crossing. Two trajectories, no matter how close, will never cross each other. This is a consequence of determinism, once a 
+state of the system is known, its time evolution into the future and in the past are known as well. A state in two trajectories would render the system indeterminate 
+and therefore contradict the uniqueness of the determinism on which the motion is formulated upon. 
+
+Phase spaces of conservative (constant energy) systems preserve the areas in the space. All the points in a given area of phase space will move in such a way to preserve 
+the area occupied by these same points at some later time. If the system does not conserve energy, the phase area or volume will contract. This is known as a dissipative 
+dynamical system and they introduce a mathematical object known as an attractor. The point is defined as the end state, or fully time evolved state, for all finite states 
+that describes the system.
+
+In order to simplify complicated phase space diagrams, Poincare sections are used. They are constructed by viewing the phase space diagram stroboscopically in such a way that 
+the motion is observed periodically. Therefore, the Poincare section will provide information about the ratio of the strobing and natural frequency of the dynamical motion. If 
+the ratio is rational such that the natural frequency $\omega_0$ is equal to $\frac{p}{q}\omega_s$ where $\omega_s$ is the strobing frequency and $p$ and $q$ are integers, then 
+there are $q$ points on the diagram. If the ratio is irrational, then no points are repeated on the plot and so a filled in line of the trajectory will appear.
+
+\section{Experimental Setup}
+
+\section{Results and Discussion}
+
+\section{Conclusion}
+
+\section{Acknowledgements}
+
+\bibliographystyle{apsrev4-2}
+\bibliography{references}
+
+\end{document}
