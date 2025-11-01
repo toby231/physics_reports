@@ -124,7 +124,7 @@ As mentioned before, Edward Lorenz had come up with the two conditions for chaot
     \item contain a non-linear term in its equations of motions that couples several of the variables
 \end{enumerate}
 
-The sensitivity to initial conditions is a consequence of the second condition. THe non-linear term grows errors in predictions exponentially in time so 
+The sensitivity to initial conditions is a consequence of the second condition. The non-linear term grows errors in predictions exponentially in time so 
 any small shifts from its original state will cause that state to become essentially unrecognisable in evolution. It is this consequence that will drive 
 the motivation for investigation in chaos theory. Another non-trivial consequence of the second condition is that differential equations containing non-linear 
 terms are impossible to solve analytically and so solutions for equations of motion will have to be done numerically.
@@ -149,6 +149,161 @@ In order to simplify complicated phase space diagrams, Poincare sections are use
 the motion is observed periodically. Therefore, the Poincare section will provide information about the ratio of the strobing and natural frequency of the dynamical motion. If 
 the ratio is rational such that the natural frequency $\omega_0$ is equal to $\frac{p}{q}\omega_s$ where $\omega_s$ is the strobing frequency and $p$ and $q$ are integers, then 
 there are $q$ points on the diagram. If the ratio is irrational, then no points are repeated on the plot and so a filled in line of the trajectory will appear.
+
+\subsection{Lyapunov Exponents}
+The sensitivity to initial conditions can be measured using a Lyapunov exponent. The exponent, $\lambda$, can be calculated using the divergence of two slightly differing 
+initial states, $x$ and $x+\epsilon$. After $n$ iterations, their divergence is characterised approximately as \citep{baker}
+
+\begin{equation}
+    \epsilon(n) \approx \epsilon e^{\lambda n}.
+\end{equation}
+
+The error growth is, aforementioned, characterised as an exponential and the Lyapunov exponent, $\lambda$, describes the average rate of divergence. The average needs to be 
+calculated over many initial conditions spread over the trajectory. If $\lambda$ is negative then the slightly separated trajectories will converge and the evolution is not 
+chaotic but if $\lambda$ is positive then the evolution is sensitive to initial conditions and is chaotic. To find $\lambda$, we consider the one dimensional map given by 
+$x_{n+1}=f(x_n)$. The difference between two initially nearby states after the $n$th step is 
+
+\begin{equation}
+    f^n(x+\epsilon) - f^n(x) \approx \epsilon e^{n\lambda}
+\end{equation}
+
+We can rearrange for $\lambda$,
+
+\begin{equation*}
+    \lambda \approx \frac{1}{n}\log_{e}\left[\frac{f^n(x+\epsilon)-f^n(x)}{\epsilon}\right].
+\end{equation*}
+
+For small $\epsilon$, the expression inside the brackets reduces down to the derivative of $f^n$ with respect to $x$, from first principles,
+
+\begin{equation}
+    \lambda \approx \frac{1}{n}\log_{e}\left|\frac{df^n}{dx}\right|.
+\end{equation}
+
+Here, we take the derivative through using the chain rule for the $n$th iterate and take the limit as $n$ goes to infinity,
+
+\begin{equation*}
+    \lambda = \lim_{n\rightarrow \infty} \frac{1}{n}\sum_{i=0}^{n-1}\log_e\left|f'(x_i)\right|
+\end{equation*}
+
+\subsection{Dimensionality}
+So far I have only considered calculating Lyapunov exponents in one dimension. For higher-dimensional systems, the process of obtaining these exponents is non-trivial. It may be 
+helpful to revisit the idea and motivation behind these exponents. The Lyapunov exponents measure the average rate of divergence between neighbouring trajectories on the attractor.
+The divergence is measured as the distance between the trajectories and so can only be expressed for an one dimensional comparison. If we want to measure the divergence of a two 
+dimensional trajectory, then we require two Lyapunov exponents, one for each dimension. The exponents then describe the rate of divergence in uniquely defined, orthogonal directions.
+Therefore, for $n$-dimensions, we require $n$ Lyapunov exponents.
+
+We can imagine the a small $n$-dimensional sphere centered at some point on the attractor and the surface of which consists of phase points from nearby trajectories. The sphere will 
+evolve into an ellipsoid in time with different axes contracting and expanding. The average rates of expansion or contraction are the Lyapunov exponents and for the $i$th axis, the 
+corresponding exponent is defined as 
+
+\begin{equation}
+    \lambda_i = \lim_{t \rightarrow \infty}\log_{e}\left[\frac{L_i(t)}{L_i(0)}\right]
+\end{equation}
+
+where $L_i(t)$ is the radius of the ellipsoid along the $i$th axis. If we consider, in $\mathbb{R}^3$, a small volume in phase space. The volume will change in time as 
+
+\begin{equation}
+    V(t) = V_0 e^{(\lambda_1 + \lambda_2 + \lambda_3)t}.
+\end{equation}
+
+Therefore, the rate of change of volume is found by 
+
+\begin{equation}
+    \frac{dV}{dt} = \sum_{i=1}^{3}\lambda_i V(t).
+\end{equation}
+
+We can combine it with the divergence theorem, or Gauss's theorem to obtain a relationship for the sum of the exponents, that is,
+
+\begin{equation}
+    \frac{dV}{dt} = \int \nabla \cdot \mathbf{F}dV = \sum_{i=1}^{3}\lambda_i V(t).
+\end{equation}
+
+I need to talk a step back here and talk about how to actually obtain $\lambda_i$ because not only would neighbouring points on nearby trajectories involve points along the same dimensional 
+axis, we need to consider points off-axis as well and so our one dimensional view of Lyapunov exponents will no longer function here. I first have to define what I mean by dimension. In this 
+section, I will be talking about \textit{capacity dimension}. Consider a $d$ dimensional line, square, cube analogue with side length, $L$. We can split this object into $N$ pieces with side 
+length, $\epsilon$. For the $n$th split, there will be $(2^d)^n$ objects with side length $\frac{L}{2^n}$. We can trivially obtain the number of objects $N$ as equal to the ratio of $L$ and 
+$\epsilon$ to the $d$th power, that is $N(\epsilon) = \left(\frac{L}{\epsilon}\right)^d$. If we rearrange for $d$ and take $\epsilon$ to go to zero, or equivalently, $n\rightarrow \infty$, we 
+obtain the definition for capacity dimension, 
+\begin{equation}
+    d_C = \lim_{\epsilon\rightarrow 0}\frac{\log_e N(\epsilon)}{\log_e \frac{1}{\epsilon}}.
+\end{equation}
+
+The biggest assumption here is that we can take infinite iterations of the set however in practice we are limited, computationally, to a finite set that is a subset of the infinite set (an 
+implicit assumption). Experimentally, we can estimate the capacity dimension by using a technique called box counting where a map is covered with boxes of side length $\epsilon$ which is varied 
+to obtain multiple values for $N(\epsilon)$. Then the graph of $\log_e N(\epsilon)$ vs $\log_e \frac{1}{\epsilon}$ can be plotted as $\epsilon \rightarrow 0$ and the gradient estimated to be $d_C$.
+
+However, as you may observe from the methodology, this method of defining dimensionality does not account for the changing density in the regions of the boxes, only counting the number of points 
+inside the box. There are two other dimension quantities I will introduce. First is the correlation dimension, $d_G$ and the second is the information dimension $d_I$. I will simplify these dimension 
+quantities in just suggesting they account for the density of points within the boxes. We can now define a general definition \citep{halsey} of dimensions of order $q$:
+
+\begin{equation}
+    d^{(q)}=\frac{1}{q-1}\lim_{\epsilon \rightarrow 0} \left(\frac{\log_e \sum_{i=1}^{n}p_i^q}{\log_e \epsilon}\right),
+\end{equation}
+
+where $n$ is the number of phase elements and $p_i$ is the probability that an attractor point falls in the $i$th element. It is known that $d_C$, $d_I$ and $d_G$ correspond to $d^{(0)}$, $d^{(1)}$ 
+and $d^{(2)}$ respectively. To learn more about these dimensional quantities, see \citep{farmer}. As we will find, many fractals will require many measurements to characterise their complex geometry.
+However, due to limitations of this report, I cannot go into any further detail with these quantities. They represent different methods/approximations in obtaining the dimensions of an object and are 
+therefore, inherently, non-equivalent.
+
+\subsection{Attractors}
+I briefly talked about attractors in phase spaces, giving a broad definition of an attractor being the end state for a finite amount of states that describes the system. Here 
+I will go more into detail about attractors, giving a rigorous mathematical definition. We first should start with the idea of \textit{measure}. In one, two and three dimensions, 
+the measure of a solid body $E$ is referred to as the \textit{length}, \textit{area} and \textit{volume} respectively. We are lucky we do not have to deal with any analytical 
+treatment of measure, instead we can leave that to the mathematicians and their investigation of the \textit{problem of measure} \citep{tao}. An attracting set, as defined by Milnor
+\citep{milnor} is a set $A$, $A \in \mathbb{R}^n$ satisfying two conditions:
+
+\begin{enumerate}
+    \item The \textit{basin of attraction}, $B(A)$, consisting of all points whose orbits converge to $A$, has strictly positive measure.
+    \item For any closed proper subset $A'\Subset A$, the set difference $B(A) \backslash B(A')$ also has strictly positive measure.
+\end{enumerate}
+
+The first condition states that the basin of attraction must be physically tangible and continuous. The continuous condition comes from the Lebesgue integral definition of measure, 
+where measure can be calculated as the area under the curve for some function. Therefore a set of discrete points will produce zero measure. If we are working in $\mathbb{R}^2$ and 
+$\mathbb{R}^3$ then our basin of attraction will be defined as an area and volume respectively. The second condition refers to how every point in $A$ will be crucial in creating the 
+set. For an attracting set to be considered an attractor, it must satisfy one more condition,
+
+\begin{enumerate}
+    \item it must contain a dense orbit.
+\end{enumerate}
+
+Dense orbits are orbits that either passes through, or gets infinitely close with, every point in the attracting set. This condition is imposed to avoid describing an attractor as the 
+combination of two attracting sets.
+
+There are three nonfractal/nonstrange types of attractors: \textit{fixed point}, \textit{limit cycle} and \textit{torus} attractors. The torus attractor is beyond the scope of this report
+and chaotic dynamics in general. 
+
+The term \textit{strange attractor} arises from attractors that exhibit chaotic behaviour, that is, sensitivity to initial conditions. However not all strange attractors are chaotic. The 
+idea of \textit{strangeness} comes from the geometric structure of the motion. Strange nonchaotic attractors display fractal geometry in their phase space but lack the extreme sensivity 
+to initial conditions, therefore is not classified as chaotic. We will be focusing on chaotic, strange attractors in this report.
+
+\subsection{Fractals}
+
+I have constantly referred to this strange, non-Euclidean geometry as fractals but I am yet to define it. We know that our Lyapunov exponents describe the average rate of divergence in a 
+certain direction. Aforementioned, negative exponents correspond to convergence, nonchaotic behaviour whereas positive exponents describe the opposite. Here I will define much more simply, 
+Lyapunov exponents describe the 'stretching' or expansion/contraction in different dimensions. For negative exponents, they describe contraction of the orbits whereas positive exponents 
+represents expansion of the orbits. Exponents equal to 0 describe zero contraction or expansion.
+
+Kaplan and Yorke \citep{kaplan} developed a heuristic, mathematically imprecise definition for a \textit{Lyapunov dimension}\footnote{This formula acts as a lower found for other methods for 
+defining dimension. The relationship between dimension definitions are outside of the scope of this report however it is important to note the varying methods as well as their limitations. Yorke 
+and Kaplan's formula is not mathematically rigorous as other dimensionality formulas but it is a very good approximation, hence its use and main reference here.},
+
+\begin{equation}
+    d_L = j + \frac{\sum_{i}^{j}\lambda_i}{\left|\lambda_{j+1}\right|}
+\end{equation}
+
+where $j$ is the largest integer for which $\sum_{i=1}^{j}\lambda_i > 0$. The condition for strangness is then reduced to simply $d_L$ must be a non-integer \citep{taylor}. It is important 
+to note that for non-area preserving/dissipative systems in two dimensions, chaos cannot arise as a result of the Poincare-Bendixon theorem. Therefore we need at least three Lyapunov exponents 
+to observe chaos \citep{Bendixson1901}.
+
+Now we can try to understand fractal geometry. A nice analogy would be to think of a crumpled piece of paper in a box. It is a 2D object in a 3D space. The crumpled paper will try to expand 
+(and contract in certain directions) to try to fill the empty space. Of course, our analogy exists in Euclidean space whereas the topic at hand is inherently non-Euclidean but hopefully the 
+imagery helps with the understanding of how fractal geometry comes about. 
+
+The term \textit{fractals} comes from \textit{fractional dimension}, coined by Benoit Mandelbrot in 1975 \citep{Mandelbrot1975}. In Euclidean dimensions, sets can describe ordinary geometric shapes.
+In 0 dimensional space, sets describe points, for 1 dimensional space, sets describe lines (having only length), in 2 dimensions, sets describe surfaces (length and width), and 3 dimensions, sets 
+describe volumes (having length, width and height). In fractal dimensions, the dimension index can take non-integer values (as seen with the different ways to describe dimensionality), indicating that 
+the set will fill the space. For example, a set with fractal dimension 1.1 will behave like an ordinary line but display some two dimensional thickness. The thickness manifests itself as a self-similarity 
+pattern as you zoom into the 'line' more.
 
 \section{Experimental Setup}
 

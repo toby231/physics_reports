@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{9}%
+\begin{thebibliography}{19}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -76,4 +76,34 @@
 \bibitem [{\citenamefont {Galaviz}(2024)}]{galaviz}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Galaviz}},\ }\href@noop {} {\bibinfo {title} {Part 1: An explanation of the three-body problem featured in science fiction series}},\ \bibinfo {howpublished} {ANSTO News} (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baker}\ and\ \citenamefont {Gollub}(1990)}]{baker}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~L.}\ \bibnamefont {Baker}}\ and\ \bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Gollub}},\ }\href@noop {} {\emph {\bibinfo {title} {Chaotic Dynamics: an introduction}}}\ (\bibinfo  {publisher} {Cambridge University Press},\ \bibinfo {year} {1990})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Halsey}(1986)}]{halsey}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont {Halsey}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physical Review Journals}\ }\textbf {\bibinfo {volume} {33}} (\bibinfo {year} {1986})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Farmer}\ \emph {et~al.}(1983)\citenamefont {Farmer}, \citenamefont {Ott},\ and\ \citenamefont {Yorke}}]{farmer}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont {Farmer}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Ott}},\ and\ \bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Yorke}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physica 7D}\ } (\bibinfo {year} {1983})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tao}(2010)}]{tao}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Tao}},\ }\href@noop {} {\bibinfo {title} {Introduction to measure theory}},\ \bibinfo {howpublished} {Lecture} (\bibinfo {year} {2010})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Milnor}(2006)}]{milnor}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~W.}\ \bibnamefont {Milnor}},\ }\href@noop {} {\bibinfo {title} {Attractor}},\ \bibinfo {howpublished} {Scholarpedia} (\bibinfo {year} {2006})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kaplan}\ and\ \citenamefont {Yorke}(1986)}]{kaplan}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kaplan}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Yorke}},\ }\href@noop {} {\bibinfo {title} {Chaotic behavior of multidimensional difference equations}},\ \bibinfo {howpublished} {Lecture Notes} (\bibinfo {year} {1986})\BibitemShut {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {This formula acts as a lower found for other methods for defining dimension. The relationship between dimension definitions are outside of the scope of this report however it is important to note the varying methods as well as their limitations. Yorke and Kaplan's formula is not mathematically rigorous as other dimensionality formulas but it is a very good approximation, hence its use and main reference here.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Taylor}(2000)}]{taylor}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Taylor}}} (\bibinfo {year} {2000}),\ \bibinfo {note} {sIAM website}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bendixson}(1901)}]{Bendixson1901}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Bendixson}},\ }\href {https://doi.org/10.1007/BF02403068} {\bibfield  {journal} {\bibinfo  {journal} {Acta Mathematica}\ }\textbf {\bibinfo {volume} {24}},\ \bibinfo {pages} {1} (\bibinfo {year} {1901})},\ \bibinfo {note} {in this paper, Bendixson extended Poincaré's earlier results and formulated what is now known as the Poincaré–Bendixson theorem.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Mandelbrot}(1975)}]{Mandelbrot1975}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~B.}\ \bibnamefont {Mandelbrot}},\ }\href {https://doi.org/10.1007/BF01608506} {\bibfield  {journal} {\bibinfo  {journal} {Communications in Mathematical Physics}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo {pages} {233} (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
 \end{thebibliography}%
