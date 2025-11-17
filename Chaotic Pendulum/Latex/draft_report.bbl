@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{19}%
+\begin{thebibliography}{23}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -106,4 +106,16 @@
 \bibitem [{\citenamefont {Mandelbrot}(1975)}]{Mandelbrot1975}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~B.}\ \bibnamefont {Mandelbrot}},\ }\href {https://doi.org/10.1007/BF01608506} {\bibfield  {journal} {\bibinfo  {journal} {Communications in Mathematical Physics}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo {pages} {233} (\bibinfo {year} {1975})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ken~Kiers}\ and\ \citenamefont {Sprott}(2004)}]{kiers}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~S.}\ \bibnamefont {Ken~Kiers}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Sprott}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {American Journal of Physics}\ }\textbf {\bibinfo {volume} {72}} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wolf}(1986)}]{wolf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Wolf}},\ }\href@noop {} {\emph {\bibinfo {title} {Nonlinear Science: Theory and Applications}}},\ edited by\ \bibinfo {editor} {\bibfnamefont {A.}~\bibnamefont {Holden}}\ (\bibinfo  {publisher} {Manchester University Press},\ \bibinfo {year} {1986})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rosenstein}\ \emph {et~al.}(1993)\citenamefont {Rosenstein}, \citenamefont {Collins},\ and\ \citenamefont {Luca}}]{rosenstein}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Rosenstein}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Collins}},\ and\ \bibinfo {author} {\bibfnamefont {C.~D.}\ \bibnamefont {Luca}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physica D: Nonlinear Phenomena}\ }\textbf {\bibinfo {volume} {65}} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Box}(1926)}]{fisher}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Box}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {The American Statistician}\ }\textbf {\bibinfo {volume} {34}} (\bibinfo {year} {1926})}\BibitemShut {NoStop}%
 \end{thebibliography}%

@@ -1,0 +1,73 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (72) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{7}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Hecht}(2025)}]{hecht}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hecht}},\ }\href@noop {} {\bibinfo {title} {History of laser}},\ \bibinfo {howpublished} {Britannica Website} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Einstein}(1917)}]{einstein}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Einstein}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physikalische Zeitschrift}\ }\textbf {\bibinfo {volume} {18}} (\bibinfo {year} {1917})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kopfermann}\ and\ \citenamefont {Ladenburg}(1928)}]{KopfermannLadenburg1928}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Kopfermann}}\ and\ \bibinfo {author} {\bibfnamefont {R.~W.}\ \bibnamefont {Ladenburg}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Zeitschrift für Physik}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages} {26–50} (\bibinfo {year} {1928})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Javan}\ \emph {et~al.}(1961)\citenamefont {Javan}, \citenamefont {Jr.},\ and\ \citenamefont {Herriott}}]{Javan1961}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Javan}}, \bibinfo {author} {\bibfnamefont {W.~R.~B.}\ \bibnamefont {Jr.}},\ and\ \bibinfo {author} {\bibfnamefont {D.~R.}\ \bibnamefont {Herriott}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Physical Review Letters}\ }\textbf {\bibinfo {volume} {6}},\ \bibinfo {pages} {106} (\bibinfo {year} {1961})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Wikipedia contributors}}(2025)}]{HeliumNeonLaser_Wikipedia_2025}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{Wikipedia contributors}}},\ }\href@noop {} {\bibinfo {title} {Heliumneon laser}},\ \bibinfo {howpublished} {Wikipedia website} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{RPMC Lasers, Inc.}}(2025)}]{RPMC2025HeNe}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{RPMC Lasers, Inc.}}},\ }\href@noop {} {\bibinfo {title} {Hene lasers: Fundamentals, history \& key considerations when selecting}} (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Reece}(2023)}]{reece_coherence_unsw}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Reece}},\ }\href {https://www.physics.unsw.edu.au} {\bibinfo {title} {Introduction to coherence}} (\bibinfo {year} {2023}),\ \bibinfo {note} {lecture notes, PHYS3060 Optics, Section 7: Coherence}\BibitemShut {NoStop}%
+\end{thebibliography}%

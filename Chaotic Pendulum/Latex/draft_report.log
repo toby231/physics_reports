@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.30)  31 OCT 2025 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.30)  17 NOV 2025 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,34 +523,183 @@ Package hyperref Info: Link coloring OFF on input line 10.
 Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 10.
 \openout3 = `draft_reportNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./draft_report.bbl) [5] (./draft_report.aux)
+) [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png, id=160, 401.8212pt x 324.4923pt>
+File: ../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png Graphic file (type png)
+<use ../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png  used on input line 254.
+(pdftex.def)             Requested size: 227.62204pt x 183.81876pt.
+<../Model_Figures/static_figures/pendulum_chaotic_phase_space.png, id=162, 385.9218pt x 324.4923pt>
+File: ../Model_Figures/static_figures/pendulum_chaotic_phase_space.png Graphic file (type png)
+<use ../Model_Figures/static_figures/pendulum_chaotic_phase_space.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/pendulum_chaotic_phase_space.png  used on input line 255.
+(pdftex.def)             Requested size: 227.62204pt x 191.39432pt.
+ [4]
+<../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png, id=186, 393.8715pt x 324.4923pt>
+File: ../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png Graphic file (type png)
+<use ../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png  used on input line 315.
+(pdftex.def)             Requested size: 227.62204pt x 187.53227pt.
+<../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png, id=187, 387.3672pt x 324.4923pt>
+File: ../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png Graphic file (type png)
+<use ../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png  used on input line 316.
+(pdftex.def)             Requested size: 227.62204pt x 190.67638pt.
+ [5 <../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png> <../Model_Figures/static_figures/pendulum_chaotic_phase_space.png>]
+<../Figures/integrator.png, id=208, 538.01pt x 390.45876pt>
+File: ../Figures/integrator.png Graphic file (type png)
+<use ../Figures/integrator.png>
+Package pdftex.def Info: ../Figures/integrator.png  used on input line 349.
+(pdftex.def)             Requested size: 227.62204pt x 165.19505pt.
+ [6 <../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png> <../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png> <../Figures/integrator.png>]
+<../Model_Figures/static_figures/non_linear.png, id=223, 400.3758pt x 312.2064pt>
+File: ../Model_Figures/static_figures/non_linear.png Graphic file (type png)
+<use ../Model_Figures/static_figures/non_linear.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/non_linear.png  used on input line 386.
+(pdftex.def)             Requested size: 227.62204pt x 177.50217pt.
+<../Figures/non_linear.png, id=224, 474.77374pt x 320.19624pt>
+File: ../Figures/non_linear.png Graphic file (type png)
+<use ../Figures/non_linear.png>
+Package pdftex.def Info: ../Figures/non_linear.png  used on input line 399.
+(pdftex.def)             Requested size: 227.62204pt x 153.51167pt.
+<../Figures/circuit_diagram.png, id=230, 872.25874pt x 655.44875pt>
+File: ../Figures/circuit_diagram.png Graphic file (type png)
+<use ../Figures/circuit_diagram.png>
+Package pdftex.def Info: ../Figures/circuit_diagram.png  used on input line 433.
+(pdftex.def)             Requested size: 227.62204pt x 171.04274pt.
+ [7 <../Model_Figures/static_figures/non_linear.png> <../Figures/non_linear.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 463.
+
+<../Model_Figures/static_figures/voltage_vs_time.png, id=250, 409.7709pt x 330.2739pt>
+File: ../Model_Figures/static_figures/voltage_vs_time.png Graphic file (type png)
+<use ../Model_Figures/static_figures/voltage_vs_time.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/voltage_vs_time.png  used on input line 505.
+(pdftex.def)             Requested size: 227.62204pt x 183.46039pt.
+<../Experimental_results/voltage_vs_time.png, id=251, 406.1574pt x 330.2739pt>
+File: ../Experimental_results/voltage_vs_time.png Graphic file (type png)
+<use ../Experimental_results/voltage_vs_time.png>
+Package pdftex.def Info: ../Experimental_results/voltage_vs_time.png  used on input line 506.
+(pdftex.def)             Requested size: 227.62204pt x 185.09322pt.
+<../Experimental_results/voltage_vs_time_comparison.png, id=252, 424.2249pt x 328.8285pt>
+File: ../Experimental_results/voltage_vs_time_comparison.png Graphic file (type png)
+<use ../Experimental_results/voltage_vs_time_comparison.png>
+Package pdftex.def Info: ../Experimental_results/voltage_vs_time_comparison.png  used on input line 508.
+(pdftex.def)             Requested size: 227.62204pt x 176.4358pt.
+<../Model_Figures/static_figures/bifurication_plot.png, id=253, 409.7709pt x 325.215pt>
+File: ../Model_Figures/static_figures/bifurication_plot.png Graphic file (type png)
+<use ../Model_Figures/static_figures/bifurication_plot.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/bifurication_plot.png  used on input line 526.
+(pdftex.def)             Requested size: 227.62204pt x 180.65028pt.
+<../Experimental_results/bifurication_plot.png, id=254, 400.3758pt x 325.215pt>
+File: ../Experimental_results/bifurication_plot.png Graphic file (type png)
+<use ../Experimental_results/bifurication_plot.png>
+Package pdftex.def Info: ../Experimental_results/bifurication_plot.png  used on input line 527.
+(pdftex.def)             Requested size: 227.62204pt x 184.89809pt.
+<../Model_Figures/static_figures/lyapunov_exponents.png, id=255, 418.4433pt x 315.0972pt>
+File: ../Model_Figures/static_figures/lyapunov_exponents.png Graphic file (type png)
+<use ../Model_Figures/static_figures/lyapunov_exponents.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/lyapunov_exponents.png  used on input line 536.
+(pdftex.def)             Requested size: 227.62204pt x 171.40483pt.
+<../Model_Figures/static_figures/phase_spaces.png, id=256, 411.939pt x 307.8702pt>
+File: ../Model_Figures/static_figures/phase_spaces.png Graphic file (type png)
+<use ../Model_Figures/static_figures/phase_spaces.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/phase_spaces.png  used on input line 546.
+(pdftex.def)             Requested size: 227.62204pt x 170.11363pt.
+<../Experimental_results/phase_spaces.png, id=257, 411.939pt x 307.8702pt>
+File: ../Experimental_results/phase_spaces.png Graphic file (type png)
+<use ../Experimental_results/phase_spaces.png>
+Package pdftex.def Info: ../Experimental_results/phase_spaces.png  used on input line 549.
+(pdftex.def)             Requested size: 227.62204pt x 170.11363pt.
+<../Model_Figures/static_figures/phase_spaces3d.png, id=258, 287.6346pt x 281.1303pt>
+File: ../Model_Figures/static_figures/phase_spaces3d.png Graphic file (type png)
+<use ../Model_Figures/static_figures/phase_spaces3d.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/phase_spaces3d.png  used on input line 565.
+(pdftex.def)             Requested size: 227.62204pt x 222.48085pt.
+<../Experimental_results/phase_spaces3d.png, id=259, 287.6346pt x 281.1303pt>
+File: ../Experimental_results/phase_spaces3d.png Graphic file (type png)
+<use ../Experimental_results/phase_spaces3d.png>
+Package pdftex.def Info: ../Experimental_results/phase_spaces3d.png  used on input line 566.
+(pdftex.def)             Requested size: 227.62204pt x 222.48085pt.
+<../Model_Figures/static_figures/poincare_section.png, id=264, 395.3169pt x 333.1647pt>
+File: ../Model_Figures/static_figures/poincare_section.png Graphic file (type png)
+<use ../Model_Figures/static_figures/poincare_section.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/poincare_section.png  used on input line 585.
+(pdftex.def)             Requested size: 227.62204pt x 191.83255pt.
+<../Experimental_results/poincare_section.png, id=265, 403.9893pt x 333.1647pt>
+File: ../Experimental_results/poincare_section.png Graphic file (type png)
+<use ../Experimental_results/poincare_section.png>
+Package pdftex.def Info: ../Experimental_results/poincare_section.png  used on input line 586.
+(pdftex.def)             Requested size: 227.62204pt x 187.71478pt.
+[8 <../Figures/circuit_diagram.png>] [9 <../Model_Figures/static_figures/voltage_vs_time.png> <../Experimental_results/voltage_vs_time.png> <../Experimental_results/voltage_vs_time_comparison.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 601.
+
+<../Experimental_results/comparefft.png, id=292, 372.1905pt x 298.4751pt>
+File: ../Experimental_results/comparefft.png Graphic file (type png)
+<use ../Experimental_results/comparefft.png>
+Package pdftex.def Info: ../Experimental_results/comparefft.png  used on input line 603.
+(pdftex.def)             Requested size: 227.62204pt x 182.53864pt.
+
+Underfull \hbox (badness 4366) in paragraph at lines 619--624
+[]\OT1/cmr/m/n/10 The the-o-ret-i-cal bi-fur-ca-tion plot agrees quite
+ []
+
+[10 <../Model_Figures/static_figures/bifurication_plot.png> <../Experimental_results/bifurication_plot.png> <../Model_Figures/static_figures/lyapunov_exponents.png>] [11 <../Model_Figures/static_figures/phase_spaces.png> <../Experimental_results/phase_spaces.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 636.
+
+(./draft_report.bbl [12 <../Model_Figures/static_figures/phase_spaces3d.png> <../Experimental_results/phase_spaces3d.png>])
+<../Experimental_results/non_linear.png, id=340, 429.2838pt x 328.8285pt>
+File: ../Experimental_results/non_linear.png Graphic file (type png)
+<use ../Experimental_results/non_linear.png>
+Package pdftex.def Info: ../Experimental_results/non_linear.png  used on input line 662.
+(pdftex.def)             Requested size: 227.62204pt x 174.35353pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../Model_Figures/static_figures/rmap_x_V1.png, id=341, 411.939pt x 315.0972pt>
+File: ../Model_Figures/static_figures/rmap_x_V1.png Graphic file (type png)
+<use ../Model_Figures/static_figures/rmap_x_V1.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/rmap_x_V1.png  used on input line 671.
+(pdftex.def)             Requested size: 227.62204pt x 174.10692pt.
+<../Model_Figures/static_figures/rmap_x_V2.png, id=342, 411.939pt x 315.0972pt>
+File: ../Model_Figures/static_figures/rmap_x_V2.png Graphic file (type png)
+<use ../Model_Figures/static_figures/rmap_x_V2.png>
+Package pdftex.def Info: ../Model_Figures/static_figures/rmap_x_V2.png  used on input line 672.
+(pdftex.def)             Requested size: 227.62204pt x 174.10692pt.
+
+Class revtex4-2 Warning: Float cannot be placed.
+
+[13 <../Model_Figures/static_figures/poincare_section.png> <../Experimental_results/poincare_section.png> <../Experimental_results/comparefft.png>] [14 <../Experimental_results/non_linear.png> <../Model_Figures/static_figures/rmap_x_V1.png> <../Model_Figures/static_figures/rmap_x_V2.png>] (./draft_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `draft_report.out' has not changed.
-(rerunfilecheck)             Checksum: E9EB50BADE2138E609B45841F3909192;1826.
+(rerunfilecheck)             Checksum: DB57C01958DA371C19EFB95E0D9D8635;3037.
  ) 
 Here is how much of TeX's memory you used:
- 14685 strings out of 474116
- 226678 string characters out of 5743682
- 1957187 words of memory out of 5000000
- 36805 multiletter control sequences out of 15000+600000
- 565401 words of font info for 64 fonts, out of 8000000 for 9000
+ 14992 strings out of 474116
+ 237810 string characters out of 5743682
+ 1962187 words of memory out of 5000000
+ 37038 multiletter control sequences out of 15000+600000
+ 567565 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,5n,133p,1082b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft_report.pdf (5 pages, 238282 bytes).
+ 85i,11n,133p,1082b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on draft_report.pdf (14 pages, 1255490 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

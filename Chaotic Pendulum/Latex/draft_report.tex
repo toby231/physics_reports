@@ -16,7 +16,12 @@
 \date{\currenttime~\today}
 
 \begin{abstract}
-l
+In this report I will explore the behaviour of the chaotic circuit. Simple chaotic behaviour will be exhibited in basic plots such as 
+phase space and Poincare section plots through the lens of a driven pendulum. The regimes of chaos and nonchaos will be clearly defined for 
+chaotic systems through the behaviour of the pendulum in the plots. The circuit proposed by Kiers et al. will be the main subject of chaotic 
+investigation. A similar circuit is built and then tested for chaotic behaviour. More advanced techniques in chaotic analysis will be used such
+as bifurcation plots and Lyapunov exponents to better define chaotic regimes. Lastly, through computation of Lyapunov exponents, the dimensionality 
+of the circuit will be calcuated and compared to the value put forth by Kiers.
 \end{abstract}
 
 \maketitle
@@ -245,6 +250,13 @@ and $d^{(2)}$ respectively. To learn more about these dimensional quantities, se
 However, due to limitations of this report, I cannot go into any further detail with these quantities. They represent different methods/approximations in obtaining the dimensions of an object and are 
 therefore, inherently, non-equivalent.
 
+\begin{figure*}
+    \subfloat[Phase space of a simulated pendulum's motion with parameters, $q=0.7$, $g = 0.2$ and $\omega = 2/3$]{\includegraphics[width=8cm]{../Model_Figures/static_figures/pendulum_nonchaotic_phase_space.png}}
+    \subfloat[Phase space of a simulated pendulum's motion with parameters, $q=2$, $g = 1.2$ and $\omega = 2/3$]{\includegraphics[width=8cm]{../Model_Figures/static_figures/pendulum_chaotic_phase_space.png}}
+    \caption{(a) An ordered trajectory displaying a stable orbit. (b) Disordered trajectory showing no clear shape. Unpredictable but deterministic.}
+    \label{fig:chaotic_pendulum_phase_space}    
+\end{figure*}
+
 \subsection{Attractors}
 I briefly talked about attractors in phase spaces, giving a broad definition of an attractor being the end state for a finite amount of states that describes the system. Here 
 I will go more into detail about attractors, giving a rigorous mathematical definition. We first should start with the idea of \textit{measure}. In one, two and three dimensions, 
@@ -291,7 +303,7 @@ and Kaplan's formula is not mathematically rigorous as other dimensionality form
     d_L = j + \frac{\sum_{i}^{j}\lambda_i}{\left|\lambda_{j+1}\right|}
 \end{equation}
 
-where $j$ is the largest integer for which $\sum_{i=1}^{j}\lambda_i > 0$. The condition for strangness is then reduced to simply $d_L$ must be a non-integer \citep{taylor}. It is important 
+where $j$ is the largest integer for which $\sum_{i=1}^{j}\lambda_i > 0$. The condition for strangeness is then reduced to simply $d_L$ must be a non-integer \citep{taylor}. It is important 
 to note that for non-area preserving/dissipative systems in two dimensions, chaos cannot arise as a result of the Poincare-Bendixon theorem. Therefore we need at least three Lyapunov exponents 
 to observe chaos \citep{Bendixson1901}.
 
@@ -299,21 +311,368 @@ Now we can try to understand fractal geometry. A nice analogy would be to think 
 (and contract in certain directions) to try to fill the empty space. Of course, our analogy exists in Euclidean space whereas the topic at hand is inherently non-Euclidean but hopefully the 
 imagery helps with the understanding of how fractal geometry comes about. 
 
+\begin{figure*}
+    \subfloat[Poincare section of a simulated pendulum's motion with parameters, $q=0.7$, $g = 0.2$ and $\omega = 2/3$]{\includegraphics[width=8cm]{../Model_Figures/static_figures/pendulum_nonchaotic_poincare_section.png}}
+    \subfloat[Poincare section of a simulated pendulum's motion with parameters, $q=2$, $g = 1.2$ and $\omega = 2/3$]{\includegraphics[width=8cm]{../Model_Figures/static_figures/pendulum_chaotic_poincare_section.png}}
+    \caption{(a) Poincare section shows two points only located diagonally away from each other on the plot. (b) Poincare section showing multiple points, scattered randomly along the plot.}
+    \label{fig:chaotic_pendulum_poincare_section}    
+\end{figure*}
+
 The term \textit{fractals} comes from \textit{fractional dimension}, coined by Benoit Mandelbrot in 1975 \citep{Mandelbrot1975}. In Euclidean dimensions, sets can describe ordinary geometric shapes.
 In 0 dimensional space, sets describe points, for 1 dimensional space, sets describe lines (having only length), in 2 dimensions, sets describe surfaces (length and width), and 3 dimensions, sets 
 describe volumes (having length, width and height). In fractal dimensions, the dimension index can take non-integer values (as seen with the different ways to describe dimensionality), indicating that 
 the set will fill the space. For example, a set with fractal dimension 1.1 will behave like an ordinary line but display some two dimensional thickness. The thickness manifests itself as a self-similarity 
 pattern as you zoom into the 'line' more.
 
+\subsection{The Chaotic Pendulum}
+I will utilise a simple case study of the driven pendulum to demonstrate the theoretical concepts aforementioned in the previous sections. The equation for the driven pendulum is given by the third order 
+differential equation \citep{baker},
+
+\begin{equation}
+    \frac{d\theta^2}{dt^2} + \frac{1}{q}\frac{d\theta}{dt} + \sin{\theta} = g\cos{(\omega_D t)},
+\end{equation}
+
+where $q$, $g$ and $\omega_D$ are the coefficients of the state variables of the system and different choice of these parameters will produce different trajectories of the system. The state variables are then $\theta$,
+$\omega = \dot{\theta}$ and $\phi$ where they represent the position of the pendulum, its velocity and its phase respectively. The equation of motion then clearly satisfies the conditions for chaotic motion, having 3 
+state variables and a non-linear term being the trigonometric function in the driving force.
+
+I can demonstrate the usefulness of phase space diagrams in characterising non-chaotic 
+versus chaotic by simply tuning the system's parameters as shown in the Figure \ref{fig:chaotic_pendulum_phase_space}.
+
+We can easily observe a drastic difference in the shape of trajectory of motions between two different sets of state parameters. The stability of orbits can be visually defined as a circular path with no beginning or end 
+whereas the chaotic, unstable orbits do have a beginning and an end and no clear shape or direction in its trajectory. The path is still circular and loopy but the overall shape is undefined, a intrinsic property of chaotic 
+motion. Visually here we can distinguish between periodicity and aperiodicity however in more complicated orbits it may be more beneficial to simplify our phase space. To do this, we will need to define Poincare sections which 
+are essentially checkpoints for our trajectories at specific locations. Because of pendulum is driven, we can conveniently choose the strobing frequency to match the driven oscillations. This will produce the diagram shown in
+Figure \ref{fig:chaotic_pendulum_poincare_section}. 
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Figures/integrator.png}
+    \caption{Diagram showing the layout of an integrator. The op amp at the centre of the circuit has two inputs, an inverting, denoted by the - symbol and an non-inverting, denoted by the + symbol. There is a capacitor from 
+    the output of the op amp that feeds back into the inverting input. The non-inverting input is connected to ground. The input voltage connects to the inverting input via a resistor.}
+    \label{fig:op_amp}
+\end{figure}
+
+The Poincare sections essentially reveal what the phase spaces do but in a more simplistic fashion. We can observe periodicity in the left Poincare plot as when we strobe the states at the same characteristic frequency of the 
+oscillation, the points remain either of two states. This is constrasted in the right plot where when we do the same thing, we find that there are many, maybe even infinite, states possible for our strobing, a clear sign for 
+aperiodicity.
+
+\section{Aim}
+
+The goal of this report is due verify the chaotic dynamics found in a chaotic circuit as proposed by Kiers \citep{kiers}. I will be using all the analytical tools mentioned above as well as numerical methods that will soon be 
+mentioned to validate the equation of motion for a circuit as a good model for real world observations.
+
 \section{Experimental Setup}
+
+To create a circuit that satisfies the condition for chaotic motion, we need to first understand how to produce an intergrated current. 
+
+\subsection{Integrators}
+
+By no means am I an electric engineer and so for the scope of this report we will remain in the small realm of physics. Operational amplifiers (Op Amps) are very sophisticated pieces of machinery which in itself deserve their 
+own report but for the sake of explaining how we produce an integrated current, all we need to know is that, for an ideal op amp, the inverting input is kept at the same voltage as the non-inverting input as a virtual 
+ground. In other words, if we take a look at the diagram below \ref{fig:op_amp}, we will see a capacitor, $C_F$, that connects from the output of the op amp to the inverting input.
+
+The purpose of this capacitor is to provide a path for the feedback mechanism of the op amp. The op amp will try to keep the voltage difference between its inverting and non-inverting input equal to 0, that is, $V_{-} \approx 
+V_{+} \approx 0$ and it will do this by adjusting the output of the op amp to produce a current that cancels out the current at the inverting input of the op amp so that there is, in this case, $V_{+} = 0$, there is no 
+voltage at the inverting input of the op amp. Using Kirchhoff's law of currents, we have at the inverting input node,
+
+\begin{equation}
+    i_1 = I_B + i_F.
+\end{equation}
+
+For an ideal op amp, there is no current at the inputs at all so $I_B = 0$ so $i_1 = i_F$. At the capacitor, using the voltage capacitor relationship we have,
+
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Model_Figures/static_figures/non_linear.png}
+    \caption{Theoretical graph displaying the relationship between $D(x)$ and $x$. The resistors $R_2$ and $R_1$, in line with the underlying paper, are chosen 
+    to be in a ratio equal to 6.}
+    \label{fig:nonlineargraph}
+\end{figure}
+
+\begin{equation}
+    i_F = C_F \frac{d(V_2 - V_o)}{dt}.
+\end{equation}
+
+and then we can equate 
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Figures/non_linear.png}
+    \caption{The non-linear subcircuit is comprised of two diodes and two resistors. Using Shockley's equations \citep{baker}, one can obtain 
+    the relationship between the input voltage and the output voltage to be $V_{out} \approx -\frac{R_2}{R_1}\text{min}(V_{in},0)$.}
+    \label{fig:nonlinear}
+\end{figure}
+
+\begin{equation}
+    \frac{V_{in} - V_2}{R_1} = C_F \frac{d(V_2 - V_o)}{dt}.
+\end{equation}
+
+In an ideal op amp we also have zero voltage at the inverting node so $V_2 = 0$ so 
+
+\begin{equation}
+    \frac{V_{in}}{R_1} = - C_F \frac{dV_o}{dt}. 
+\end{equation}
+
+Assuming the output voltage begins at zero, we can rearrange for $V_o$ by integrating both sides to achieve the integrating relationship,
+
+\begin{equation}
+    V_o = -\frac{1}{R_1 C_F}\int_{0}^{t}V_{in}dt.
+\end{equation}
+
+\subsection{Non-linear component}
+Now that we have a way to produce integrated state variables, all we need now to produce our chaotic circuit is to introduce a non-linear 
+component. There are a multitude of different non-linear circuits that can be constructed and that are well understood. I will choose to 
+go with the non-linear subcircuit in the reference paper we are verifying which is shown in Figure \ref{fig:nonlinear}
+
+The output voltage, $D(x)$, can be plotted against the input voltage, $x$, to show this non-linearity, shown in Figure \ref{fig:nonlineargraph}.
+\subsection{The Circuit}
+
+We need to satisfy the three state variables condition so we need to have 3 integrators and then a non-linear component. We also need to spend an 
+op amp to couple the integrators together and so therefore, we can construct the circuit as shown in Figure \ref{fig:circuitdiagram}.
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Figures/circuit_diagram.png}
+    \caption{Circuit diagram of the chaotic circuit. There are 6 op amps in total however LMC6062IN microchips were used. Each chip 
+    contained two op amps and the input and output of each op amp corresponding to specific pins on the chip. There are a total of 8 pins on the chip.
+    Pin 3 and 5 corresponded to the non-inverting input of each op amp whereas pins 2 and 6 corresponded to the inverting input of each. Pins 1 and 
+    7 were the output of the two op amps respectively. The three integrators are then the op amps with a $1\mu F$ capacitor placed in parallel, which are 
+    the 2nd op amp of the Chip 1 and both op amps in Chip 2. The final op amp, or the 2nd one in Chip 3 serves as a summing op amp.}
+    \label{fig:circuitdiagram}
+\end{figure}
+
+We need to apply Kirchhoff rules to obtain our differential equation of motion. If we take the output of pin 7 in the 2nd op amp of Chip 2 as $x$, then 
+the 1st op amp of that same chip will be $-\dot{x}$ and the output of pin 7 in the 2nd op amp of Chip 1 will be $\ddot{x}$. Applying Kirchhoff's law of currents 
+at the summing op amp output we obtain
+
+\begin{equation}
+    \frac{d\ddot{x}}{dt} + \left(\frac{R}{R_v}\right)V_2 + \left(\frac{R}{R_0}\right)V_0 = -\dot{x} + D(x) 
+\end{equation}
+
+or more succinctly,
+
+\begin{equation} \label{eqn:equation_of_motion}
+    \dddot{x} = -\left(\frac{R}{R_v}\right)V_2 - \left(\frac{R}{R_0}\right)V_0 - \dot{x} + D(x).
+\end{equation}
+
+Here I have omitted the $R_1 C_F$ factor we find in the integrator equation by absorbing it into the time derivative, so we are deriving with respect to dimensionless 
+time, $\tilde{t} = \frac{1}{R_1 C_F} t$.
+
+\subsection{Numerical Methods (Extension)}
+The differential equation \ref{eqn:equation_of_motion} was solved using a 4-stage Runge Kutta (RK4) algorithm. It is a one step, explicit, numerical integration 
+method with a run time growth of $O(h^4)$. This serves to be a limiting factor in our analysis of chaos as we must choose an appropriate time step for the algorithm that 
+will produce highly resolved trajectory behaviour but also be reasonable in run time. I chose a time step of 0.125 ms for each state solution. 
+
+Furthermore, I employed my own version of Wolf's algorithm \citep{wolf} to calculate all three Lyapunov exponents. Even in this modern day, there is still no stable or 
+accurate way to determine zero or negative Lyapunov exponents in time series data. Wolf's algorithm only allows you to obtain all three if you have the independent equations  
+of each state. This is because in the algorithm we need to know how each state vector evolves with time. We exploit the useful property of Gram-Schmidt reorthonormalisation
+of preserving orientation of the principal axis whilst also providing the subsequent new orientation of the next state vectors, ensuring that the new axes are orthogonal 
+(no orientation collapse).
+
+Because we know the equations of motion, we can build the Jacobian for the system and observe how it acts on our principal axis. Since we have three state variables, we have 
+to consider three principal axes vectors, 
+
+\begin{equation}
+    P(t) = \begin{bmatrix}
+        dx(n) \\
+        dy(n) \\
+        dz(n) \\
+    \end{bmatrix}.
+\end{equation}
+
+At each iterative step, the next principal axis orientation will be 
+
+\begin{equation}
+    \begin{bmatrix}
+        dx(n+1) \\
+        dy(n+1) \\
+        dz(n+1) \\
+    \end{bmatrix} = \mathbf{J_{n}}
+    \begin{bmatrix}
+        dx(n) \\
+        dy(n) \\
+        dz(n) \\
+    \end{bmatrix}.
+\end{equation}
+
+The Jacobian here contains all the divergence information from previous Jacobians, that is $\mathbf{J_{n}} = \mathbf{J_{n-1}J_{n-2}...J_1}$.
+So in each step of the RK4 method, the principal axis vectors are updated with the perturbation from the Jacobian and every couple of steps or so, 
+the axis vectors are re-orthonormalised so that orientation collapse is avoided. The stretching factors in each re-orthonormalisation step in each direction are 
+recorded and the time average is taken to obtain the Lyapunov exponent in that direction.
+
+I used QR decomposition, which is mathematically equivalent to GSR, to obtain the stretching factors in each direction. Essentially, the new perturbed vector,
+
+
+\begin{figure*}
+    \subfloat[Theoretical simulation of $x$ versus time for 0 to 10 seconds. The time step in the RK4 algorithm is 0.125 ms.]{\includegraphics[width=8cm]{../Model_Figures/static_figures/voltage_vs_time.png}} 
+    \subfloat[Experimental measurement of $x$ versus time for 0 to 10 seconds. There were 2001 samples, therefore the time step was 5 ms.]{\includegraphics[width=8cm]{../Experimental_results/voltage_vs_time.png}} \\
+    \subfloat[Comparison of the two plots, despite its chaotic behaviour, we can see the theoretical simulation traces out the experimental results somewhat for 5 to 10 seconds. The residuals were 
+    calculated to be 42\%.]{\includegraphics[width=8cm]{../Experimental_results/voltage_vs_time_comparison.png}} \\
+    \caption{We want to see how well the simulation matches experimental results. The simulation shows higher characteristic frequency of oscillation than experiment. There is clear chaotic dynamics 
+    going on because there is one positive, one near zero and one negative Lyapunov exponent. The experimental Lyapunov exponent weakly matches the non-negative theoretical component, approximately a 
+    40\% disagreement, in the same range as the error found in calculating residuals.}
+    \label{fig:voltage_vs_time}   
+\end{figure*}
+
+\begin{equation}
+    Y_{n+1} = J_{n} Y_{n}.
+\end{equation}
+
+The new vector can then be decomposed into 
+
+\begin{equation}
+    Y_{n+1} = QR. 
+\end{equation}
+
+\begin{figure}
+    \subfloat[Bifurcation points at 52 k$\Omega$, 65 k$\Omega$, 68 k$\Omega$, 103 k$\Omega$, 125 k$\Omega$.]{\includegraphics[width=8cm]{../Model_Figures/static_figures/bifurication_plot.png}} \\
+    \subfloat[Bifurcation points, approximately, at 52 k$\Omega$, 64 k$\Omega$, 68 k$\Omega$, 100 k$\Omega$, 113 k$\Omega$ and 118 k$\Omega$.]{\includegraphics[width=8cm]{../Experimental_results/bifurication_plot.png}}
+    \caption{The top plot is the theoretical simulation of the bifurcation plot. We find a smooth curve with clear regions of nonchaos and chaos. The bottom plot is the bifurcation plot of experimental results.
+    We find strange artefacts in measured peaks. These weird artefacts tend to occur at bifurcation plots. There is also another bifurcation point at 145 k$\Omega$ in the experimental plot, which is a strange artefact 
+    rather than reflective of the underlying physics. There also is a saturated region in the top branch of the experimental bifurcation plot at 135 k$\Omega$.}
+    \label{fig:bicuration_plot}
+\end{figure}
+Now we treat the new vector as the new basis components, $Q$,
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Model_Figures/static_figures/lyapunov_exponents.png}
+    \caption{Calculated Lyapunov using the Wolf algorithm for theoretically simulated results. We see in regions where there are 2 negative exponents and 1 zero exponent, we have a limit cycle attractor. In regions of chaos, it can be defined as the regions 
+    where there are 1 positive, 1 zero and 1 negative exponents.}
+    \label{fig:lyapunov}
+\end{figure}
+
+\begin{figure*}
+    \subfloat[Theoretically simulated plots for variable resistance set to 53, 78, 95 and 128 k$\Omega$. A clear limit cycle attractor is shown in the top 
+    left and bottom right plots, indicating regions of nonchaos. The orbit appears to cross however this is a 2D cross section of a 3D plot and so the loop never 
+    intersects with itself in space. The chaotic strange attractors are shown in the top right and bottom left plot. We find there are trajectories that come really 
+    close to each other, however they never touch. In fact, they get infinitely close to each other but will never touch, this is fractal behaviour.]{\includegraphics[width=8cm]{../Model_Figures/static_figures/phase_spaces.png}} 
+    \subfloat[Rather than plotting experimental data as lines, we choose to create a scatter plot of trajectories. This is because, our time step, experimentally, was too 
+    high to accurately resolve trajectories. Creating a scatter plot allows us to show the generic shape of the attractor. We can see all panels except the bottom left plot exhibit 
+    stable orbital behaviour. The bottom left plot clearly shows chaotic behaviour with no clear circular trajectory or shape.]{\includegraphics[width=8cm]{../Experimental_results/phase_spaces.png}}
+    \caption{We find that all plots except the plot for $Rv=78$ k$\Omega$ agree between experimental and theoretical simulated data. The experimental result for the chaotic attractor, $Rv = 95$ k$\Omega$ 
+    displays more chaos than theoretically expected. We can tell as the states fills outs most of the circular shape of the attractor whereas in the simulated result, there is some empty space within the circular 
+    attractor.}
+    \label{fig:phase_space}
+\end{figure*}
+
+\begin{equation}
+    Y_{n+1} \rightarrow Q 
+\end{equation}
+
+and the process is restarted. Here, I only reorthonormalised, that is, setting the vector as $Q$, once every 10 steps. The $R$ matrix is an upper triangular 
+matrix that contains all the stretching factors in all directions. The growth rates are found in the diagonal components of the matrix and so the average can be 
+found by the taking the summation over all $R$ matrices in each step. 
+
+\begin{figure}
+    \subfloat[Simulated result]{\includegraphics[width=8cm]{../Model_Figures/static_figures/phase_spaces3d.png}} \\
+    \subfloat[Experimental data]{\includegraphics[width=8cm]{../Experimental_results/phase_spaces3d.png}}
+    \caption{A 3D plot showing the chaotic attractors $Rv=95$ k$\Omega$ and $Rv=128$ for both the simulated and experimental results. The constant looping around has depth in the $\ddot{x}$ axis. We can more clearly see how each trajectory do not 
+    cross over itself however showing this plot to the uninitiated, the condition that trajectories cannot cross each other would seem to be broken.}
+    \label{fig:phase_space3d}
+\end{figure}
+
+Even to this day, Lyapunov exponents that are 0 or negative are impossible to calculate in an accurate or stable manner. Therefore, we can only calculate non-negative 
+exponents, which will be done using the \textit{nolds} Python package, which implements the Rosenstein algorithm \citep{rosenstein}.
 
 \section{Results and Discussion}
 
+I will admit that it was my first time constructing a more involved circuit. I had, up until this point, never used a breadboard nor connected any wires in any way and therefore, the construction of the circuit in Figure 
+\ref{fig:circuitdiagram} proved to be quite cumbersome. I am grateful to have undertaken this journey as I have learnt plenty and thoroughly enjoyed the process. However, ultimately, I believed there to be some error in 
+the final iteration of the circuit, and the iteration for which the experimental data was taken. This clear error, due to human mistake, can be clearly depicted in Figure \ref{fig:expnonlinear} in Appendix A. Before the 
+circuit was connected wholly, we tested each Chip individually for range of voltages. I found that, along with many of my other peers, the non-linear subcircuit output produced voltages in the range of -1 to 6 volts, which 
+was not quite the 0 to 6 volts range we were modelling from. The idea of 'good enough' was eventually decided upon, meaning the circuit was not perfectly matching the theoretical simulation but I wanted to show the behaviour 
+was ultimately the same. I knew going ahead meant the quantitative analysis would not be perfect but the circuit should still display chaotic behaviour similar to theoretical expectations. It seemed, at first glance, that the 
+experimental data matched theoretical simulation decently well, shown in Figure \ref{fig:voltage_vs_time}. 
+\begin{figure*}
+    \subfloat[Simulated result]{\includegraphics[width=8cm]{../Model_Figures/static_figures/poincare_section.png}} 
+    \subfloat[Experimental data]{\includegraphics[width=8cm]{../Experimental_results/poincare_section.png}}
+    \caption{Poincare sections at $x=0$, coming from positive $\dot{x}$. The shape of the plane is different between simulated and experimental results. Theory predicts that the plane of intersection is a straight diagonal 
+    line, however the experimental data demonstrates that the plane is more of a concave up arc. The behaviour of Poincare sections for each Rv are the same across theory and experiment. We find that in regions of nonchaos, there 
+    are clear defined regions, exhibited by dark blue regions indicating high density of states. As Rv reaches regions of chaos, the density of states decreases and more spread out across the plot. In the theoretical Poincare section,
+    we find a second layer of the plane, indicating small increased dimension of a 2D plane.}
+    \label{fig:poincare}
+\end{figure*}
+
+In the overlay plot, we can see that the shape of the curves do match, although the experimental result seemed to be oscillating a bit slower. I can attribute this to the lower sampling frequency of the LabJack settings. If this 
+experiment were to be redone with more time investment, the data could have been more finely resolved. The code for the LabJack was completed by myself and looking retroactively, could have been much improved in efficiency. A rough 
+estimation of disagreement between the theoretical and experimental results can be calculated from the residuals, being approximately, a 42\% deviation. This lines up with the Lyapunov exponent calculations, being approximately 40\% 
+deviation. The calculation of the non-negative Lyapunov exponent from time series data is a complicated process, involving advanced statistical methods such as Monte Carlo sampling and therefore the process is beyond the scope of this 
+report. Therefore, I cannot give a proper uncertainty on its calculation. For the calcuation of theoretical Lyapunov exponents, I can more fairly estimate the uncertainty as the process is more known. I will use block averaging \citep{fisher} 
+to find the average standard deviation of the Lyapunov dataset. For the chaotic attractor, $Rv=95$ k$\Omega$, the largest Lyapunov exponent is calculated to be $\lambda_1 = 0.059 \pm 
+0.004$, the second largest, $\lambda_2 = 0.0027 \pm 0.003$ and the smallest, $\lambda_3 = -0.554 \pm 0.003$. Therefore, if we apply the Kaplan-Yorke equation, we obtain a value for the dimensionality of the circuit,
+
+\begin{figure}
+    \includegraphics[width=8cm]{../Experimental_results/comparefft.png}
+    \caption{Fourier space plots for experimental data. In regions of nonchaos, there are narrow band signals, clearly indicating periodicity. For the spectrum in $Rv=95$, there is supposedly noise, however we know it is not noise as we do not see it in 
+    the other plots.}
+    \label{fig:fftcompare}
+\end{figure}
+\begin{equation}
+    d_L = 2 + \frac{0.059 + 0.0027}{0.554} = 2.111 \pm 0.124. 
+\end{equation}
+
+Note here that the large uncertainty originates from the second Lyapunov exponent being close to zero. Nevertheless, we observe behaviour just a bit around 2 dimensions, an exclusive indicator for fractal behaviour which is 
+expected.
+
+The chaotic indicator of 1 positive, 1 zero and 1 negative exponent can clearly be seen in the theoretical plot seen in Figure \ref{fig:lyapunov}. We find that in regions of nonchaos, the exponents behave in quite stable manner but once we get into that chaotic 
+region, roughly above $Rv= 65$ k$\Omega$ and below $Rv=105$ k$\Omega$, the Lyapunov exponents start to become chaotic themselves. All three exponents, start to fluctuate in seemingly disorderly. From previous work, we understand that the larger the positive exponent, the 
+more chaotic behaviour is observed. For example, in the small region where the largest exponent is approximately zeroed in between the chaotic regions, in the region of $80 < Rv < 85$, we can observe slightly nonchaos. This is better shown in Figure \ref{fig:bicuration_plot}.
+
+The theoretical bifurcation plot agrees quite strongly with the Lyapunov exponent graph. We begin with a stable plot from $Rv=47$ k$\Omega$ to $Rv 53$ k$\Omega$. We then see period doubling until approximately $Rv=68$ k$\Omega$ and then chaos. In regions of 1 zero and 2 negative 
+Lyapunov exponents, limit cycle attractors will be observed. These are stable orbits are however then doubled in period, reflected in the two negative exponents slightly converging before entering the state of chaos. Past the chaotic regime, we will observe period halfing and then 
+stable orbits again, still with limit cycle attractors. We find this behaviour to still be reflected in the bifuraction plot produced with experimental data, although slightly shifted towards the right. The overall behaviour still remains the same but there are oddities, especially at 
+bifurcation points and then near the end of the graph, where the peaks seem to be saturated, capped at 6V. The bifurcation points do somewhat agree, and to be honest, better than expected due to the differences found in previous plots. A further investigation into specific $Rv$ trajectories 
+are found in Figure \ref{fig:phase_space}. The values for $Rv$ were chosen based on one nonchaotic, one chaotic, one where the theoretical and experimental disagree and then one post the chaotic regime.
+
+The phase space plots better reflect and visualise the attractors I have been talking about. The strange chaotic attractors are much more obvious to see and distinguish from the limit cycles. Even in the experimental data, we can observe that limit cycles 
+greatly restrain the region in which states can exist, creating high density trajectories that produce a circular or loop shape. We can observe that even though in the 2D plots, the loop seems to cross over itself, this does not violate the rule put forth 
+by the phase space conventions. We can better see this non-violation in Figure \ref{fig:phase_space3d}.
+
+The loop possesses a 3D depth that is unable to be expressed in a 2D plot but in 3D we can better see this characteristic. The plot of both attractors deceptively show the violation where trajectories cross over each other but rather this is exactly what fractal 
+behaviour tends to do. In reality, these trajectories get infinitely close together and weave themselves through one another at an infinitely small scale whereby the pattern is self similar and therefore the trajectories can pass 'through' each other without touching.
+We can sort of see this behaviour in a Poincare section where rather than stroboscopically probing the plot at the same frequency or a driven frequency, we observe when the plot crosses a certain plane, seen in Figure \ref{fig:poincare}.
+
+The Poincare plots reveal that chaotic trajectories 'revisit' the same plane but at a slightly different angle/state. This infinitely small change in state is then the fractal behaviour. Finally I want to end the investigation of this behaviour by displaying another 
+obvious sign of chaos. Despite the multitude of noise that can arise from circuit behaviour, plotting the oscillations in Fourier space reveals that in nonchaotic regimes, the signal is picked up quite easily and strongly. Therefore, the 'noise' seen in the third plot 
+in \ref{fig:fftcompare}, is actually induced wholly by chaotic behaviour, an intrinsic characteristic of the dynamics, not influenced by external factors.
+
+This kind of insight shows that in chaotic systems, the 'noise' that can be observed is largely generated endogenously rather than an amplification of generic noise.
+
+The return maps for the simulated result are shown in Figure \ref{fig:rmap} however experimental curves could not be produced due to insufficient duration of sampling. Overall, the theme of this investigation did not require the fractal behaviour exhibited by these return 
+maps, I find that fractal behaviour is better reflected in the plots shown above.
+
 \section{Conclusion}
+
+Despite the trials and tribulations in the journey of this report, I still managed to strongly show chaotic behaviour in the circuit built. Although the circuit did not quantitatively reflect the simulated model, plots showing chaotic behaviour could be produced and the 
+notion that these regions of chaos existed experimentally were convincinly conveyed. Therefore, the aim of this experiment to validate the findings of Ref \citep{baker} were satisfied and to an acceptable extent. Basic plots for chaotic systems such as phase spaces and 
+Poincare sections could be produced for the experimental setup and advanced techniques in analysing chaotic behaviour could be conducted such as producing bifurcation plots and calculating Lyapunov exponents. I found that the chaotic circuit proposed by Ref \citep{baker} 
+exhibited near to, but not exactly, 2 dimensional behaviour which agrees with their result and conclusion.
 
 \section{Acknowledgements}
 
+I would like to forward my many thanks to Nicholas for helping me build the circuit during the lab and would like to shout out his endless patience. I would also like to give my many thanks to my lovely girlfriend whom have been a great supporter in me writing this report.
+
+
 \bibliographystyle{apsrev4-2}
 \bibliography{references}
+
+\appendix
+\section{Appendix}
+\subsection{Non-linear subcircuit}
+
+\begin{figure} [h]
+    \includegraphics[width=8cm]{../Experimental_results/non_linear.png}
+    \caption{Graph displaying experimental measurement of the non-linear component. The lack of drop off shows weak diode connection. However there is a non-linear 
+    feature as the subcircuit does not allow voltages past 0.75V, instead outputs -0.5V. The overall shape is not expected and therefore the simulated results and 
+    this experimental data will not be valid.}
+    \label{fig:expnonlinear}
+\end{figure}
+
+\subsection{Return Maps}\label{app:B}
+\begin{figure*} [h]
+    \subfloat[Return map for simulated result for n+1th peak for nth peak.]{\includegraphics[width=8cm]{../Model_Figures/static_figures/rmap_x_V1.png}} 
+    \subfloat[Return map for simulated result for n+2th peak for nth peak.]{\includegraphics[width=8cm]{../Model_Figures/static_figures/rmap_x_V2.png}}
+    \caption{To show a complete return map with fractal structure, we need 20 times more sample points than previous RK4 solutions. This is to generate more peaks and so when we 
+    were generating experimental data, we could not produce a return map due to scarcity of peaks.}
+    \label{fig:rmap}
+\end{figure*}
 
 \end{document}
