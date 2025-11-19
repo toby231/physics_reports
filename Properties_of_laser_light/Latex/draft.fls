@@ -197,12 +197,12 @@ INPUT ../Figures/HeNe_Laser_Levels.png
 INPUT ../Figures/HeNe_Laser_Levels.png
 INPUT ../Figures/HeNe_Laser_Levels.png
 INPUT ../Figures/HeNe_Laser_Levels.png
+INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
+INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
+INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
+INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
+INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
-INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
-INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
-INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
-INPUT ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
@@ -222,11 +222,6 @@ INPUT ../Figures/warmuppol.png
 INPUT ../Figures/warmuppol.png
 INPUT ../Figures/warmuppol.png
 INPUT ../Figures/warmuppol.png
-INPUT ../Figures/doubleslit.jpg
-INPUT ../Figures/doubleslit.jpg
-INPUT ../Figures/doubleslit.jpg
-INPUT ../Figures/doubleslit.jpg
-INPUT ../Figures/doubleslit.jpg
 INPUT ../Figures/sc1.png
 INPUT ../Figures/sc1.png
 INPUT ../Figures/sc1.png
@@ -273,4 +268,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb

@@ -23,44 +23,44 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-You've used 7 entries,
+You've used 8 entries,
             6079 wiz_defined-function locations,
-            1676 strings with 16076 characters,
-and the built_in function-call counts, 5398 in all, are:
-= -- 431
-> -- 93
-< -- 24
-+ -- 36
-- -- 20
-* -- 745
-:= -- 596
-add.period$ -- 7
-call.type$ -- 7
-change.case$ -- 33
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 491
-empty$ -- 372
-format.name$ -- 53
-if$ -- 1040
+            1685 strings with 16237 characters,
+and the built_in function-call counts, 6325 in all, are:
+= -- 509
+> -- 112
+< -- 29
++ -- 42
+- -- 24
+* -- 874
+:= -- 686
+add.period$ -- 8
+call.type$ -- 8
+change.case$ -- 37
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 574
+empty$ -- 437
+format.name$ -- 66
+if$ -- 1232
 int.to.chr$ -- 1
-int.to.str$ -- 15
-missing$ -- 62
-newline$ -- 73
-num.names$ -- 21
-pop$ -- 213
+int.to.str$ -- 16
+missing$ -- 76
+newline$ -- 76
+num.names$ -- 24
+pop$ -- 250
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 40
 quote$ -- 0
-skip$ -- 241
+skip$ -- 287
 stack$ -- 0
-substring$ -- 125
-swap$ -- 423
-text.length$ -- 8
+substring$ -- 148
+swap$ -- 500
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 87
+type$ -- 100
 warning$ -- 0
-while$ -- 16
+while$ -- 19
 width$ -- 0
-write$ -- 107
+write$ -- 115

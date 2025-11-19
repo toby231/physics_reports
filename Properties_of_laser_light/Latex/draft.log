@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.30)  16 NOV 2025 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.30)  18 NOV 2025 12:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,97 +523,100 @@ Package hyperref Info: Link coloring OFF on input line 10.
 Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 10.
 \openout3 = `draftNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<../Figures/HeNe_Laser_Levels.png, id=82, 246.4407pt x 158.994pt>
+<../Figures/HeNe_Laser_Levels.png, id=78, 246.4407pt x 158.994pt>
 File: ../Figures/HeNe_Laser_Levels.png Graphic file (type png)
 <use ../Figures/HeNe_Laser_Levels.png>
-Package pdftex.def Info: ../Figures/HeNe_Laser_Levels.png  used on input line 60.
+Package pdftex.def Info: ../Figures/HeNe_Laser_Levels.png  used on input line 61.
 (pdftex.def)             Requested size: 227.62204pt x 146.85364pt.
- [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../Figures/HeNe_Laser_Levels.png>]
-<../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png, id=105, 602.25pt x 168.63pt>
+<../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png, id=83, 602.25pt x 168.63pt>
 File: ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png Graphic file (type png)
 <use ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png>
-Package pdftex.def Info: ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png  used on input line 71.
+Package pdftex.def Info: ../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png  used on input line 72.
 (pdftex.def)             Requested size: 227.62204pt x 63.73526pt.
-<../Figures/michelson.png, id=110, 959.585pt x 323.2075pt>
+ [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 83.
+
+<../Figures/michelson.png, id=106, 959.585pt x 323.2075pt>
 File: ../Figures/michelson.png Graphic file (type png)
 <use ../Figures/michelson.png>
-Package pdftex.def Info: ../Figures/michelson.png  used on input line 105.
+Package pdftex.def Info: ../Figures/michelson.png  used on input line 106.
 (pdftex.def)             Requested size: 227.62204pt x 76.66394pt.
-<../Figures/warmupnopol.png, id=111, 416.2752pt x 312.2064pt>
+<../Figures/warmupnopol.png, id=107, 416.2752pt x 312.2064pt>
 File: ../Figures/warmupnopol.png Graphic file (type png)
 <use ../Figures/warmupnopol.png>
-Package pdftex.def Info: ../Figures/warmupnopol.png  used on input line 128.
+Package pdftex.def Info: ../Figures/warmupnopol.png  used on input line 121.
 (pdftex.def)             Requested size: 227.62204pt x 170.7184pt.
-<../Figures/warmuppol.png, id=112, 409.7709pt x 312.2064pt>
+<../Figures/warmuppol.png, id=108, 409.7709pt x 312.2064pt>
 File: ../Figures/warmuppol.png Graphic file (type png)
 <use ../Figures/warmuppol.png>
-Package pdftex.def Info: ../Figures/warmuppol.png  used on input line 129.
+Package pdftex.def Info: ../Figures/warmuppol.png  used on input line 122.
 (pdftex.def)             Requested size: 227.62204pt x 173.42429pt.
-<../Figures/doubleslit.jpg, id=113, 552.0625pt x 405.515pt>
-File: ../Figures/doubleslit.jpg Graphic file (type jpg)
-<use ../Figures/doubleslit.jpg>
-Package pdftex.def Info: ../Figures/doubleslit.jpg  used on input line 137.
-(pdftex.def)             Requested size: 227.62204pt x 167.20274pt.
-<../Figures/sc1.png, id=114, 853.1875pt x 853.1875pt>
+[2 <../Figures/HeNe_Laser_Levels.png> <../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png> <../Figures/michelson.png>]
+<../Figures/sc1.png, id=125, 853.1875pt x 853.1875pt>
 File: ../Figures/sc1.png Graphic file (type png)
 <use ../Figures/sc1.png>
-Package pdftex.def Info: ../Figures/sc1.png  used on input line 148.
+Package pdftex.def Info: ../Figures/sc1.png  used on input line 140.
 (pdftex.def)             Requested size: 170.71652pt x 170.71259pt.
-<../Figures/sc2.png, id=115, 853.1875pt x 853.1875pt>
+<../Figures/sc2.png, id=126, 853.1875pt x 853.1875pt>
 File: ../Figures/sc2.png Graphic file (type png)
 <use ../Figures/sc2.png>
-Package pdftex.def Info: ../Figures/sc2.png  used on input line 149.
+Package pdftex.def Info: ../Figures/sc2.png  used on input line 141.
 (pdftex.def)             Requested size: 170.71652pt x 170.71259pt.
-<../Figures/sc3.png, id=116, 852.18375pt x 852.18375pt>
+<../Figures/sc3.png, id=127, 852.18375pt x 852.18375pt>
 File: ../Figures/sc3.png Graphic file (type png)
 <use ../Figures/sc3.png>
-Package pdftex.def Info: ../Figures/sc3.png  used on input line 150.
+Package pdftex.def Info: ../Figures/sc3.png  used on input line 142.
 (pdftex.def)             Requested size: 170.71652pt x 170.70679pt.
-<../Figures/sc4.png, id=117, 856.19875pt x 856.19875pt>
+<../Figures/sc4.png, id=128, 856.19875pt x 856.19875pt>
 File: ../Figures/sc4.png Graphic file (type png)
 <use ../Figures/sc4.png>
-Package pdftex.def Info: ../Figures/sc4.png  used on input line 151.
+Package pdftex.def Info: ../Figures/sc4.png  used on input line 143.
 (pdftex.def)             Requested size: 170.71652pt x 170.71413pt.
-<../Figures/sc5.png, id=118, 853.1875pt x 853.1875pt>
+<../Figures/sc5.png, id=129, 853.1875pt x 853.1875pt>
 File: ../Figures/sc5.png Graphic file (type png)
 <use ../Figures/sc5.png>
-Package pdftex.def Info: ../Figures/sc5.png  used on input line 152.
+Package pdftex.def Info: ../Figures/sc5.png  used on input line 144.
 (pdftex.def)             Requested size: 170.71652pt x 170.71259pt.
- [2 <../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png> <../Figures/michelson.png>]
-<../Figures/tempcoherence.png, id=135, 422.0568pt x 313.6518pt>
+ [3 <../Figures/warmupnopol.png> <../Figures/warmuppol.png>]
+<../Figures/tempcoherence.png, id=149, 422.0568pt x 313.6518pt>
 File: ../Figures/tempcoherence.png Graphic file (type png)
 <use ../Figures/tempcoherence.png>
-Package pdftex.def Info: ../Figures/tempcoherence.png  used on input line 160.
+Package pdftex.def Info: ../Figures/tempcoherence.png  used on input line 181.
 (pdftex.def)             Requested size: 227.62204pt x 169.15886pt.
- (./draft.bbl) [3 <../Figures/warmupnopol.png> <../Figures/warmuppol.png> <../Figures/doubleslit.jpg>] [4 <../Figures/sc1.png> <../Figures/sc2.png> <../Figures/sc3.png> <../Figures/sc4.png> <../Figures/sc5.png>] [5 <../Figures/tempcoherence.png>] (./draft.aux)
+ [4 <../Figures/sc1.png> <../Figures/sc2.png> <../Figures/sc3.png> <../Figures/sc4.png> <../Figures/sc5.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 193.
+
+(./draft.bbl) [5 <../Figures/tempcoherence.png>] (./draft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: AA630CC11BA26C36AB44B39AF2DDDDE9;2729.
+(rerunfilecheck)             Checksum: 984DFFC8E6F14F535FC611EA14D42383;2598.
  ) 
 Here is how much of TeX's memory you used:
- 14738 strings out of 474116
- 228813 string characters out of 5743682
- 1949187 words of memory out of 5000000
- 36865 multiletter control sequences out of 15000+600000
+ 14734 strings out of 474116
+ 228657 string characters out of 5743682
+ 1954187 words of memory out of 5000000
+ 36860 multiletter control sequences out of 15000+600000
  565354 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,10n,133p,1082b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on draft.pdf (5 pages, 2740425 bytes).
+ 85i,10n,133p,1082b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on draft.pdf (5 pages, 2747632 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

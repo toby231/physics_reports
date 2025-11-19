@@ -16,7 +16,8 @@
 \date{\currenttime~\today}
 
 \begin{abstract}
-l
+In this report, we examine many different properties of laser light. Firstly, the warm up behaviour for both unpolarised and polarised laser light will be examined, investigating the existence of 
+longitudinal modes of oscillation in the cavity. Then we will look, qualitatively and quantitatively look at the spatial and temporal coherence of the laser light.
 \end{abstract}
 
 \maketitle
@@ -86,7 +87,7 @@ must be an integer number of the wavelengths so $2L = m\lambda$. We can rewrite 
 
 The separation of these longitudinal modes is then 
 
-\begin{equation}
+\begin{equation} \label{eqn:spacing}
     \Delta \nu = \frac{c}{2L}.
 \end{equation}
 
@@ -104,7 +105,7 @@ waves, the intensity of fringes will just be the sum of the two intensities.
 \begin{figure}
     \includegraphics[width=8cm]{../Figures/michelson.png}
     \caption{(a) Schematic diagram of the Michelson interferometer setup. A source of light enters a beam splitter which then directs two beams into a fixed and a movable mirror. The two separate beams then are reflected back into the splitter where 
-    they recombine and enter the detector. (b) A graph displaying the intensity of the interferometry pattern based on the path difference, or the difference in distances between the two mirrors.}
+    they recombine and enter the detector. (b) A graph displaying the intensity of the interferometry pattern based on the path difference, or the difference in distances between the two mirrors. Source: Peter Reece PHYS3114 Lectures}
     \label{fig:interferometer}
 \end{figure}
 
@@ -112,9 +113,17 @@ We can hand wave a derivation for the visibility of fringes using the Wiener-Khi
 with a spacing of $\Delta \nu$, where $\nu$ is the longitudinal mode spacing. We will find the magnitude of the coherence function (proportional to the visibility) to have a periodic factor of $\tau_{\text{rev}}=\frac{1}{\Delta \nu}$. Therefore, the coherence length 
 can be written in terms of the cavity length,
 
-\begin{equation}
+\begin{equation} \label{eqn:cavity}
     \Delta_{\text{rev}} = c \tau_{\text{rev}} = \frac{c}{\Delta \nu} = 2L_{\text{cav}}.
 \end{equation}
+
+\begin{figure*}
+    \subfloat[Without polarisation]{\includegraphics[width=8cm]{../Figures/warmupnopol.png}}
+    \subfloat[With polarisation]{\includegraphics[width=8cm]{../Figures/warmuppol.png}}
+    \caption{Experimental measurement for the intensity of the laser while it is warming up. There are two plots, one where there is no polariser and one where the polarisation is changed by 10$^\circ$ every 10 seconds for 9 minutes. In the plot without polarisation, we 
+    observe a slowly drifting oscillating wave. In the plot with polarisation, there is a modulated wave.}
+    \label{fig:warmup}
+\end{figure*}
 
 \subsubsection{Spatial Coherence}
 Spatial coherence is essentially the measure of coherence in the transverse direction, for two points on the plane of the light's oscillation. This is a simple construction as we can just investigation this coherence by checking the interference pattern 
@@ -122,26 +131,9 @@ at these two points using the Young double slit experiment. Using the same resul
 
 \section{Experimental Results \& Analysis}
 
-\subsection{Laser warm up}
-
-\begin{figure*}
-    \subfloat[Without polarisation]{\includegraphics[width=8cm]{../Figures/warmupnopol.png}}
-    \subfloat[With polarisation]{\includegraphics[width=8cm]{../Figures/warmuppol.png}}
-    \caption{l}
-    \label{fig:warmup}
-\end{figure*}
-
 \subsection{Measurement of the wavelength of the laser}
 
-\begin{figure}
-    \includegraphics[width=8cm]{../Figures/doubleslit.jpg}
-    \caption{l}
-    \label{fig:doubleslit}
-\end{figure}
-
-\subsection{Longituinal modes}
-
-\subsection{Spatial coherence}
+The wavelength of the laser can be calculated using the Young double slit experiment. Placing a grating with 1.59$ \mu$m spacing in front of the laser will cause a first order maximum at 15 cm. The distance from the grating to the screen is 40 cm and so using 
 
 \begin{figure*}
     \centering
@@ -150,21 +142,59 @@ at these two points using the Young double slit experiment. Using the same resul
     \subfloat{\includegraphics[width=6cm]{../Figures/sc3.png}} \hspace{0.25cm}
     \subfloat{\includegraphics[width=6cm]{../Figures/sc4.png}} \\ \vspace{0.25cm}
     \subfloat{\includegraphics[width=6cm]{../Figures/sc5.png}}
-    \caption{l}
+    \caption{From left to right and top to bottom sequence, the grating is translated towards one direction slowly, increment not noted. The interference fringes disappears and the total intensity of the pattern falls.}
     \label{fig:spatialcoherence}
 \end{figure*}
+\begin{equation}
+    \lambda = d\sin{\theta} \approx \frac{d y}{L}.
+\end{equation}
 
-\subsection{Temporal Coherence}
+We obtain a value for the wavelength of the laser to be 633.75 $\pm 0.5$ nm. This does not agree with the given quantity of 632.8 nm, representing a $0.15 \%$ error.
+
+\subsection{Laser warm up}
+
+We wanted to first test the findings of Ref \citep{Fortin1981HeNe}. They observed then when He-Ne lasers are approaching 100\% of the total usable output, there is fluctuations in the intensity measured. This is due to the changes in the length of the cavity due to thermal 
+expansion. This thermal expansion would cause the longitudinal modes to drift across the Doppler gain curve and each time the peak would change modes, the intensity of the light will oscillate, producing the warm up beat seen in \ref{fig:warmup}.
+
+In the plot of the warm up with a rotating polariser we find the same oscillations as before however now with a modulating wave on top. This modulating wave comes from the slowly varying amplitude of the faster beat frequency carrier wave which we cannot directly see here. The 
+slowly drifting thermal expansion can still be seen as the wavepackets are also up and down in amplitude. The beat frequency comes from the difference in the two frequencies of the two orthogonal polarisations of light originating in the cavity. Therefore, we can only see the 
+summation of these two axes of polarisation using a linear polariser. This beat frequency is further explored in the next section.
+
+\subsection{Longitudinal modes}
+We can observe this beat frequency more closely by rotating the polariser whilst measuring the laser output with a spectrum analyser. We find two peaks within the range of the spectrum analyser, one at 687 MHz and the other at 1374 MHz. This corresponds to the beat pairs between $\nu_0$ 
+and $\nu_1$ and the next pair $\nu_0$ and $\nu_2$ with the spacing between modes corresponding to Equation \ref{eqn:spacing}. We can calculate the length of the cavity using the beat frequency,
+
+\begin{equation}
+    L = \frac{3\times10^8}{2\times687.183 \times 10^6} = 21.8 \text{ cm}.
+\end{equation}
+
+If we rotate the polariser, we can observe the behaviour of the two orthogonal polarisers. The polariser begins where the peak is at a minimum. The minimum occurs as the interference between the two orthogonal modes is zero. We then find max peaks to occur at a polarisation rotation angle 
+of 39$^\circ$, 146$^\circ$, 220$^\circ$ and 317$^\circ$ and minimum peaks to occur at 0$^\circ$, 85$^\circ$, 180$^\circ$ and 267$^\circ$. We can roughly see the mixing of the two orthogonal modes here. At points where one mode is favoured, i.e $\approx$ 0$^\circ$, 90$^\circ$, 180$^\circ$, 270$^\circ$,
+we observe minimums as the interference and hence beat frequency is 0. At angles where the orthogonal modes can be evenly mixed, i.e $\approx$ 45$^\circ$, 135$^\circ$, 225$^\circ$ and 315$^\circ$, the beat frequency is at a maximum. The experimental results roughly agree with this range.
+
+\subsection{Spatial coherence}
+
+A qualitative analysis of spatial coherence is given here. We can observe the decrease in intensity with a shift in the transverse direction of the grating in Figure \ref{fig:spatialcoherence}. As we scan the grating along the transverse plane of the laser, the intensity of the laser falls, indicating the 
+decrease in the interference between the points on the plane.
 
 \begin{figure}
     \includegraphics[width=8cm]{../Figures/tempcoherence.png}
-    \caption{l}
+    \caption{Experimental graph of the visibility versus change in mirrors difference in path length, same plot as in the theoretical figure \ref{fig:interferometer}.}
     \label{fig:temporalcoherence}
 \end{figure}
 
+\subsection{Temporal Coherence}
+
+The temporal coherence is measured in Figure \ref{fig:temporalcoherence}. We can observe an oscillation in visibility as the path difference increases. The amplitude of the intensity should decrease and it can sort of be observed in the figure however there is a big spike near the 10 cm point, this can be 
+attributed to a gentle bump in the set up.
+
+The coherence length can be calculated by using the distance from the first peak to the first zero. From our figure, the max peak roughly occurs at path difference of -15 cm and the first zero at +30 cm. The coherence length is then 45 cm. The cavity using this method and Equation \ref{eqn:cavity} is measured to be 
+22.5 cm. Therefore this is a 3\% disagreement between the two methods for the length of the cavity.
+
 \section{Conclusion}
 
-\section{Acknowledgements}
+In this short report, we were able to examine multiple properties of laser light including measurement of the wavelength, interactions between polarisation and longitudinal modes as well as coherence. We found the cavity length using two different methods and found a 3\% disagreement between the two, verifying the 
+theoretical framework to a strong degree.
 
 \bibliographystyle{apsrev4-2}
 \bibliography{references}

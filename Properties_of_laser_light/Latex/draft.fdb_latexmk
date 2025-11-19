@@ -1,17 +1,16 @@
 # Fdb version 4
-["bibtex draft"] 1763280977.41199 "draft.aux" "draft.bbl" "draft" 1763280977.55002 0
-  "./draftNotes.bib" 1763280776.37696 0 d41d8cd98f00b204e9800998ecf8427e ""
+["bibtex draft"] 1763427916.15192 "draft.aux" "draft.bbl" "draft" 1763427918.29599 0
+  "./draftNotes.bib" 1763427916.61891 0 d41d8cd98f00b204e9800998ecf8427e ""
   "./references.bib" 1763280977.19284 2157 720f70ba707048891ac20bb2c27f72de ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1601932770 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "draft.aux" 1763280777.76438 6873 794965e09188569ba6b9b90947f4dd39 "pdflatex"
+  "draft.aux" 1763427917.99273 8272 ee2e9383bbbaa5cc48eb4ac843132e69 "pdflatex"
   (generated)
   "draft.bbl"
   "draft.blg"
   (rewritten before read)
-["pdflatex"] 1763280776.01912 "/Users/tobynguyen/Documents/physics_reports/Properties_of_laser_light/Latex/draft.tex" "draft.pdf" "draft" 1763280977.55007 0
+["pdflatex"] 1763427916.24847 "/Users/tobynguyen/Documents/physics_reports/Properties_of_laser_light/Latex/draft.tex" "draft.pdf" "draft" 1763427918.29616 0
   "../Figures/HeNe_Laser_Levels.png" 1763272411.03421 93428 845b5fc215286025aab1f69ba56660b0 ""
   "../Figures/R1Z7_HeNe-Laser_Tube-Diagram.png" 1763272691.6267 8633 4ab3d26f226f89394a1aed53dc665e7d ""
-  "../Figures/doubleslit.jpg" 1763279494.80479 17142 56a7fb11e924faf4ea0e51901f361da0 ""
   "../Figures/michelson.png" 1763276505.90717 171110 ef6594cb281df29c2eec6ed3630d2f1a ""
   "../Figures/sc1.png" 1763280360.17892 618468 d7aa1210be54afeda626dc7467ab086b ""
   "../Figures/sc2.png" 1763280398.968 490533 cb023092e2ec506d731347d83ce037b1 ""
@@ -21,7 +20,7 @@
   "../Figures/tempcoherence.png" 1763004726.03832 33443 631470b30958e64d99af75d5560e2a4f ""
   "../Figures/warmupnopol.png" 1763013282.28051 37845 fa8cb95608639d97b1a306ad9f8eb8f7 ""
   "../Figures/warmuppol.png" 1763003607.19535 64747 d660782e50e1a61326d9e9b1d5bd697e ""
-  "/Users/tobynguyen/Documents/physics_reports/Properties_of_laser_light/Latex/draft.tex" 1763280773.59071 10817 9be34dd3cce763ca534a730177d4fa07 ""
+  "/Users/tobynguyen/Documents/physics_reports/Properties_of_laser_light/Latex/draft.tex" 1763427913.88929 16514 fdb2f0379977bf3041d940c4e6b9e580 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -55,6 +54,8 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1248133631 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -131,10 +132,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1717067784.25712 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1717067653 8221424 4e180d915e995e8ddc03894eb3fdc21f ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "draft.aux" 1763280777.76438 6873 794965e09188569ba6b9b90947f4dd39 "pdflatex"
-  "draft.bbl" 1763280977.52452 4690 19e5ab08a12b3f188d656cfae29d54e0 "bibtex draft"
-  "draft.out" 1763280777.76517 2729 aa630cc11ba26c36ab44b39af2dddde9 "pdflatex"
-  "draft.tex" 1763280773.59071 10817 9be34dd3cce763ca534a730177d4fa07 ""
+  "draft.aux" 1763427917.99273 8272 ee2e9383bbbaa5cc48eb4ac843132e69 "pdflatex"
+  "draft.bbl" 1763427916.24628 5166 9a1c7f2316d5d69b77cf988d952e83af "bibtex draft"
+  "draft.out" 1763427917.99356 2598 984dffc8e6f14f535fc611ea14d42383 "pdflatex"
+  "draft.tex" 1763427913.88929 16514 fdb2f0379977bf3041d940c4e6b9e580 ""
   (generated)
   "draft.aux"
   "draft.log"
